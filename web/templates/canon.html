@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Canon principles - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>Canon principles</h1>
+<p class="lead">51 curated principles across three schools. Each one carries explicit Where-to-use and Where-NOT guidance for the the funnel. Stack them inside a cocktail before shipping copy.</p>
+
+<div class="tag-row" style="margin-bottom: 32px;">
+    <strong style="margin-right: 8px;">Filter:</strong>
+    <a class="chip {% if not filter_school %}chip-tactic{% endif %}" href="/canon">All</a>
+    <a class="chip {% if filter_school == 'be' %}chip-tactic{% endif %}" href="/canon?school=be">Behavioral Economics</a>
+    <a class="chip {% if filter_school == 'voss' or filter_school == 'nstd' %}chip-tactic{% endif %}" href="/canon?school=voss">Voss / NSTD</a>
+    <a class="chip {% if filter_school == 'cialdini' or filter_school == 'sutherland' %}chip-tactic{% endif %}" href="/canon?school=cialdini">Cialdini / Sutherland</a>
+</div>
+
+{% if canon_groups %}
+    {% for label, items in canon_groups %}
+        <section class="layer-section">
+            <h2>{{ label }} ({{ items|length }})</h2>
+            {% for k in items %}
+                {% include "_canon_card.html" %}
+            {% endfor %}
+        </section>
+    {% endfor %}
+{% else %}
+    <div class="no-match-notice">
+        <strong>No match.</strong> No canon principles in the index for this filter.
+    </div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}How to use - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>How to use the Brand OS</h1>
+<p class="lead">Three ways to query the Marketing Brain depending on what you are doing.</p>
+
+<section class="layer-section">
+    <h2>1. Browser (you are here)</h2>
+    <p>For one-off lookups, brand-book reading, and pre-meeting prep. The search box on the front page accepts plain English, plain Russian, or any mix.</p>
+    <p>Example queries that work:</p>
+    <ul>
+        <li><a href="/?q=founder+pratfall+for+cart+abandon">founder pratfall for cart abandon</a></li>
+        <li><a href="/?q=anchoring+on+PDP">anchoring on PDP</a></li>
+        <li><a href="/?q=salt+on+watermelon+sweet+pairing">salt on watermelon sweet pairing</a></li>
+        <li><a href="/?q=labour+illusion+for+ingredient+sourcing">labour illusion for ingredient sourcing</a></li>
+        <li><a href="/?q=loss+aversion+welcome+email">loss aversion welcome email</a></li>
+    </ul>
+
+    <p>Direct links also work:</p>
+    <ul>
+        <li><a href="/for-vector/bodybuilder">/for-vector/bodybuilder</a> - everything for one of the 6 content vectors</li>
+        <li><a href="/for-stage/hero_landing">/for-stage/hero_landing</a> - everything tagged for a funnel stage</li>
+        <li><a href="/tactic/pratfall_effect">/tactic/pratfall_effect</a> - everything tagged with a tactic</li>
+        <li><a href="/canon?school=voss">/canon?school=voss</a> - filter canon principles by school</li>
+        <li><a href="/icp">/icp</a> - the canonical ICP and 6 content vectors</li>
+        <li><a href="/guidelines">/guidelines</a> - the 4 canonical foundation files</li>
+    </ul>
+</section>
+
+<section class="layer-section">
+    <h2>2. Claude session</h2>
+    <p>For drafting customer copy, generating email sequences, building landing pages, or any task where the answer becomes shipped text.</p>
+    <p>Clone the repo into your working directory and open Claude Code in it:</p>
+    <pre><code>git clone git@github.com:mishalyalin/pranasalt-brand-os.git
+cd pranasalt-brand-os
+python3 tools/marketing_brain.py stats
+claude</code></pre>
+    <p>The repo's <code>CLAUDE.md</code> auto-loads as the system prompt and tells Claude:</p>
+    <ul>
+        <li>To query the Brain before generating any customer-facing copy.</li>
+        <li>The seven hard rules (short hyphens, no emojis, no exclamation marks, no medicine vocabulary, no category comparisons, no fabricated claims, no consultancy jargon).</li>
+        <li>The names policy from `00-foundations/founder-stories.md` - founder names, on-camera policy.</li>
+        <li>The four-layer Brain architecture so Claude knows what to cite.</li>
+    </ul>
+    <p>The simplest prompt that works:</p>
+    <blockquote>
+        Use the Marketing Brain to find a tactic for &lt;your task&gt;. Draft the copy. Run the Wall-1 and Wall-2 hygiene scan. Cite primary sources.
+    </blockquote>
+</section>
+
+<section class="layer-section">
+    <h2>3. Building a customer-facing site or landing page</h2>
+    <p>If you are working with a designer, developer, or agency on a new page:</p>
+    <ol>
+        <li><strong>Send them this URL plus credentials.</strong> They read the brand guidelines and the ICP page before drafting.</li>
+        <li><strong>For each content block, query the Brain.</strong> "What tactic should the hero stack? What cocktail fits the cart-abandon email?"</li>
+        <li><strong>Stack from the top down.</strong> Layer 0 (positioning) is the strategic frame. Layer 1 (cocktails) is the recommended stack. Layer 1.5 (canon) is the principles inside the stack. Layer 2 (Vault rows) is the evidence.</li>
+        <li><strong>Apply the Wall-1 and Wall-2 hygiene check before shipping.</strong> Hygiene chips appear on every retrieved card. If a card has a hygiene flag, the tactic still works but the wording around it needs to stay culinary and within-customer rather than medicinal or category-comparative.</li>
+        <li><strong>Cite primary sources.</strong> The Brain returns the primary source (Kahneman, Voss, Cialdini, Bohner, etc.) for every retrieved item. The Brand OS itself is internal. Customer copy cites the underlying work.</li>
+    </ol>
+</section>
+
+<section class="layer-section">
+    <h2>What the Brain will not do</h2>
+    <ul>
+        <li>It will not fabricate studies. If the corpus does not cover your question, you get a no-match notice and an instruction to gather evidence first.</li>
+        <li>It will not invent customer numbers, prices, or claims that are not traceable.</li>
+        <li>It will not contradict the canonical files. If you see drift, the canonical files in the repo win and the web interface is stale - file a PR to fix.</li>
+    </ul>
+</section>
+
+<section class="layer-section">
+    <h2>Access and credentials</h2>
+    <p>This interface is internal. Do not share the URL or basic-auth credentials outside the founding team. The site is intentionally not indexed (<code>noindex, nofollow, noarchive</code>) and is behind an unguessable subdomain and basic auth.</p>
+    <p>To add a teammate: ask Misha directly. Do not paste credentials into Slack, Notion, or email.</p>
+</section>
+
+<section class="layer-section">
+    <h2>Edit workflow</h2>
+    <ol>
+        <li>Edit the canon file in the repo (Markdown for content, JSON for vocab).</li>
+        <li>Open a PR on <code>mishalyalin/pranasalt-brand-os</code>.</li>
+        <li>CI runs the Brand Voice Check, Claims Trace, and the auto-merge tier decision.</li>
+        <li>Once merged, the deploy hook rebuilds the Brain index on the VPS and the web interface picks up the change within seconds.</li>
+    </ol>
+    <p>The simplest edit - adding a new tactic alias - is a single line in <code>08-templates/vocab/tactics.json</code>, editable straight from the GitHub UI in your browser.</p>
+</section>
+
+{% endblock %}

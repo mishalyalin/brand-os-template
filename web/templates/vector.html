@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Vector: {{ vector_name }} - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>{{ vector_name }}</h1>
+<p class="lead">{{ vector_description }}</p>
+
+<div class="tag-row" style="margin-bottom: 32px;">
+    <strong style="margin-right: 8px;">Alias triggers:</strong>
+    {% for a in vector_aliases %}
+        <span class="chip">{{ a }}</span>
+    {% endfor %}
+</div>
+
+{% if anchor %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-0">Layer 0</span>Canonical definition</h2>
+        {% set p = anchor %}
+        {% include "_positioning_card.html" %}
+    </section>
+{% endif %}
+
+{% if cocktails %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-1">Layer 1</span>Cocktails tagged for this vector ({{ cocktails|length }})</h2>
+        {% for c in cocktails %}
+            {% include "_cocktail_card.html" %}
+        {% endfor %}
+    </section>
+{% else %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-1">Layer 1</span>Cocktails</h2>
+        <div class="no-match-notice">
+            Zero cocktails currently tagged for this vector. Net-new opportunity: build a cocktail that serves this segment.
+        </div>
+    </section>
+{% endif %}
+
+{% if canons %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-15">Layer 1.5</span>Canon principles tagged for this vector ({{ canons|length }})</h2>
+        {% for k in canons %}
+            {% include "_canon_card.html" %}
+        {% endfor %}
+    </section>
+{% endif %}
+
+{% if rows %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-2">Layer 2</span>Raw Vault rows (top {{ rows|length }} by ranking)</h2>
+        {% for r in rows %}
+            {% include "_row_card.html" %}
+        {% endfor %}
+    </section>
+{% endif %}
+
+<section class="layer-section">
+    <h2>Creative brief for this vector</h2>
+    <ul>
+        <li>The tactic must respect Wall 1 (no medicine vocabulary) and Wall 2 (no salt or spice category comparison).</li>
+        <li>Cite the primary source. Never Phill, Nudge, or VaultsGPT in shipped copy.</li>
+        <li>Short hyphens only. Period-terminated cadence. No emojis. No exclamation marks.</li>
+        <li>Shared visual structure across all six vectors: same food, same person, sachet appears, the person's face changes.</li>
+        <li>Use the founder as the protagonist by default. Respect any on-camera policies in `00-foundations/founder-stories.md`.</li>
+    </ul>
+</section>
+
+{% endblock %}

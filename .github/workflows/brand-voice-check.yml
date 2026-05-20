@@ -1,0 +1,63 @@
+name: Brand Voice Check
+
+# Scans touchpoint-copy files for hard-rule violations defined by your brand.
+# Out of the box this workflow enforces the most common cross-brand rules:
+# - no em-dashes / en-dashes (most period-terminated voices ban these)
+# - no emojis in customer-facing copy
+# - no exclamation marks in customer-facing copy
+# Customize the rules in the script below for your brand.
+#
+# If you want to disable this check entirely (e.g. your brand uses emojis),
+# delete this file or set the workflow's `on:` to a manual trigger only.
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+    paths:
+      - "03-touchpoint-copy/**"
+      - "01-canon/cocktail-recipes.md"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Em-dash / en-dash scan
+        run: |
+          set -e
+          HITS=$(grep -rInE '[—–]' 03-touchpoint-copy/ 01-canon/cocktail-recipes.md 2>/dev/null || true)
+          if [ -n "$HITS" ]; then
+            echo "::error::Em-dash or en-dash found in touchpoint copy. Use short hyphens '-' only."
+            echo "$HITS"
+            exit 1
+          fi
+          echo "Em-dash scan PASS"
+
+      - name: Emoji scan (customer-facing only)
+        run: |
+          set -e
+          # Match any character in common emoji ranges
+          HITS=$(grep -rInP '[\x{1F300}-\x{1F9FF}\x{2600}-\x{27BF}\x{1F000}-\x{1F2FF}]' \
+            03-touchpoint-copy/ 2>/dev/null || true)
+          if [ -n "$HITS" ]; then
+            echo "::error::Emoji found in customer-facing copy."
+            echo "$HITS"
+            exit 1
+          fi
+          echo "Emoji scan PASS"
+
+      - name: Exclamation mark scan
+        run: |
+          set -e
+          # Allow exclamation marks in code blocks and headings (rare). Block in prose.
+          HITS=$(grep -rIn '^[^`].*!' 03-touchpoint-copy/ 2>/dev/null | grep -v '^[^:]*\.md:[0-9]*:#' || true)
+          if [ -n "$HITS" ]; then
+            echo "::warning::Exclamation marks found in customer-facing copy. Voice intentional?"
+            echo "$HITS"
+            # warning, not fail - some brands allow this
+          fi
+          echo "Exclamation scan complete"

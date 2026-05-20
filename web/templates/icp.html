@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}ICP and content vectors - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>ICP and content vectors</h1>
+<p class="lead">The strategic frame. Locked 28 April 2026, sharpened 19 May 2026. Every customer-facing creative must serve at least one of the six content vectors and respect both walls. If a tactic does not fit, reject it.</p>
+
+{% for kind, anchors in positioning_groups %}
+    <section class="layer-section">
+        <h2>{{ kind.replace('_', ' ')|capitalize }}</h2>
+        {% for p in anchors %}
+            {% include "_positioning_card.html" %}
+        {% endfor %}
+    </section>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,338 @@
+{
+  "$schema": "tactics-vocab-v1",
+  "_meta": {
+    "version": "1.0.0",
+    "last_updated": "2026-05-19",
+    "description": "Marketing Brain tactic vocabulary. 41 behavioral / negotiation / influence tactics covering the Behavioral Economics, Voss/NSTD, and Cialdini-Sutherland schools. Each key is the canonical tactic ID; value is a list of alias strings the parser scans for in raw text (cocktails / canon principles / Vault rows). Order matters inside each alias list: put longer phrases first so 'Pratfall Effect' matches before 'Pratfall' alone.",
+    "schools_covered": ["behavioral_economics", "nstd_voss", "cialdini_sutherland"],
+    "edit_instructions": "Edit this file directly. After any change, run `python3 tools/marketing_brain.py rebuild-index` to refresh the SQLite index + JSON cache. Add a new tactic by adding a new key under `vocab`. Add a new alias by appending to the existing list. The Brain matches aliases case-insensitively as substrings.",
+    "owner": "TBD - set during onboarding",
+    "loaded_by": "tools/marketing_brain.py at module-import time via _load_vocab()"
+  },
+  "vocab": {
+    "pratfall_effect": [
+      "Pratfall Effect",
+      "pratfall",
+      "admitting a flaw",
+      "stolen thunder",
+      "two-sided",
+      "linked flaw",
+      "revealing flaws",
+      "Bohner"
+    ],
+    "apology_opener": [
+      "apolog",
+      "Oops! Sorry My Bad",
+      "De Kerpel",
+      "minor mistake",
+      "sorry for the rain"
+    ],
+    "labour_illusion": [
+      "Labour Illusion",
+      "labor illusion",
+      "effort heuristic",
+      "Kruger",
+      "more effort went into",
+      "perceived effort",
+      "Effort makes products"
+    ],
+    "ikea_effect": [
+      "IKEA Effect",
+      "IKEA effect",
+      "built it themselves",
+      "We value IKEA",
+      "Norton",
+      "Mochon"
+    ],
+    "endowed_progress": [
+      "Endowed Progress",
+      "endowed progress",
+      "head start",
+      "Nunes Dreze"
+    ],
+    "specific_numbers": [
+      "Specific Numbers",
+      "precise number",
+      "Zhang & Schwarz",
+      "Zhang and Schwarz",
+      "rounded numbers feel vague",
+      "precise asking price",
+      "Specific timing",
+      "Janiszewski"
+    ],
+    "anchoring": [
+      "Anchoring",
+      "anchor",
+      "reference price",
+      "anchored on",
+      "Tversky",
+      "Kahneman",
+      "primed with a random higher number"
+    ],
+    "decoy_effect": [
+      "Decoy Effect",
+      "decoy",
+      "Economist",
+      "asymmetric dominance",
+      "middle choice",
+      "extremeness aversion"
+    ],
+    "charm_pricing": [
+      "Charm Pricing",
+      "charm pricing",
+      ".99 pricing",
+      "$3.99 vs",
+      "just-below price"
+    ],
+    "loss_aversion": [
+      "Loss Aversion",
+      "loss aversion",
+      "losses hurt twice",
+      "loss framing",
+      "loss lottery",
+      "loss-framing"
+    ],
+    "reciprocity": [
+      "Reciprocity",
+      "reciprocit",
+      "free sample",
+      "small gift",
+      "Sweet Anyone",
+      "extra mint",
+      "Power of Free"
+    ],
+    "social_proof": [
+      "Social Proof",
+      "social proof",
+      "most popular",
+      "X others",
+      "Herd Mentality",
+      "social influence",
+      "social norms"
+    ],
+    "authority": [
+      "Authority",
+      "authority",
+      "expertise",
+      "credentials",
+      "Cialdini",
+      "Milgram",
+      "Franchise Tax Board",
+      "expert"
+    ],
+    "liking": [
+      "Liking",
+      "likable",
+      "likeable",
+      "attractiveness",
+      "warm",
+      "smiles",
+      "compliments"
+    ],
+    "unity": [
+      "Unity",
+      "in-group",
+      "ingroup",
+      "shared identity",
+      "we vs they",
+      "'We' wins",
+      "We laugh with our group"
+    ],
+    "scarcity": [
+      "Scarcity",
+      "scarcity",
+      "limited",
+      "sold out",
+      "exclusive",
+      "shelf",
+      "fewer units",
+      "out of stock",
+      "wholesale beef"
+    ],
+    "commitment_consistency": [
+      "Consistency",
+      "Commitment",
+      "commitment device",
+      "active commitment",
+      "public commitment",
+      "implementation intention",
+      "I don",
+      "Always confirm"
+    ],
+    "halo_effect": [
+      "Halo Effect",
+      "halo effect",
+      "expert opinion",
+      "celebrity",
+      "Ray-Bans",
+      "Tiger Woods",
+      "branded ingredients"
+    ],
+    "mere_exposure": [
+      "Mere Exposure",
+      "mere exposure",
+      "Zajonc",
+      "repeated",
+      "familiarity",
+      "Repeated exposure"
+    ],
+    "reactance": [
+      "Reactance",
+      "reactance",
+      "forbidden",
+      "restriction",
+      "censorship",
+      "told not to",
+      "Don't tell"
+    ],
+    "default_effect": [
+      "Defaults",
+      "Default",
+      "opt-out",
+      "auto-enrol",
+      "Penn Medicine",
+      "Disney's healthy menu"
+    ],
+    "habit_loop": [
+      "Habits",
+      "Habit Tips",
+      "habit",
+      "Wendy Wood",
+      "popcorn",
+      "repetition"
+    ],
+    "peak_end_rule": [
+      "Peak End Rule",
+      "peak end",
+      "peak-end",
+      "Peak-End",
+      "final experience"
+    ],
+    "curiosity_gap": [
+      "Curiosity Gap",
+      "Curiosity",
+      "Loewenstein",
+      "Zeigarnik",
+      "unresolved",
+      "boosts story"
+    ],
+    "framing": [
+      "Framing",
+      "framing",
+      "survival rate vs mortality",
+      "small fee",
+      "for $0",
+      "gift framing"
+    ],
+    "specificity_concrete": [
+      "Concrete Phrases",
+      "Concrete Ph",
+      "concrete",
+      "vivid",
+      "Packard",
+      "Berger",
+      "Stop using jargon",
+      "Martinez and Mammola"
+    ],
+    "power_of_free": [
+      "Power Of Free",
+      "Power of Free",
+      "Free shipping",
+      "free sample",
+      "for $0",
+      "chance of free"
+    ],
+    "fresh_start_effect": [
+      "Fresh Start",
+      "fresh-start",
+      "fresh start",
+      "Katy Mil"
+    ],
+    "sunk_costs": [
+      "Sunk Costs",
+      "sunk cost",
+      "high-ordeal",
+      "more shows"
+    ],
+    "mirroring": [
+      "Mirroring",
+      "mirror",
+      "tactical empathy"
+    ],
+    "magic_words": [
+      "Magic Words",
+      "recommending",
+      "I don't",
+      "I can't",
+      "helper",
+      "Jonah Berger",
+      "By this time next year"
+    ],
+    "identity_priming": [
+      "Identity",
+      "identity-based",
+      "Sport Club Recife",
+      "Immortal Fans",
+      "be a voter",
+      "be a helper"
+    ],
+    "costly_signaling": [
+      "Costly Signa",
+      "costly signal",
+      "TV ads",
+      "billboards",
+      "Higher ad spend"
+    ],
+    "veblen_effect": [
+      "Veblen Effect",
+      "Veblen",
+      "higher price higher demand",
+      "Expensive wine tastes better"
+    ],
+    "hyperbolic_discounting": [
+      "Hyperbolic D",
+      "hyperbolic discount",
+      "immediate reward",
+      "per day",
+      "small immediate"
+    ],
+    "contrast_effect": [
+      "Contrast Eff",
+      "contrast effect"
+    ],
+    "distinctiveness": [
+      "Distinctivene",
+      "Von Restorff",
+      "Distinctive",
+      "isolation effect",
+      "Red Sneaker",
+      "URGENT stamp"
+    ],
+    "watched_eyes": [
+      "Watched Ey",
+      "Hawthorne",
+      "Honesty box",
+      "eyes watch",
+      "Being observed",
+      "Being watched"
+    ],
+    "storytelling": [
+      "Story Bias",
+      "Backstor",
+      "Significant Objects",
+      "tablecloths"
+    ],
+    "negativity_bias": [
+      "Negativity Bi",
+      "negative info",
+      "Pratto",
+      "negative information"
+    ],
+    "primacy_effect": [
+      "Primacy Effect",
+      "primacy",
+      "first impressions",
+      "first option"
+    ]
+  }
+}

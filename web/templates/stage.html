@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Stage: {{ stage_name }} - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>{{ stage_name.replace('_', ' ') }}</h1>
+<p class="lead">Funnel stage. Everything in the index tagged for firing at this stage.</p>
+
+<div class="tag-row" style="margin-bottom: 32px;">
+    <strong style="margin-right: 8px;">Alias triggers:</strong>
+    {% for a in stage_aliases %}
+        <span class="chip">{{ a }}</span>
+    {% endfor %}
+</div>
+
+{% if cocktails %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-1">Layer 1</span>Cocktails ({{ cocktails|length }})</h2>
+        {% for c in cocktails %}
+            {% include "_cocktail_card.html" %}
+        {% endfor %}
+    </section>
+{% endif %}
+
+{% if canons %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-15">Layer 1.5</span>Canon principles ({{ canons|length }})</h2>
+        {% for k in canons %}
+            {% include "_canon_card.html" %}
+        {% endfor %}
+    </section>
+{% endif %}
+
+{% if rows %}
+    <section class="layer-section">
+        <h2><span class="layer-tag layer-tag-2">Layer 2</span>Raw Vault rows (top {{ rows|length }} by ranking)</h2>
+        {% for r in rows %}
+            {% include "_row_card.html" %}
+        {% endfor %}
+    </section>
+{% endif %}
+
+{% if not (cocktails or canons or rows) %}
+    <div class="no-match-notice">
+        <strong>No match.</strong> Stage exists in vocabulary but nothing is currently tagged. Net-new opportunity.
+    </div>
+{% endif %}
+
+{% endblock %}

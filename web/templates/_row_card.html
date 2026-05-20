@@ -1,0 +1,33 @@
+<article class="result-card">
+    <div class="result-header">
+        <h3>{{ r.title }}</h3>
+        <span class="result-meta">{{ r.id }}</span>
+    </div>
+    <div class="tag-row">
+        {% for t in r.tactics %}
+            <a class="chip chip-tactic" href="/tactic/{{ t }}">{{ t.replace('_', ' ') }}</a>
+        {% endfor %}
+        {% for s in r.stages %}
+            <a class="chip chip-stage" href="/for-stage/{{ s }}">{{ s.replace('_', ' ') }}</a>
+        {% endfor %}
+        {% for v in r.vector_labels %}
+            <span class="chip chip-vector">{{ v }}</span>
+        {% endfor %}
+        {% if r.wall_1_flag %}
+            <span class="chip chip-warn">Wall-1 hygiene</span>
+        {% endif %}
+        {% if r.wall_2_flag %}
+            <span class="chip chip-warn">Wall-2 hygiene</span>
+        {% endif %}
+        {% if r.rank_stars %}
+            <span class="chip">ranking: {{ "*" * r.rank_stars }}</span>
+        {% endif %}
+        {% if r.easy_to_apply %}
+            <span class="chip">easy to apply</span>
+        {% endif %}
+    </div>
+    {% if r.primary_source %}
+        <p class="result-meta">Primary source guess: {{ r.primary_source }}</p>
+    {% endif %}
+    <p class="result-body">{{ r.body[:600] }}{% if r.body|length > 600 %}...{% endif %}</p>
+</article>

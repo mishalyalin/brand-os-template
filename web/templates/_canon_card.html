@@ -1,0 +1,31 @@
+<article class="result-card">
+    <div class="result-header">
+        <h3>{{ k.name }}</h3>
+        <span class="result-meta">{{ k.id }} - {{ k.school_label }}</span>
+    </div>
+    {% if k.definition %}
+        <p class="result-body" style="font-weight: 500;">{{ k.definition }}</p>
+    {% endif %}
+    <div class="tag-row">
+        {% for t in k.tactics %}
+            <a class="chip chip-tactic" href="/tactic/{{ t }}">{{ t.replace('_', ' ') }}</a>
+        {% endfor %}
+        {% for s in k.stages %}
+            <a class="chip chip-stage" href="/for-stage/{{ s }}">{{ s.replace('_', ' ') }}</a>
+        {% endfor %}
+        {% for v in k.vector_labels %}
+            <span class="chip chip-vector">{{ v }}</span>
+        {% endfor %}
+        {% if k.wall_1_flag %}
+            <span class="chip chip-warn">Wall-1 hygiene</span>
+        {% endif %}
+        {% if k.wall_2_flag %}
+            <span class="chip chip-warn">Wall-2 hygiene</span>
+        {% endif %}
+    </div>
+    {% if k.primary_source %}
+        <p class="result-meta">Primary source: {{ k.primary_source }}</p>
+    {% endif %}
+    <p class="result-body" style="white-space: pre-wrap;">{{ k.body }}{% if k.body|length >= 1500 %}...{% endif %}</p>
+    <p class="result-meta" style="margin-top: 10px;">Source file: <code>01-canon/{{ k.source_file }}</code></p>
+</article>

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Index stats - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>Index stats</h1>
+<p class="lead">Live counts from the Brain index. Source-of-truth files live in the repo and rebuild on every push.</p>
+
+<section class="layer-section">
+    <h2>Top-line counts</h2>
+    <table>
+        <tr><th>Layer</th><th>Count</th></tr>
+        <tr><td>Layer 0 - positioning anchors</td><td>{{ stats.positioning }}</td></tr>
+        <tr><td>Layer 1 - cocktails</td><td>{{ stats.cocktails }}</td></tr>
+        <tr><td>Layer 1.5 - canon principles (BE + Voss + Cialdini)</td><td>{{ stats.canon }}</td></tr>
+        <tr><td>Layer 2 - raw Vault rows</td><td>{{ stats.rows }}</td></tr>
+        <tr><td>Index version</td><td>{{ stats.version }}</td></tr>
+    </table>
+</section>
+
+<section class="layer-section">
+    <h2>Content vector coverage</h2>
+    <p>How many tactics across the index serve each ICP sub-segment.</p>
+    <table>
+        <tr><th>Vector</th><th>Cocktails</th><th>Canon</th><th>Vault rows</th></tr>
+        {% for v in vector_coverage %}
+            <tr>
+                <td><a href="/for-vector/{{ v.key }}">{{ v.name }}</a></td>
+                <td>{{ v.cocktails }}</td>
+                <td>{{ v.canons }}</td>
+                <td>{{ v.rows }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</section>
+
+<section class="layer-section">
+    <h2>Top tactics by Vault row count</h2>
+    <table>
+        <tr><th>Tactic</th><th>Rows</th></tr>
+        {% for t, c in top_tactics %}
+            <tr>
+                <td><a href="/tactic/{{ t }}">{{ t.replace('_', ' ') }}</a></td>
+                <td>{{ c }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</section>
+
+{% endblock %}

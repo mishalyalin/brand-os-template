@@ -1,0 +1,19 @@
+{
+  "$schema": "hygiene-vocab-v1",
+  "_meta": {
+    "version": "1.0.0-template",
+    "last_updated": "TEMPLATE - to be filled by onboard.py",
+    "description": "Four lists used to flag content for review: wall_1_triggers (the brand's first hygiene wall, typically regulatory), wall_2_triggers (the brand's second hygiene wall, typically strategic positioning), never_name_brands (reference brands that live in evidence files only - never appear in customer copy), voice_register_refs (cadence-only references, not category competitors).",
+    "sources_of_truth": [
+      "00-foundations/voice-anti-patterns.md - the human-readable wall vocab",
+      "00-foundations/positioning.md - the never-name and voice-register lists"
+    ],
+    "edit_instructions": "Edit this file directly when a new trigger word emerges. After any change, run `python3 tools/marketing_brain.py rebuild-index` to refresh the index. Triggers match case-insensitively as substrings.",
+    "owner": "TBD - set during onboarding",
+    "loaded_by": "tools/marketing_brain.py at module-import time"
+  },
+  "wall_1_triggers": [],
+  "wall_2_triggers": [],
+  "never_name_brands": [],
+  "voice_register_refs": []
+}

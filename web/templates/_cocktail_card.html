@@ -1,0 +1,18 @@
+<article class="result-card">
+    <div class="result-header">
+        <h3>{{ c.name }}</h3>
+        <span class="result-meta"><code>01-canon/cocktail-recipes.md</code></span>
+    </div>
+    <div class="tag-row">
+        {% for t in c.tactics %}
+            <a class="chip chip-tactic" href="/tactic/{{ t }}">{{ t.replace('_', ' ') }}</a>
+        {% endfor %}
+        {% for s in c.stages %}
+            <a class="chip chip-stage" href="/for-stage/{{ s }}">{{ s.replace('_', ' ') }}</a>
+        {% endfor %}
+        {% for v in c.vector_labels %}
+            <span class="chip chip-vector">{{ v }}</span>
+        {% endfor %}
+    </div>
+    <p class="result-body" style="white-space: pre-wrap;">{{ c.body }}{% if c.body|length >= 1200 %}...{% endif %}</p>
+</article>

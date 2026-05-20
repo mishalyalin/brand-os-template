@@ -1,0 +1,23 @@
+{
+  "$schema": "content-vectors-vocab-v1",
+  "_meta": {
+    "version": "1.0.0-template",
+    "last_updated": "TEMPLATE - to be filled by onboard.py",
+    "description": "Content vectors are your ICP sub-segments. Every customer-facing creative must fit one of them. Up to six total. Run `python3 tools/onboard.py` to define yours or edit this file directly.",
+    "source_of_truth": "00-foundations/positioning.md is the source of truth for vector definitions.",
+    "owner": "TBD - set during onboarding",
+    "loaded_by": "tools/marketing_brain.py at module-import time"
+  },
+  "vectors": {
+    "example_segment_one": {
+      "name": "Example segment - rename me",
+      "aliases": ["example trigger one", "example trigger two"],
+      "description": "Replace this object with your first ICP sub-segment."
+    },
+    "example_segment_two": {
+      "name": "Example segment two - rename me",
+      "aliases": ["another trigger"],
+      "description": "Add up to six segments total."
+    }
+  }
+}

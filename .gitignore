@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local index files - cached, rebuilt deterministically via `python3 tools/marketing_brain.py rebuild-index`
+# The JSON is small enough to commit (~few hundred KB) and useful for grepping.
+# The SQLite DB is binary and gets rebuilt locally on first query - exclude it.
+01-canon/_brain-index.db
+
+# Local environment
+.env
+.env.local
+*.secret
+
+# Local web dev venv
+.venv-web/
+.venv/

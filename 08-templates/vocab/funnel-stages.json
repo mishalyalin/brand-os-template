@@ -1,0 +1,96 @@
+{
+  "$schema": "funnel-stages-vocab-v1",
+  "_meta": {
+    "version": "1.0.0",
+    "last_updated": "2026-05-19",
+    "description": "the funnel-stage vocabulary. 10 stages where a piece of customer-facing copy can fire. Each key is the canonical stage ID; value is a list of alias strings the parser searches in raw text + tactic names to auto-tag rows / cocktails / canon principles with the stages they apply to.",
+    "edit_instructions": "Edit this file directly. After any change, run `python3 tools/marketing_brain.py rebuild-index` to refresh the SQLite index + JSON cache. Add a new stage by adding a new key under `vocab`. Add a new alias by appending to the existing list. The Brain matches aliases case-insensitively as substrings.",
+    "owner": "TBD - set during onboarding",
+    "loaded_by": "tools/marketing_brain.py at module-import time via _load_vocab()"
+  },
+  "vocab": {
+    "hero_landing": [
+      "hero",
+      "landing",
+      "headline",
+      "lander",
+      "above the fold"
+    ],
+    "cart_abandon": [
+      "cart abandon",
+      "abandoned cart",
+      "abandonment",
+      "cart-abandon"
+    ],
+    "welcome_flow": [
+      "welcome",
+      "onboarding",
+      "first email",
+      "subscriber",
+      "newsletter",
+      "Edison Research",
+      "subscribe"
+    ],
+    "pdp_pricing": [
+      "PDP",
+      "pricing",
+      "Pricing",
+      "price perception",
+      "perceived value",
+      "Pricing card"
+    ],
+    "founder_section": [
+      "founder",
+      "Founder",
+      "credibility",
+      "authenticity",
+      "I am a",
+      "origin story",
+      "lived experience"
+    ],
+    "subscription_tier": [
+      "subscription",
+      "tier",
+      "subscriber",
+      "renewal",
+      "monthly",
+      "retention"
+    ],
+    "social_tiktok": [
+      "TikTok",
+      "Instagram",
+      "social media",
+      "Reddit",
+      "ad creative",
+      "Reddit ads",
+      "video",
+      "creator"
+    ],
+    "email_subject": [
+      "subject line",
+      "subject:",
+      "email subject",
+      "open rate",
+      "Tax letters"
+    ],
+    "retention": [
+      "retention",
+      "churn",
+      "month 2",
+      "repeat purchase",
+      "lifetime",
+      "subscription members",
+      "Free shipping subscriptions"
+    ],
+    "trust_certification": [
+      "certif",
+      "trust",
+      "expert tasting",
+      "ISO",
+      "lab",
+      "transparency",
+      "AEO",
+      "BRCGS"
+    ]
+  }
+}

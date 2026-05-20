@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>{% block title %}Brand OS{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="/" class="brand-mark">
+            <span class="brand-mark-line-1">Brand</span>
+            <span class="brand-mark-line-2">Brand OS</span>
+        </a>
+        <nav class="site-nav">
+            {% for item in nav %}
+                <a href="{{ item.href }}"
+                   class="nav-link {% if request.path == item.href or (item.href != '/' and request.path.startswith(item.href)) %}nav-link-active{% endif %}">
+                    {{ item.label }}
+                </a>
+            {% endfor %}
+        </nav>
+    </div>
+</header>
+
+<main class="container site-main">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <p class="footer-title">Index</p>
+            <p class="footer-stat">Positioning anchors: <strong>{{ stats.positioning }}</strong></p>
+            <p class="footer-stat">Cocktails: <strong>{{ stats.cocktails }}</strong></p>
+            <p class="footer-stat">Canon principles: <strong>{{ stats.canon }}</strong></p>
+            <p class="footer-stat">Raw Vault rows: <strong>{{ stats.rows }}</strong></p>
+            <p class="footer-stat footer-version">Index version: {{ stats.version }}</p>
+        </div>
+        <div class="footer-col">
+            <p class="footer-title">Source of truth</p>
+            <p class="footer-note">All content in this interface mirrors the canonical files at <a href="https://github.com/mishalyalin/pranasalt-brand-os" rel="noopener">github.com/mishalyalin/pranasalt-brand-os</a>.</p>
+            <p class="footer-note">If a page disagrees with a canon file, the canon file wins.</p>
+        </div>
+        <div class="footer-col">
+            <p class="footer-title">Use</p>
+            <p class="footer-note">Internal team access only. Do not share the URL or basic-auth credentials outside the founding team.</p>
+            <p class="footer-note">Owner: TBD - set during onboarding.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/static/app.js" defer></script>
+
+</body>
+</html>

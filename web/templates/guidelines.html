@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Guidelines - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>Brand guidelines</h1>
+<p class="lead">The four canonical files that govern every customer-facing word the brand ships. If a generated piece of copy disagrees with anything below, the copy is wrong.</p>
+
+<nav style="background: var(--paper-soft); border: 1px solid var(--paper-edge); padding: 16px 20px; border-radius: 2px; margin-bottom: 40px;">
+    <strong style="display:block; font-size:12px; text-transform:uppercase; letter-spacing:2px; color:var(--ink-faint); margin-bottom:8px;">On this page</strong>
+    <p style="margin:0;">
+        <a href="#positioning">Positioning</a> &nbsp;-&nbsp;
+        <a href="#brand-voice">Brand voice</a> &nbsp;-&nbsp;
+        <a href="#voice-anti-patterns">Voice anti-patterns</a> &nbsp;-&nbsp;
+        <a href="#regulatory-frames">Regulatory frames</a>
+    </p>
+</nav>
+
+<section id="positioning" class="layer-section markdown-content">
+    {{ contents.positioning }}
+</section>
+
+<hr>
+
+<section id="brand-voice" class="layer-section markdown-content">
+    {{ contents.brand_voice }}
+</section>
+
+<hr>
+
+<section id="voice-anti-patterns" class="layer-section markdown-content">
+    {{ contents.voice_anti_patterns }}
+</section>
+
+<hr>
+
+<section id="regulatory-frames" class="layer-section markdown-content">
+    {{ contents.regulatory_frames }}
+</section>
+
+{% endblock %}

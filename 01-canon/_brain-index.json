@@ -1,0 +1,1315 @@
+{
+"version": "1.3.0",
+"built_at": "2026-05-19",
+"raw_row_count": 0,
+"cocktail_count": 1,
+"canon_count": 51,
+"positioning_count": 9,
+"tactic_vocab": [
+"pratfall_effect",
+"apology_opener",
+"labour_illusion",
+"ikea_effect",
+"endowed_progress",
+"specific_numbers",
+"anchoring",
+"decoy_effect",
+"charm_pricing",
+"loss_aversion",
+"reciprocity",
+"social_proof",
+"authority",
+"liking",
+"unity",
+"scarcity",
+"commitment_consistency",
+"halo_effect",
+"mere_exposure",
+"reactance",
+"default_effect",
+"habit_loop",
+"peak_end_rule",
+"curiosity_gap",
+"framing",
+"specificity_concrete",
+"power_of_free",
+"fresh_start_effect",
+"sunk_costs",
+"mirroring",
+"magic_words",
+"identity_priming",
+"costly_signaling",
+"veblen_effect",
+"hyperbolic_discounting",
+"contrast_effect",
+"distinctiveness",
+"watched_eyes",
+"storytelling",
+"negativity_bias",
+"primacy_effect"
+],
+"stage_vocab": [
+"hero_landing",
+"cart_abandon",
+"welcome_flow",
+"pdp_pricing",
+"founder_section",
+"subscription_tier",
+"social_tiktok",
+"email_subject",
+"retention",
+"trust_certification"
+],
+"vector_vocab": [
+"example_segment_one",
+"example_segment_two"
+],
+"rows": [],
+"cocktails": [
+{
+"name": "{{ EXAMPLE_COCKTAIL_NAME }}",
+"tactics": [],
+"stages": [],
+"vectors": [],
+"body": "**Funnel stage:** {{ FUNNEL_STAGE }}.\n\n**Tactic stack:** {{ TACTIC_1 }} + {{ TACTIC_2 }} + {{ TACTIC_3 }}.\n\n**Verbatim copy:**\n\n> {{ VERBATIM_COPY }}\n\n**Why this cocktail fits the brand:**\n\n{{ FIT_RATIONALE }}\n\n**Primary citations:**\n\n- {{ TACTIC_1 }}: {{ CITATION_1 }}\n- {{ TACTIC_2 }}: {{ CITATION_2 }}\n- {{ TACTIC_3 }}: {{ CITATION_3 }}\n\n**Hygiene confirmation:**\n\n- Wall 1: {{ WALL_1_NOTE }}\n- Wall 2: {{ WALL_2_NOTE }}\n\n**When NOT to use:** {{ WHEN_NOT_TO_USE }}.\n\n---\n\nAdd additional cocktails below as the brand develops them. Cocktails are the most valuable layer of the Brain because each one represents a battle-tested combination - not theory, applied practice.",
+"anchor": "{{-example_cocktail_name-}}"
+}
+],
+"canons": [
+{
+"id": "BE-01",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Anchoring",
+"heading": "1. Anchoring",
+"definition": "The first number a customer sees on a page recalibrates their sense of what every subsequent number means.",
+"body": "**Canonical source:** Kahneman, _Thinking Fast and Slow_ (2011), Chapter 11. Ariely, _Predictably Irrational_ (2008), Chapter 2 wine-and-Social-Security-number experiment.\n\n**One-line definition:** The first number a customer sees on a page recalibrates their sense of what every subsequent number means.\n\n**Where to use:** Lander hero with a category-benchmark anchor below the fold. Pricing tier headers (retail price visible alongside subscription price). Price-objection email with a comparison list. PDP per-use breakdown (cost-per-meal / cost-per-use / cost-per-day anchored against a culturally comparable alternative).\n\n**Where NOT to use:** Avoid putting the absolute price anywhere above the brand promise. The product hooks first; the price reads as obvious after the value frame is set.",
+"tactics": [
+"anchoring"
+],
+"stages": [
+"hero_landing",
+"pdp_pricing",
+"subscription_tier",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Kahneman, _Thinking Fast and Slow_ (2011), Chapter 11. Ariely, _Predictably Irrational_ (2008), Chapter 2 wine-and-Social-Security-number experiment.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-02",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "The decoy effect (asymmetric dominance)",
+"heading": "2. The decoy effect (asymmetric dominance)",
+"definition": "A third option that is clearly worse than option B but not clearly worse than option A makes option B feel like the obvious choice.",
+"body": "**Canonical source:** Ariely's Economist subscription experiment, _Predictably Irrational_ Chapter 1. Joel Huber and Christopher Puto, 1982 formalisation.\n\n**One-line definition:** A third option that is clearly worse than option B but not clearly worse than option A makes option B feel like the obvious choice.\n\n**Where to use:** PDP three-tier visual decoy at single-SKU launch (a worse-cadence subscribe, a recommended-cadence subscribe, a one-time purchase with explicit \"no saving\" labelling). Later phases with additional SKUs become a true three-tier SKU ladder.\n\n**Where NOT to use:** Do not run a decoy that requires false claims. The one-time tier must genuinely lack the saving the subscription tier carries.",
+"tactics": [
+"decoy_effect"
+],
+"stages": [
+"pdp_pricing",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Ariely's Economist subscription experiment, _Predictably Irrational_ Chapter 1. Joel Huber and Christopher Puto, 1982 formalisation.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-03",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Loss aversion",
+"heading": "3. Loss aversion",
+"definition": "Frame the offer as \"what you will lose if you do not act\" and the same incentive becomes 2.25x more motivating than \"what you will gain if you act\".",
+"body": "**Canonical source:** Kahneman and Tversky's prospect theory, Econometrica 1979. Losses weighted approximately 2.25 times more heavily than equivalent gains.\n\n**One-line definition:** Frame the offer as \"what you will lose if you do not act\" and the same incentive becomes 2.25x more motivating than \"what you will gain if you act\".\n\n**Where to use:** Final-day urgency closer (walking-away language, real expiry). Cart abandon SMS with two or three loss axes (financial, time, opportunity). Post-signup \"reserved in your name for 48 hours\" framing.\n\n**Where NOT to use:** Avoid stacking too many loss frames on the same screen. The reader becomes resistant if loss is mentioned in three consecutive sentences. One loss per touchpoint, well placed.",
+"tactics": [
+"anchoring",
+"framing",
+"loss_aversion",
+"unity"
+],
+"stages": [
+"cart_abandon"
+],
+"vectors": [],
+"primary_source": "Kahneman and Tversky's prospect theory, Econometrica 1979. Losses weighted approximately 2.25 times more heavily than equivalent gains.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-04",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Default bias",
+"heading": "4. Default bias",
+"definition": "Whatever option is pre-selected for the user becomes the option most users actually choose.",
+"body": "**Canonical source:** Thaler and Sunstein, _Nudge_ (2008), Chapter 5. Organ-donation opt-in vs opt-out study showing ~70 percentage point difference.\n\n**One-line definition:** Whatever option is pre-selected for the user becomes the option most users actually choose.\n\n**Where to use:** PDP subscription tier as default selection. Email preference centre pre-selecting the sensible defaults rather than asking the user to opt into each stream individually.\n\n**Where NOT to use:** Where local consent law forbids pre-checked opt-in (e.g. UK PECR forbids pre-checked SMS opt-in at checkout). Default must be unchecked where required, then over-merchandised with good copy that earns the active opt-in. Check `00-foundations/regulatory-frames.md` for your jurisdiction.",
+"tactics": [
+"default_effect"
+],
+"stages": [
+"pdp_pricing",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Thaler and Sunstein, _Nudge_ (2008), Chapter 5. Organ-donation opt-in vs opt-out study showing ~70 percentage point difference.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-05",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Social proof",
+"heading": "5. Social proof",
+"definition": "The customer trusts a number, a name, or a story from a peer more than any claim from the brand itself.",
+"body": "**Canonical source:** Cialdini, _Influence_ (1984), Chapter 4. Asch conformity studies, 1951. Ariely's tip-jar starter-coins experiments, _Predictably Irrational_ Chapter 1.\n\n**One-line definition:** The customer trusts a number, a name, or a story from a peer more than any claim from the brand itself.\n\n**Where to use:** Structural-proof stack at pre-launch (third-party lab certification, regulatory registrations, transparent ingredient or component declaration). Founder credential transfer (a verifiable prior-industry track record as authority anchor). Review widget from launch onward, including the empty-state.\n\n**Where NOT to use:** Do not fake review counts or customer counts. A real small number beats a fake large number. Numbers without a verifiable source do not ship.",
+"tactics": [
+"anchoring",
+"authority",
+"social_proof"
+],
+"stages": [
+"founder_section",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_ (1984), Chapter 4. Asch conformity studies, 1951. Ariely's tip-jar starter-coins experiments, _Predictably Irrational_ Chapter 1.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-06",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Scarcity",
+"heading": "6. Scarcity",
+"definition": "Honest scarcity (limited stock, time-bound offer with a real deadline) increases urgency; dishonest scarcity (perpetual \"24 hours left\" countdowns) destroys trust over the customer lifetime.",
+"body": "**Canonical source:** Cialdini, _Influence_, Chapter 7. Brehm reactance theory, 1966. Ariely on honest scarcity in _The (Honest) Truth About Dishonesty_ (2012).\n\n**One-line definition:** Honest scarcity (limited stock, time-bound offer with a real deadline) increases urgency; dishonest scarcity (perpetual \"24 hours left\" countdowns) destroys trust over the customer lifetime.\n\n**Where to use:** Real production batch scarcity (\"First batch: N units. Next batch ships from [supplier] in [month].\" - based on actual production cadence). Real time-bound code expiry (signup code with a fixed window that actually expires).\n\n**Where NOT to use:** Banned: hero countdown timers that reset, \"only X left\" counters that never go to zero, \"selling fast\" badges with no underlying truth. See `07-anti-patterns/` for the regulatory exposure in your jurisdiction.",
+"tactics": [
+"authority",
+"reactance",
+"scarcity"
+],
+"stages": [
+"hero_landing",
+"retention",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_, Chapter 7. Brehm reactance theory, 1966. Ariely on honest scarcity in _The (Honest) Truth About Dishonesty_ (2012).",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-07",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "The endowment effect",
+"heading": "7. The endowment effect",
+"definition": "The moment something feels \"yours\", giving it up feels like losing a possession - even if you never paid for it.",
+"body": "**Canonical source:** Thaler, Kahneman and Knetsch's mug experiment, Journal of Political Economy 1990. Ariely's \"I, Mine\" chapter in _Predictably Irrational_.\n\n**One-line definition:** The moment something feels \"yours\", giving it up feels like losing a possession - even if you never paid for it.\n\n**Where to use:** Possessive framing throughout post-signup (\"your code\", \"your bonus is reserved\", \"your first box is queued\"). Win-state moments that explicitly transfer ownership of a code, bonus, or perk.\n\n**Where NOT to use:** Pre-signup. A bonus is \"the bonus\" until the customer has earned it through signup; only then does it become \"your bonus\".",
+"tactics": [
+"anchoring",
+"framing"
+],
+"stages": [],
+"vectors": [],
+"primary_source": "Thaler, Kahneman and Knetsch's mug experiment, Journal of Political Economy 1990. Ariely's \"I, Mine\" chapter in _Predictably Irrational_.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-08",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "The free-as-cue effect",
+"heading": "8. The free-as-cue effect",
+"definition": "The word \"free\" disproportionately attracts attention and reduces decision friction. A small free gift outperforms a much larger percentage discount.",
+"body": "**Canonical source:** Ariely, _Predictably Irrational_, Chapter 3 \"The Cost of Zero Cost\". Lindt Truffle / Hershey's Kiss experiment.\n\n**One-line definition:** The word \"free\" disproportionately attracts attention and reduces decision friction. A small free gift outperforms a much larger percentage discount.\n\n**Where to use:** Lander hero leading with \"Free [bonus] with your first [purchase]\" not \"Save X% on your first [purchase]\". Bonus itemised at retail value with strikethrough.\n\n**Where NOT to use:** Do not lead with free if the free thing is not yet genuinely allocated. Every \"free\" claim must trace to an actual budgeted line item.",
+"tactics": [],
+"stages": [
+"hero_landing"
+],
+"vectors": [],
+"primary_source": "Ariely, _Predictably Irrational_, Chapter 3 \"The Cost of Zero Cost\". Lindt Truffle / Hershey's Kiss experiment.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-09",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Mental accounting",
+"heading": "9. Mental accounting",
+"definition": "The customer's perceived cost depends entirely on which mental account they slot the purchase into.",
+"body": "**Canonical source:** Thaler, \"Mental Accounting Matters\", Journal of Behavioral Decision Making, 1999.\n\n**One-line definition:** The customer's perceived cost depends entirely on which mental account they slot the purchase into.\n\n**Where to use:** Three-axis price framing (per-box, per-use, per-week). Explicit mental-account substitution in the price-objection email (\"Slot it in your [appropriate budget category], not your [adjacent more-restrictive budget category]\").\n\n**Where NOT to use:** Reframing into a mental account that crosses one of your brand's regulatory walls (e.g. a food brand reframing into a \"wellness budget\" can push the brand toward a medicinal register). Check the reframing against `00-foundations/regulatory-frames.md`.",
+"tactics": [
+"framing"
+],
+"stages": [],
+"vectors": [],
+"primary_source": "Thaler, \"Mental Accounting Matters\", Journal of Behavioral Decision Making, 1999.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-10",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "The peak-end rule",
+"heading": "10. The peak-end rule",
+"definition": "The customer's memory of the funnel will be shaped almost entirely by its emotional peak (the win moment) and its end (the unboxing).",
+"body": "**Canonical source:** Kahneman et al, \"When more pain is preferred to less\", Psychological Science 1993. Kahneman, _Thinking Fast and Slow_ Chapter 35.\n\n**One-line definition:** The customer's memory of the funnel will be shaped almost entirely by its emotional peak (the win moment) and its end (the unboxing).\n\n**Where to use:** Peak amplification at the signup win-state. End amplification at unboxing (handwritten note, surprise bonus on top of the box, a tactile artefact designed as an end-experience object).\n\n**Where NOT to use:** Do not design the peak around an exclamation-mark or emoji burst if your voice rules forbid both. The peak in an editorial voice is a quiet, well-chosen line rather than effusive celebration.",
+"tactics": [
+"anchoring",
+"peak_end_rule"
+],
+"stages": [],
+"vectors": [],
+"primary_source": "Kahneman et al, \"When more pain is preferred to less\", Psychological Science 1993. Kahneman, _Thinking Fast and Slow_ Chapter 35.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-11",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Identity priming",
+"heading": "11. Identity priming",
+"definition": "The funnel works better when it gets the customer to identify themselves as a kind of person, not just buy a product.",
+"body": "**Canonical source:** Ariely, _The Upside of Irrationality_ (2010), Chapters 1 and 4. Self-signalling theory, Bodner and Prelec 2003.\n\n**One-line definition:** The funnel works better when it gets the customer to identify themselves as a kind of person, not just buy a product.\n\n**Where to use:** Capture popup identity question (\"Which of these sounds most like you tonight?\" with category-native options). Lander closing line that names the kind of person the brand is for. Founder note framing identity (family, craft, ritual, lifestyle - whatever the brand legitimately occupies).\n\n**Where NOT to use:** Identity priming must NOT cross one of your brand's regulatory walls. For example, a food brand should not prime medicinal identity (\"I am someone who supports my immune system\"). Keep identity priming inside your category's legitimate register.",
+"tactics": [
+"framing",
+"identity_priming"
+],
+"stages": [
+"founder_section",
+"hero_landing"
+],
+"vectors": [],
+"primary_source": "Ariely, _The Upside of Irrationality_ (2010), Chapters 1 and 4. Self-signalling theory, Bodner and Prelec 2003.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-12",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "The IKEA effect",
+"heading": "12. The IKEA effect",
+"definition": "The more the customer does to personalise or build the product, the more they value what they end up with.",
+"body": "**Canonical source:** Norton, Mochon and Ariely, Journal of Consumer Psychology 2012, \"The IKEA effect: When labor leads to love\".\n\n**One-line definition:** The more the customer does to personalise or build the product, the more they value what they end up with.\n\n**Where to use:** Lander \"build your profile\" three-question quiz. Personalised onboarding (\"Pick the three of these seven that you actually [use / cook / wear / etc.]\"). Month-3 retention email asking the customer to shape the next product iteration.\n\n**Where NOT to use:** Avoid making the customer build the product before the first purchase if the build complexity is high. Three questions is the right ceiling; seven questions is the wrong floor.",
+"tactics": [
+"ikea_effect"
+],
+"stages": [
+"hero_landing",
+"retention",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Norton, Mochon and Ariely, Journal of Consumer Psychology 2012, \"The IKEA effect: When labor leads to love\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-13",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Pain of paying",
+"heading": "13. Pain of paying",
+"definition": "Anything that smooths, hides, or pre-pays the moment of payment increases conversion. Anything that visibly extracts money decreases it.",
+"body": "**Canonical source:** Prelec and Loewenstein, \"The Red and the Black\", Marketing Science 1998. Ariely and Kreisler, _Dollars and Sense_ (2017), Chapter 9.\n\n**One-line definition:** Anything that smooths, hides, or pre-pays the moment of payment increases conversion. Anything that visibly extracts money decreases it.\n\n**Where to use:** One-tap wallet checkout (Apple Pay, Shop Pay, Google Pay) as primary buttons above card-entry. Tax-treatment framing as explicit pain-reduction signal where the brand has a genuine tax advantage to communicate. Subscription as \"charged on each shipment, not today\".\n\n**Where NOT to use:** Do not hide the price entirely. The pain of paying is reduced by smoothing the moment, not by concealing the cost. Concealment is likely to fall foul of consumer-protection law in your jurisdiction (check `00-foundations/regulatory-frames.md`).",
+"tactics": [
+"curiosity_gap",
+"framing"
+],
+"stages": [
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Prelec and Loewenstein, \"The Red and the Black\", Marketing Science 1998. Ariely and Kreisler, _Dollars and Sense_ (2017), Chapter 9.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-14",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Reciprocity priming",
+"heading": "14. Reciprocity priming",
+"definition": "A small unexpected gift, given before any ask, biases the recipient strongly toward saying yes to a subsequent request.",
+"body": "**Canonical source:** Cialdini, _Influence_, Chapter 2 \"Reciprocation\". Ariely's gift-economy work, _Predictably Irrational_ Chapter 4.\n\n**One-line definition:** A small unexpected gift, given before any ask, biases the recipient strongly toward saying yes to a subsequent request.\n\n**Where to use:** Personal founder DM video (asymmetric reciprocity - unscalable founder hours are exactly what makes it credible). Founder-story email opening with a tangible guide or asset given upfront. P.S. line linking to a permanently-free resource (\"The [guide] is always at [URL]. Free. No signup.\"). Unannounced unboxing bonus on top of the primary product.\n\n**Where NOT to use:** Do not stack reciprocity with high-pressure urgency in the same touchpoint. The gift moves the relationship into social-norms; mixing it with market-norm urgency cancels the effect.",
+"tactics": [
+"authority",
+"reciprocity"
+],
+"stages": [
+"founder_section",
+"social_tiktok",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_, Chapter 2 \"Reciprocation\". Ariely's gift-economy work, _Predictably Irrational_ Chapter 4.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-15",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Status quo bias",
+"heading": "15. Status quo bias",
+"definition": "Once the customer is on subscription, they will stay on subscription unless something actively dislodges them.",
+"body": "**Canonical source:** Samuelson and Zeckhauser, \"Status Quo Bias in Decision Making\", Journal of Risk and Uncertainty 1988.\n\n**One-line definition:** Once the customer is on subscription, they will stay on subscription unless something actively dislodges them.\n\n**Where to use:** Subscription default architecture. Anniversary email framing renewal as continuation (\"One box, done. The next one ships in N days.\"). Continuity gifts at predictable retention checkpoints (months 2 through 6).\n\n**Where NOT to use:** Do not use cancellation friction as a status-quo defence. Commit to one-click cancel. Continuity gifts and content do the retention work instead of friction.",
+"tactics": [
+"default_effect",
+"framing"
+],
+"stages": [
+"retention",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Samuelson and Zeckhauser, \"Status Quo Bias in Decision Making\", Journal of Risk and Uncertainty 1988.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-16",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Phantom commitment manufacturing",
+"heading": "16. Phantom commitment manufacturing",
+"definition": "Construct a phantom commitment state - \"your cart\", \"your box\", \"your reserved code\" - that exploits memory uncertainty, status-quo verbs (\"continue\"), and foot-in-the-door bridging to make the user feel they have already committed when they have not.",
+"body": "**Canonical source:** Compound mechanic. Closest single sources: Freedman and Fraser foot-in-the-door, Journal of Personality and Social Psychology 1966. Cialdini commitment-and-consistency, _Influence_ Chapter 3. Ariely confabulation experiments, _Predictably Irrational_ Chapter 5.\n\n**One-line definition:** Construct a phantom commitment state - \"your cart\", \"your box\", \"your reserved code\" - that exploits memory uncertainty, status-quo verbs (\"continue\"), and foot-in-the-door bridging to make the user feel they have already committed when they have not.\n\n**Where to use:** ONLY via a transparency-engineered variant where the phantom-state attaches to things the brand genuinely has reserved (the code, the discount, the bonus), never to a fictional cart. See `02-funnel-architecture/cart-abandon-cascade.md` and the relevant `06-decisions/` record for the brand-safe implementation.\n\n**Where NOT to use:** Direct copy of a competitor's \"Your Cart\" subject line when no cart actually exists. This is likely to breach consumer-protection law on misleading commercial practices in most jurisdictions. The mechanism is too valuable to skip; the literal deceptive copy is too exposed to use.\n\n## The six-lever cocktail (a phantom-commitment hero case)\n\nWhen a brand manufactures a phantom-commitment moment well, the cocktail typically stacks six BE principles in a single 60-90 word email:\n\n1. Endowment via possessive (\"Your [thing]\")\n2. Loss aversion via incompleteness (\"Just one step left!\")",
+"tactics": [
+"anchoring",
+"authority",
+"commitment_consistency",
+"costly_signaling",
+"curiosity_gap",
+"loss_aversion",
+"reciprocity"
+],
+"stages": [
+"cart_abandon",
+"email_subject",
+"hero_landing",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Compound mechanic. Closest single sources: Freedman and Fraser foot-in-the-door, Journal of Personality and Social Psychology 1966. Cialdini commitment-and-consistency, _Influence_ Chapter 3. Ariely confabulation experiments, _Predictably Irrational_ Chapter 5.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-01",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Tactical Empathy",
+"heading": "1. Tactical Empathy",
+"definition": "Deliberately understanding the counterpart's feelings in the moment, including what is behind them, and verbalising it back. Not sympathy, not agreement.",
+"body": "**Canon reference:** Voss, NSTD Chapter 3. The foundational concept that runs through every other tactic.\n\n**One-line definition:** Deliberately understanding the counterpart's feelings in the moment, including what is behind them, and verbalising it back. Not sympathy, not agreement.\n\n**Where to use:** Capture popup hero (\"It seems like you are mid-scroll and not in the mood for a popup.\"). Problem-naming email opener (the lived-experience label). Price-objection email opener (the deeper \"burned before\" frame, not just the price reaction). Cart abandonment SMS first touch (\"It looks like something pulled you away mid-checkout\").\n\n**Where NOT to use:** Transactional emails. Order confirmations and operational notifications should lead with operational fact, not empathy.",
+"tactics": [],
+"stages": [
+"cart_abandon",
+"hero_landing",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 3. The foundational concept that runs through every other tactic.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-02",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Mirroring",
+"heading": "2. Mirroring",
+"definition": "Repeat the most loaded 1-3 words of what they just said, with question intonation, then shut up.",
+"body": "**Canon reference:** Voss, NSTD Chapter 2. Repeating the last 1-3 words with upward inflection.\n\n**One-line definition:** Repeat the most loaded 1-3 words of what they just said, with question intonation, then shut up.\n\n**Where to use:** SMS reply auto-handler when the customer offers an objection. DM thread off-topic replies. Channel-specific reply protocols when the user replies with anything unexpected.\n\n**Where NOT to use:** Broadcast emails and SMS. Mirroring requires the user to have said something first.",
+"tactics": [
+"mirroring"
+],
+"stages": [],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 2. Repeating the last 1-3 words with upward inflection.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-03",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Labelling",
+"heading": "3. Labelling",
+"definition": "Verbally name the emotion or dynamic you observe in your counterpart, always starting with \"It seems / sounds / looks like\".",
+"body": "**Canon reference:** Voss, NSTD Chapter 3. \"It seems like... / It sounds like... / It looks like...\" openers.\n\n**One-line definition:** Verbally name the emotion or dynamic you observe in your counterpart, always starting with \"It seems / sounds / looks like\".\n\n**Where to use:** Email opening sentences (60-75% of welcome flow emails should open with a label per the Voss email adapter). Subject lines (label-as-subject pattern). Cart abandonment SMS second touch (\"It looks like the second-thought after almost-clicking is usually...\").\n\n**Where NOT to use:** Operational confirmations. A transactional code delivery does not need a label.",
+"tactics": [],
+"stages": [
+"cart_abandon",
+"email_subject",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 3. \"It seems like... / It sounds like... / It looks like...\" openers.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-04",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Accusation Audit",
+"heading": "4. Accusation Audit",
+"definition": "List every negative thing the counterpart could possibly think about you, name them out loud before they raise them.",
+"body": "**Canon reference:** Voss, NSTD Chapter 3 and MasterClass.\n\n**One-line definition:** List every negative thing the counterpart could possibly think about you, name them out loud before they raise them.\n\n**Where to use:** Founder-story email opener (stacked 3-5 audits of the most likely customer suspicions - no credential, no celebrity ambassador, no traditional pedigree, etc.). Price-objection email (compound audit naming the three real objections - previous bad experience, status-quo alternative, partner-veto). Paid lander advertorial opener.\n\n**Where NOT to use:** Single-line audits. The Voss-canonical pattern is 3-5 negatives stacked in one breath. One-line audits read soft.",
+"tactics": [
+"halo_effect"
+],
+"stages": [
+"founder_section",
+"hero_landing"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 3 and MasterClass.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-05",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "No-Oriented Questions",
+"heading": "5. No-Oriented Questions",
+"definition": "People feel safer saying no than yes. Reframe yes-questions into no-questions.",
+"body": "**Canon reference:** Voss, NSTD Chapter 4. \"Yes is a commitment; no is a safeguard.\"\n\n**One-line definition:** People feel safer saying no than yes. Reframe yes-questions into no-questions.\n\n**Where to use:** Urgency subject line (\"Should I let your discount expire tonight?\" beats \"Your discount ends tonight\"). \"Magic email\" subject (\"Have you decided this is not for you?\"). Cart abandonment SMS final touch (\"Would it be ridiculous to grab the box before the code releases at midnight?\"). Capture popup CTA (\"Any reason not to [try it]?\"). Opt-down line (\"Would you object to hearing from us only once a quarter?\").\n\n**Where NOT to use:** Yes-oriented questions and CTAs are banned per `07-anti-patterns/`. They trigger commitment-fatigue refusal.",
+"tactics": [
+"commitment_consistency"
+],
+"stages": [
+"cart_abandon",
+"email_subject"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 4. \"Yes is a commitment; no is a safeguard.\"",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-06",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "\"That's Right\" Elicitation",
+"heading": "6. \"That's Right\" Elicitation",
+"definition": "Build to \"that's right\" via a summary that paraphrases the counterpart's position plus labels their emotions, in your words.",
+"body": "**Canon reference:** Voss, NSTD Chapter 5.\n\n**One-line definition:** Build to \"that's right\" via a summary that paraphrases the counterpart's position plus labels their emotions, in your words.\n\n**Where to use:** Future-pacing email (a seven-day visualisation that summarises the customer's lived week). Price-objection email closer (\"Let me see if I have the picture right...\"). Problem-naming email close (\"Let me know if I have read this wrong - is the problem actually [X], or is it something else?\").\n\n**Where NOT to use:** Performative \"that's right\" without inviting correction. The summary must include a no-oriented confirmation question or it is brand-monologue, not negotiation.",
+"tactics": [],
+"stages": [
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 5.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-07",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Calibrated Questions (What/How)",
+"heading": "7. Calibrated Questions (What/How)",
+"definition": "Open-ended \"How\" / \"What\" questions that force the counterpart to think and that put a problem on their side of the table.",
+"body": "**Canon reference:** Voss, NSTD Chapter 7. \"Successful negotiation involves getting your counterpart to suggest your solution himself.\"\n\n**One-line definition:** Open-ended \"How\" / \"What\" questions that force the counterpart to think and that put a problem on their side of the table.\n\n**Where to use:** Problem-naming email close (\"What is the [thing] you are most [frustrated / tired / stuck] with?\"). Onboarding email close (\"How does this [plan] look against what you are already doing this week?\"). Price-objection email close (\"How would your [domain] change if [the underlying problem] actually got solved?\"). DM thread (\"What were you hoping to find out before you ordered?\").\n\n**Where NOT to use:** \"Why\" as an interrogative is banned per `07-anti-patterns/`. \"Why did you sign up?\" triggers defensiveness. Replace with \"What brought you here?\"",
+"tactics": [],
+"stages": [
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 7. \"Successful negotiation involves getting your counterpart to suggest your solution himself.\"",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-08",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The Rule of Three",
+"heading": "8. The Rule of Three",
+"definition": "Get the counterpart to agree to the same thing three times, in three different ways, in the same conversation. Counters counterfeit yeses.",
+"body": "**Canon reference:** Voss, NSTD Chapter 8.\n\n**One-line definition:** Get the counterpart to agree to the same thing three times, in three different ways, in the same conversation. Counters counterfeit yeses.\n\n**Where to use:** 3-stage confirmation arc across three separate emails on the same underlying commitment. Post-purchase order confirmation third-leg (\"How would you like us to remind you when you are halfway through?\").\n\n**Where NOT to use:** Within a single email. Rule of Three operates across the welcome sequence, not within one send.",
+"tactics": [
+"commitment_consistency"
+],
+"stages": [
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 8.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-09",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Bending Reality (Loss Aversion Framing)",
+"heading": "9. Bending Reality (Loss Aversion Framing)",
+"definition": "People weight losses ~2x more than equivalent gains. Anchor on loss before talking gains.",
+"body": "**Canon reference:** Voss, NSTD Chapter 6. Loss-framed scarcity outperforms gain-framed scarcity by approximately 2x.\n\n**One-line definition:** People weight losses ~2x more than equivalent gains. Anchor on loss before talking gains.\n\n**Where to use:** Onboarding email with a paired loss-frame (\"The week with vs the week without\"). Subscription pricing copy reframed as a recurring loss avoided (\"Every box ordered one-time is [the per-unit gap] the brand cannot give back to you\"). Cart abandonment SMS with two loss axes (code expiry + bonus release).\n\n**Where NOT to use:** Discount-loss as the only loss frame. Voss-deeper version names two or three loss axes (financial, status, time, identity, opportunity).",
+"tactics": [
+"anchoring",
+"framing",
+"identity_priming",
+"loss_aversion",
+"scarcity",
+"unity"
+],
+"stages": [
+"cart_abandon",
+"pdp_pricing",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 6. Loss-framed scarcity outperforms gain-framed scarcity by approximately 2x.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-10",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Anchoring",
+"heading": "10. Anchoring",
+"definition": "The first number on the table sets the reference for everything that follows. Use ranges over points in writing.",
+"body": "**Canon reference:** Voss, NSTD Chapters 6 and 9. Anchor with ranges, odd non-round numbers, and constraints.\n\n**One-line definition:** The first number on the table sets the reference for everything that follows. Use ranges over points in writing.\n\n**Where to use:** Price-objection email market-range anchor (\"Premium [category] typically lands between [low] and [high] per month for a household of [size]\"). PDP and checkout market-range anchor above the first-box price.\n\n**Where NOT to use:** Single-point anchors when a range is available. Voss-canonical anchors are ranges; ship a range whenever the data supports one.",
+"tactics": [
+"anchoring"
+],
+"stages": [
+"pdp_pricing",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapters 6 and 9. Anchor with ranges, odd non-round numbers, and constraints.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-11",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The F-Word: \"Fairness\"",
+"heading": "11. The F-Word: \"Fairness\"",
+"definition": "The word \"fair\" is the most emotionally loaded word in negotiation. Never use it reactively; only proactively. Substitute \"real\" / \"honest\" / \"straight\" in brand voice.",
+"body": "**Canon reference:** Voss, NSTD Chapter 6.\n\n**One-line definition:** The word \"fair\" is the most emotionally loaded word in negotiation. Never use it reactively; only proactively. Substitute \"real\" / \"honest\" / \"straight\" in brand voice.\n\n**Where to use:** Proactive deployment in the founder email (\"If at any point any of this stops feeling real to you - the price, the claim, the founder story - tell me. I will not argue.\"). Graceful exit close (\"When the time is right, it will feel real. If it never does, that is a real answer too.\").\n\n**Where NOT to use:** The word \"fair\" itself is banned per `07-anti-patterns/`. Reactive use (\"we offer a fair price\") triggers the negotiator's reflex Voss documents at length.",
+"tactics": [],
+"stages": [
+"founder_section"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 6.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-12",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Time as Leverage / Deadlines",
+"heading": "12. Time as Leverage / Deadlines",
+"definition": "Use deadlines structurally (system / supply) rather than personally (we / I need). Never bluff a deadline that is not real.",
+"body": "**Canon reference:** Voss, NSTD Chapter 6. Deadlines are mostly invented. Never reveal yours.\n\n**One-line definition:** Use deadlines structurally (system / supply) rather than personally (we / I need). Never bluff a deadline that is not real.\n\n**Where to use:** Real production batch deadline (\"There is one other deadline. The current batch finishes in [N weeks]. After that, the next run is [date].\"). Cart abandonment SMS final touch with real supply deadline (only if supply is genuinely tight).\n\n**Where NOT to use:** Time-only urgency with manufactured deadlines. \"Sale ends at midnight\" when the sale will run tomorrow. Exposed under consumer-protection law in most jurisdictions. The code expiry must actually fire when stated, or remove the expiry language.",
+"tactics": [],
+"stages": [
+"cart_abandon"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 6. Deadlines are mostly invented. Never reveal yours.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-13",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The Late-Night FM DJ Voice",
+"heading": "13. The Late-Night FM DJ Voice",
+"definition": "Calm, low, authoritative. Reads in writing as short sentences with period-terminated rhythm.",
+"body": "**Canon reference:** Voss, NSTD Chapter 2. Calm, slow, downward inflection. In writing: short sentences, plain words, periods.\n\n**One-line definition:** Calm, low, authoritative. Reads in writing as short sentences with period-terminated rhythm.\n\n**Where to use:** Transactional emails. Urgency emails (DJ voice prevents urgency from reading as sales-panic). All subject lines.\n\n**Where NOT to use:** Tonal drift into hype phrases or exclamations. Hype registers as panic. DJ voice cuts hype to numbers.",
+"tactics": [],
+"stages": [
+"email_subject"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 2. Calm, slow, downward inflection. In writing: short sentences, plain words, periods.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-14",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The 7-38-55 Rule (Writing Limit)",
+"heading": "14. The 7-38-55 Rule (Writing Limit)",
+"definition": "In writing, you lose 93% of the channel. Compensate with rhythm, line breaks, paragraph length, label placement. Watch for written analogues of incongruence: reply latency, length shift, pronoun shift.",
+"body": "**Canon reference:** Voss, NSTD Chapter 8. 7% words, 38% tone, 55% body language.\n\n**One-line definition:** In writing, you lose 93% of the channel. Compensate with rhythm, line breaks, paragraph length, label placement. Watch for written analogues of incongruence: reply latency, length shift, pronoun shift.\n\n**Where to use:** Reply protocol detection rule in DM and SMS. Short reply at long latency triggers calibrated-question follow-up, not sales-close.\n\n**Where NOT to use:** As a content rule. 7-38-55 is a detection meta-principle, not a copy template.",
+"tactics": [],
+"stages": [
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 8. 7% words, 38% tone, 55% body language.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-15",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The Pinocchio Effect",
+"heading": "15. The Pinocchio Effect",
+"definition": "Liars use more words, complex sentences, third-person pronouns, and stack disclaimers.",
+"body": "**Canon reference:** Voss, NSTD Chapter 8.\n\n**One-line definition:** Liars use more words, complex sentences, third-person pronouns, and stack disclaimers.\n\n**Where to use:** As a self-audit. The brand's own copy can fail Pinocchio-tests if it overcompensates. Avoid hedges (\"to be honest\", \"frankly\", \"to be clear\") - they read as Pinocchio-stack indicators.\n\n**Where NOT to use:** As an offensive tactic. The brand does not deploy Pinocchio detection against customers in any way the customer would notice.",
+"tactics": [],
+"stages": [],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 8.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-16",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The Pronoun Test",
+"heading": "16. The Pronoun Test",
+"definition": "Decision-makers hide their authority behind a collective; gatekeepers perform authority with \"I\".",
+"body": "**Canon reference:** Voss, NSTD Chapter 8. More \"I\" = less power; more \"we/they\" = more power and influence.\n\n**One-line definition:** Decision-makers hide their authority behind a collective; gatekeepers perform authority with \"I\".\n\n**Where to use:** First-person singular (\"I\") for the founder voice in founder-story emails, price-objection closer, urgency closer, sign-off, and P.S. lines. First-person plural (\"we\") for the brand collective in supply-chain claims, lab-testing claims, operational language.\n\n**Where NOT to use:** Bureaucratic \"we\" or \"the team\" where the founder's voice would carry more authority. At early stage the founder anchor is usually stronger than the brand collective.",
+"tactics": [
+"anchoring",
+"authority"
+],
+"stages": [
+"founder_section",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 8. More \"I\" = less power; more \"we/they\" = more power and influence.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-17",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The Bargaining Style Triad",
+"heading": "17. The Bargaining Style Triad",
+"definition": "Three negotiator personality types. Adapt or fail.",
+"body": "**Canon reference:** Voss, NSTD Chapter 9. Analyst / Accommodator / Assertive.\n\n**One-line definition:** Three negotiator personality types. Adapt or fail.\n\n**Where to use:** Day-1 welcome email variant routing. Analyst variant leads with lab / ingredient / spec credentials. Accommodator variant leads with founder-story content abbreviated, family/community framing. Assertive variant leads with price-objection content abbreviated, hard maths.\n\n**Where NOT to use:** A single welcome email to all signups. The Voss-coded version routes by signal (CTA clicked on landing, dwell-time, scroll depth, time of day). Even without a quiz, the first-touch signal is enough for a coarse Triad-route.",
+"tactics": [
+"authority",
+"framing",
+"unity"
+],
+"stages": [
+"founder_section",
+"hero_landing",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 9. Analyst / Accommodator / Assertive.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-18",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The Ackerman Method",
+"heading": "18. The Ackerman Method",
+"definition": "Four-step bargaining sequence with decreasing increments. Used when you are the one offering.",
+"body": "**Canon reference:** Voss, NSTD Chapter 9.\n\n**One-line definition:** Four-step bargaining sequence with decreasing increments. Used when you are the one offering.\n\n**Where to use:** Cart-abandonment cascade restructured as non-monetary-kicker Ackerman. Touch 1 holds the code with a label. Touch 2 calibrated question, no new offer. Touch 3 non-monetary kicker (a bonus item as throw-in, not extra discount). Touch 4 Magic Email no-oriented closer.\n\n**Where NOT to use:** Stacking additional monetary discounts in cart-abandonment. The Ackerman version protects price integrity via non-monetary throw-ins.",
+"tactics": [],
+"stages": [
+"cart_abandon",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 9.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-19",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Black Swans",
+"heading": "19. Black Swans",
+"definition": "Hidden information that, if surfaced, transforms the negotiation. Every deal has at least three.",
+"body": "**Canon reference:** Voss, NSTD Chapter 10.\n\n**One-line definition:** Hidden information that, if surfaced, transforms the negotiation. Every deal has at least three.\n\n**Where to use:** Problem-naming email close Black Swan question (\"What would have to be true for [the brand's offer] to be an easy yes for you?\"). Post-purchase T+24h Black Swan (\"What is the thing about [the domain] that we have not addressed?\").\n\n**Where NOT to use:** Pre-signup. Black Swan questions assume relationship; cold visitors do not yet have the trust budget to answer.",
+"tactics": [],
+"stages": [
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 10.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-20",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "The Three Types of Leverage",
+"heading": "20. The Three Types of Leverage",
+"definition": "Three categories of leverage. Normative is the most underused in writing and the most powerful.",
+"body": "**Canon reference:** Voss, NSTD Chapter 10. Positive (give), Negative (cost-label), Normative (their own words).\n\n**One-line definition:** Three categories of leverage. Normative is the most underused in writing and the most powerful.\n\n**Where to use:** Build a signup-intent capture in the popup (\"Which of these brought you here?\"). Quote it back in the urgency email (\"You told us [their answer] is what brought you here.\"). Quarterly \"you said\" check-in for retention. Paid lander cultural-norm normative leverage (a true statement about long-standing behaviour in the audience's category).\n\n**Where NOT to use:** Without the customer's prior statement. Normative leverage requires the customer to have stated something the brand can hold them to.",
+"tactics": [],
+"stages": [
+"hero_landing",
+"retention",
+"subscription_tier",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Voss, NSTD Chapter 10. Positive (give), Negative (cost-label), Normative (their own words).",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "NS-21",
+"school": "nstd_voss",
+"school_label": "NSTD / Voss canon",
+"source_file": "nstd-tactics.md",
+"name": "Voss's Magic Email",
+"heading": "21. Voss's Magic Email",
+"definition": "Subject and body are the same no-oriented question. \"Have you given up on this project?\"",
+"body": "**Canon reference:** Voss canon - directly published by Voss on LinkedIn and the Black Swan blog.\n\n**One-line definition:** Subject and body are the same no-oriented question. \"Have you given up on this project?\"\n\n**Where to use:** T+30 days post-welcome-flow win-back (\"Have you decided [the brand] is not for you?\"). T+90 days quarterly re-engagement (\"Have you moved on from this?\").\n\n**Where NOT to use:** More than once per customer per quarter. The Magic Email loses power if overused. Voss documents this caution explicitly.\n\n## Supplementary tactics flagged from the Negotiation 9\n\n**Dynamic Silence.** Voss specifies a 4+ second pause after labels and mirrors. In writing, the analogue is reply pacing. The brand that replies in 90 seconds reads as desperate. The brand that replies in 4-6 hours reads as deliberate. Voss-coded rule: never reply within 90 minutes of receipt for substantive customer messages; aim for the 4-24 hour window.\n\n**Encouragers.** \"Mm-hmm\", \"Go on\", \"Tell me more\" - signals that the brand is listening. In writing: \"Keep going.\" / \"What else?\" / \"Tell me more about that.\" When a customer replies with an objection or a question, the encouragement-line opener doubles reply rates.\n\n## What this file does not do\n\n- It does not contain brand-specific copy upgrades. Those live in `02-funnel-architecture/` and per-touchpoint files in `03-touchpoint-copy/`.\n- It does not contain anti-patterns. Those live in `07-anti-patterns/`.\n- It does not contain unresolved op",
+"tactics": [
+"curiosity_gap",
+"mirroring"
+],
+"stages": [
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Voss canon - directly published by Voss on LinkedIn and the Black Swan blog.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-01",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Reciprocity",
+"heading": "1. Reciprocity",
+"definition": "Humans feel obliged to repay what another person has provided. Pre-emptive giving creates non-symmetric obligation.",
+"body": "**Canon reference:** Cialdini, _Influence_ (1984), Chapter 2 \"Reciprocation: The Old Give and Take\".\n\n**One-line definition:** Humans feel obliged to repay what another person has provided. Pre-emptive giving creates non-symmetric obligation.\n\n**Where to use:** Move the most expensive reciprocation gift from email capture to first-order cart (e.g. a bonus item attached to the paid order, not the signup). Itemise unlock-able bonuses at retail value with strikethrough. Asymmetric founder-video DM or personalised note is the strongest reciprocation lever - personalised, unexpected gifts trigger reciprocation roughly 3x more strongly than equivalent-cost generic gifts per the Hare Krishna flower study.\n\n**Where NOT to use:** Discount as the primary reciprocation lever. A signup percent-off code is the weakest reciprocation form - it reads as a vendor offer, not a gift.",
+"tactics": [
+"authority",
+"reciprocity"
+],
+"stages": [
+"founder_section",
+"social_tiktok"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_ (1984), Chapter 2 \"Reciprocation: The Old Give and Take\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-02",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Commitment and Consistency",
+"heading": "2. Commitment and Consistency",
+"definition": "Once a person has taken a small, public, or written action, they will work to remain consistent with it - and will accept a much larger downstream request that follows the consistency line.",
+"body": "**Canon reference:** Cialdini, _Influence_, Chapter 3 \"Commitment and Consistency: Hobgoblins of the Mind\".\n\n**One-line definition:** Once a person has taken a small, public, or written action, they will work to remain consistent with it - and will accept a much larger downstream request that follows the consistency line.\n\n**Where to use:** Single zero-stakes commitment between popup reveal and email field (one yes/no question with a single \"Yes\" button, written in the customer's lived language). Social-frame on subscription commit (\"Most subscribers start with [tier]. Save X%.\"). Standard four-clause trust line covering pause / cancel / guarantee / regulatory credential.\n\n**Where NOT to use:** Multi-step commitments that introduce friction at the popup. One micro-commitment is the right ceiling; three is the wrong floor.",
+"tactics": [
+"authority",
+"commitment_consistency"
+],
+"stages": [
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_, Chapter 3 \"Commitment and Consistency: Hobgoblins of the Mind\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-03",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Social Proof",
+"heading": "3. Social Proof",
+"definition": "People decide what to do by watching what similar others do. Strength of effect rises with similarity, uncertainty, and quantity.",
+"body": "**Canon reference:** Cialdini, _Influence_, Chapter 4 \"Social Proof: Truths Are Us\".\n\n**One-line definition:** People decide what to do by watching what similar others do. Strength of effect rises with similarity, uncertainty, and quantity.\n\n**Where to use:** Do not fake social proof - replace with structural credentials until reviews arrive. Three-stat trust band combining a lab/certification credential, a regulatory credential, and a transparency credential. Waitlist count framed as similar-others not total count (only ship the number if accurate). Review widget on PDP from day one even at zero reviews - the empty state is honest.\n\n**Where NOT to use:** Fabricated review counts or customer counts. Cialdini Chapter 4 explicit: fabricated consensus collapses customer trust on first contradiction. Pre-launch counts are too small a denominator to credibly support a large round-number \"customers\" line.",
+"tactics": [
+"authority",
+"social_proof"
+],
+"stages": [
+"pdp_pricing",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_, Chapter 4 \"Social Proof: Truths Are Us\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-04",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Liking",
+"heading": "4. Liking",
+"definition": "We comply with requests from people we like. Liking rises from physical attractiveness, similarity, compliments, association, and contact-and-cooperation.",
+"body": "**Canon reference:** Cialdini, _Influence_, Chapter 5 \"Liking: The Friendly Thief\".\n\n**One-line definition:** We comply with requests from people we like. Liking rises from physical attractiveness, similarity, compliments, association, and contact-and-cooperation.\n\n**Where to use:** One high-warmth moment is more persuasive than a stream of medium-warmth moments. Drop a single human anecdote (founder, family member, customer) into one welcome-flow email and never reuse it. Founder voice in DMs reads looser than founder voice in email - slight informality cues real-human presence. Editorial-cadence voice as an in-group signal for the target audience.\n\n**Where NOT to use:** Repeated use of family members as liking anchors cheapens them. Any on-camera or named-personality use must respect each individual's consent and your founder/co-founder visibility policy (some founders deliberately stay off-camera; see `00-foundations/founder-stories.md`).",
+"tactics": [
+"anchoring",
+"authority",
+"liking",
+"mere_exposure",
+"unity"
+],
+"stages": [
+"founder_section",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_, Chapter 5 \"Liking: The Friendly Thief\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-05",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Authority",
+"heading": "5. Authority",
+"definition": "People defer to experts (or symbols of expertise: titles, uniforms, trappings) even when the deference is unwarranted.",
+"body": "**Canon reference:** Cialdini, _Influence_, Chapter 6 \"Authority: Directed Deference\".\n\n**One-line definition:** People defer to experts (or symbols of expertise: titles, uniforms, trappings) even when the deference is unwarranted.\n\n**Where to use:** Stack three authorities not one. (1) A category-non-adjacent founder credential the customer can verify (a public track record from a prior industry). (2) A third-party lab or certification report - the trapping-of-authority, the lab's name does the work. (3) A cultural or craft-lineage authority appropriate to the category. Publish the actual lab report PDF or certification on a `/quality` (or equivalent) page - the act of publishing IS the authority.\n\n**Where NOT to use:** Generic authority claims (\"award-winning\", \"voted best by [unspecified]\", \"trusted by [unspecified] chefs\") without naming the magazine, award, or chefs. Reads as filler. Wait until named partners and real awards before deploying these registers.",
+"tactics": [
+"authority"
+],
+"stages": [
+"founder_section",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_, Chapter 6 \"Authority: Directed Deference\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-06",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Scarcity",
+"heading": "6. Scarcity",
+"definition": "Opportunities seem more valuable when their availability is limited. Strongest when recently introduced, created by competition with others, or emphasises loss rather than gain.",
+"body": "**Canon reference:** Cialdini, _Influence_, Chapter 7 \"Scarcity: The Rule of the Few\".\n\n**One-line definition:** Opportunities seem more valuable when their availability is limited. Strongest when recently introduced, created by competition with others, or emphasises loss rather than gain.\n\n**Where to use:** Shift dominant scarcity mode from time to eligibility. Eligibility-based scarcity (\"Code is for new customers only. Yours for 48 hours.\") combined with a hard time fence. Eligibility-only scarcity on launch bonuses (\"Bonus ships with first orders only - never as a top-up.\"). Loss-framing on the final urgency email and SMS (per Cialdini ch. 7 loss-framed scarcity outperforms gain-framed by ~2x). Founder-time scarcity as honest lever: replies go straight to the founder until the business outgrows that.\n\n**Where NOT to use:** Banned per `07-anti-patterns/`: \"Selling fast\", \"limited stock\", \"only X left\" - whenever the claim is not literally true at that timestamp. One observed fake-scarcity move can collapse a year of trust building. Real production batch scarcity (a verified count of units in the current run) is acceptable when stated as fact.",
+"tactics": [
+"authority",
+"framing",
+"loss_aversion",
+"scarcity"
+],
+"stages": [
+"founder_section",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Influence_, Chapter 7 \"Scarcity: The Rule of the Few\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-07",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Unity",
+"heading": "7. Unity",
+"definition": "We are more persuaded by those we share a \"we\" identity with - kinship, locality, shared category - than by those we merely like.",
+"body": "**Canon reference:** Cialdini, _Pre-Suasion_ (2016), Chapters 11 and 12. Seventh principle, added after _Influence_.\n\n**One-line definition:** We are more persuaded by those we share a \"we\" identity with - kinship, locality, shared category - than by those we merely like.\n\n**Where to use:** Pick one unity name and use it consistently. The strongest unity names tend to be brand-name portmanteaus (community-identity word built from the brand name plus a suffix like -nauts, -aners, -ites, -ers). The name should be diet/lifestyle-neutral, applicable to every ICP archetype. Wire into specific moments: footer newsletter form, first welcome email subject, order confirmation page, subscription confirmation. Anchor a synchronous shared action (a Sunday ritual, a weekly drop, a monthly recipe) to give the unity name something to actually do (per Cialdini _Pre-Suasion_ ch. 12).\n\n**Where NOT to use:** \"Community\" - overused, drained of meaning in current DTC. \"Members\" - reads as supplement-coded in food / lifestyle categories.\n\n## Sutherland's seven moves\n\n[SOURCE: Rory Sutherland, _Alchemy_ (2019) and Spectator columns.]",
+"tactics": [
+"anchoring",
+"authority",
+"identity_priming",
+"unity"
+],
+"stages": [
+"email_subject",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Pre-Suasion_ (2016), Chapters 11 and 12. Seventh principle, added after _Influence_.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-08",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Context effects",
+"heading": "2.1 Context effects",
+"definition": "The same product feels premium or budget depending on the context it arrives in - the menu it is listed beside, the typography it is set in, the box it is posted in.",
+"body": "**Canon reference:** Sutherland, _Alchemy_, Chapters 2 and 4.\n\n**One-line definition:** The same product feels premium or budget depending on the context it arrives in - the menu it is listed beside, the typography it is set in, the box it is posted in.\n\n**Where to use:** Unboxing as ritual not logistic. A single sensory line in the post-purchase confirmation email (\"Open the box on the counter. The first thing you'll smell is...\"). Bonus item on top of the primary product, face-up. Box artwork register matched to the premium-editorial quadrant of your category, not the mass-market quadrant.\n\n**Where NOT to use:** Generic packaging \"premium\" claims without the context to back them. The premium signal is in the typography, the box weight, the handwritten note - not in the word \"premium\".",
+"tactics": [],
+"stages": [],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_, Chapters 2 and 4.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-09",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Status signalling at low cost",
+"heading": "2.2 Status signalling at low cost",
+"definition": "Premium signals do not require premium materials; they require deliberate constraint and visible costly-to-fake markers.",
+"body": "**Canon reference:** Sutherland, _Alchemy_, throughout.\n\n**One-line definition:** Premium signals do not require premium materials; they require deliberate constraint and visible costly-to-fake markers.\n\n**Where to use:** Treat the unboxing photo as a deliberate signal-generation event. The box itself functions as countertop furniture, not pantry storage. A small ritual-object (a card, magnet, accessory, or display piece) that triggers display behaviour and thereby word-of-mouth.\n\n**Where NOT to use:** Status signals copied from an adjacent but mismatched category (e.g. supplement-register colour blocks and shaker bottles for a food brand). Match the status signals to your actual category register.",
+"tactics": [],
+"stages": [],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_, throughout.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-10",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Signal-to-cost ratio",
+"heading": "2.3 Signal-to-cost ratio",
+"definition": "Costly signals build trust because they cannot be faked cheaply. Brands undervalue these because they are not directly attributable to conversion.",
+"body": "**Canon reference:** Sutherland, _Alchemy_, Chapter 3.\n\n**One-line definition:** Costly signals build trust because they cannot be faked cheaply. Brands undervalue these because they are not directly attributable to conversion.\n\n**Where to use:** Published third-party lab tests. Founder personal video DM responses (cost is unscalable founder hours, which is exactly what makes it credible). Printed and posted bonuses, not PDF downloads. Strategic absence from a category-default channel where the brand has chosen not to compete.\n\n**Where NOT to use:** Signals that look costly but can be faked cheaply (generic stock photography, AI-generated testimonials). The cost signals must be operationally real.",
+"tactics": [
+"costly_signaling",
+"default_effect"
+],
+"stages": [
+"founder_section",
+"social_tiktok",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_, Chapter 3.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-11",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Reverse-engineered placebo",
+"heading": "2.4 Reverse-engineered placebo",
+"definition": "Placebo is not a trick; it is real value the customer experiences. Brands should deliberately construct rituals that amplify the actual effect of the product.",
+"body": "**Canon reference:** Sutherland, _Alchemy_, Chapter 8.\n\n**One-line definition:** Placebo is not a trick; it is real value the customer experiences. Brands should deliberately construct rituals that amplify the actual effect of the product.\n\n**Where to use:** Sensory line in the welcome flow describing the actual sensory experience of first use (\"The smell when you open the first... is...\"). Ritual of opening a fresh unit for each use (vs. a generic container behaviour). Rituals that anchor the product to a specific time, room, or behaviour.\n\n**Where NOT to use:** Body-system or health-outcome placebo framing in categories where regulatory walls forbid medicinal claims. Sensory and craft placebo only. Cross-check against `00-foundations/regulatory-frames.md` before writing.",
+"tactics": [
+"anchoring",
+"framing"
+],
+"stages": [
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_, Chapter 8.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-12",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "The Veblen good moment",
+"heading": "2.5 The Veblen good moment",
+"definition": "For some goods, raising the price increases demand because the price itself is the value-signal.",
+"body": "**Canon reference:** Sutherland in _Alchemy_, Chapter 12.\n\n**One-line definition:** For some goods, raising the price increases demand because the price itself is the value-signal.\n\n**Where to use:** Premium-tier SKUs and gift sets in later phases. A/B test a higher anchor against the assumed-correct price at identical product. Sutherland predicts the higher price often wins on retention and net revenue because the higher price loads a different mental category (premium subscription vs commodity).\n\n**Where NOT to use:** Single-SKU launch at an accessible price point. A launch SKU is usually a premium-everyday good, not a Veblen good. The Veblen move is a phase-two optimisation once the brand has earned the mental category.",
+"tactics": [
+"anchoring",
+"veblen_effect"
+],
+"stages": [
+"retention",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Sutherland in _Alchemy_, Chapter 12.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-13",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Choice architecture beyond decoy",
+"heading": "2.6 Choice architecture beyond decoy",
+"definition": "Cialdini-style decoys (BEST VALUE / MOST POPULAR / one-time) are the obvious move. Sutherland's wider move: change the choice set entirely, not just the framing within it.",
+"body": "**Canon reference:** Sutherland, _Alchemy_, Chapter 6 and TED talk.\n\n**One-line definition:** Cialdini-style decoys (BEST VALUE / MOST POPULAR / one-time) are the obvious move. Sutherland's wider move: change the choice set entirely, not just the framing within it.\n\n**Where to use:** Phase 2 test - reframe the subscription / one-time binary as a set of meaningfully different commitment lengths matched to the customer's native mental cadence (seasons, quarters, semesters, school years - whatever fits the category and audience). Native framings beat generic \"subscribe and save\" cadences.\n\n**Where NOT to use:** Replacing standard choice architecture at launch. The default decoy structure works; reframing the choice set is a phase-two optimisation, not a launch-week change.",
+"tactics": [
+"authority",
+"commitment_consistency",
+"decoy_effect",
+"default_effect",
+"framing",
+"social_proof"
+],
+"stages": [
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_, Chapter 6 and TED talk.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-14",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "The dopamine of small reveals",
+"heading": "2.7 The dopamine of small reveals",
+"definition": "Small, unexpected surprises hit the same neural circuit as gambling wins. Cumulative effect of multiple small reveals is disproportionately retentive.",
+"body": "**Canon reference:** Sutherland, _Alchemy_, Chapter 7. Spectator columns on scratch-cards, lotteries, and small dopamine hits.\n\n**One-line definition:** Small, unexpected surprises hit the same neural circuit as gambling wins. Cumulative effect of multiple small reveals is disproportionately retentive.\n\n**Where to use:** A reveal mechanic at the capture popup (scratch-to-reveal, spin-to-win - only if the reward is genuine and the experience matches the brand voice). One unannounced second gift in the first box. A monthly extra in subscription boxes 2, 3, 4. Weekly ritual content with a small reveal element. Vary the founder DM or video monthly.\n\n**Where NOT to use:** Reveals that promise more than they deliver. Sutherland rule: \"Always promise less than you deliver, but only by a known small amount.\"\n\n## Schwartz awareness-stages (the third lens)\n\n[SOURCE: Eugene Schwartz, _Breakthrough Advertising_ (1966).]\n\nSchwartz's five stages: Unaware → Problem-aware → Solution-aware → Product-aware → Most-aware. Copy must match the prospect's current stage.\n\n**Stage-by-stage register:**\n\n- **Stage 1 (Unaware):** Does not know the problem the brand solves exists for them. Register: storytelling, not product. Ad creative usually does this work, not the funnel itself.\n- **Stage 2 (Problem-aware):** Knows the problem, has not yet looked for a solution. Register: problem-naming, sensory, lived-experience language. Landers and the second welcome email tend to live here.\n- **Stage 3 (Solution",
+"tactics": [
+"authority",
+"curiosity_gap",
+"scarcity",
+"social_proof"
+],
+"stages": [
+"founder_section",
+"hero_landing",
+"social_tiktok",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_, Chapter 7. Spectator columns on scratch-cards, lotteries, and small dopamine hits.",
+"wall_1_flag": false,
+"wall_2_flag": false
+}
+],
+"positioning": [
+{
+"id": "POS-LINE",
+"kind": "positioning_line",
+"name": "The positioning line",
+"body": "{{ YOUR_POSITIONING_LINE }}",
+"guidance": "Single source of truth for every brand decision. Not a headline - the lens through which every creative choice is evaluated.",
+"tags": [
+"positioning",
+"core"
+],
+"vectors": [
+"example_segment_one",
+"example_segment_two"
+]
+},
+{
+"id": "POS-ICP",
+"kind": "icp_definition",
+"name": "Ideal Customer Profile",
+"body": "{{ ICP_DESCRIPTION }}",
+"guidance": "The ideal customer profile is the gate. If a tactic does not serve this customer, reject it before going further. Edit 00-foundations/positioning.md to refine the ICP, then rebuild the index.",
+"tags": [
+"icp",
+"core"
+],
+"vectors": [
+"example_segment_one",
+"example_segment_two"
+]
+},
+{
+"id": "POS-CV-1",
+"kind": "content_vector",
+"name": "Example segment - rename me",
+"vector_key": "example_segment_one",
+"body": "Replace this object with your first ICP sub-segment.",
+"aliases": [
+"example trigger one",
+"example trigger two"
+],
+"guidance": "Content vector. Every email / SMS / Instagram post / TikTok / ad / PDP module must fit one of the 6 vectors. If a creative idea does not fit any, the answer is no. Shared visual structure across all 6: same food, same person, sachet appears, the person's face changes.",
+"tags": [
+"content_vector",
+"creative_starter"
+],
+"vectors": [
+"example_segment_one"
+]
+},
+{
+"id": "POS-CV-2",
+"kind": "content_vector",
+"name": "Example segment two - rename me",
+"vector_key": "example_segment_two",
+"body": "Add up to six segments total.",
+"aliases": [
+"another trigger"
+],
+"guidance": "Content vector. Every email / SMS / Instagram post / TikTok / ad / PDP module must fit one of the 6 vectors. If a creative idea does not fit any, the answer is no. Shared visual structure across all 6: same food, same person, sachet appears, the person's face changes.",
+"tags": [
+"content_vector",
+"creative_starter"
+],
+"vectors": [
+"example_segment_two"
+]
+},
+{
+"id": "POS-FORBIDS",
+"kind": "forbids_list",
+"name": "What positioning forbids in copy",
+"body": "- {{ FORBID_1 }}\n- {{ FORBID_2 }}",
+"guidance": "Hard list of copy rules. Apply before any external publication. Auto-fails CI brand-voice-check if violated.",
+"tags": [
+"forbids",
+"hygiene",
+"anti_pattern"
+],
+"vectors": [
+"example_segment_one",
+"example_segment_two"
+]
+},
+{
+"id": "POS-LICENSES",
+"kind": "licenses_list",
+"name": "What positioning licenses in copy",
+"body": "- {{ LICENSE_1 }}\n- {{ LICENSE_2 }}",
+"guidance": "Explicitly licensed phrases and frames. Cleared for use without further review.",
+"tags": [
+"licensed",
+"approved_copy"
+],
+"vectors": [
+"example_segment_one",
+"example_segment_two"
+]
+},
+{
+"id": "POS-FOUNDER",
+"kind": "founder_anchor",
+"name": "Founder credential anchor",
+"body": "{{ FOUNDER_CREDENTIAL_PARAGRAPH }}",
+"guidance": "The founder credential is the authority anchor. State it factually, avoid hype. Full story in `00-foundations/founder-stories.md`. Edit there + rebuild the index when the framing changes.",
+"tags": [
+"founder",
+"authority",
+"credential"
+],
+"vectors": [
+"example_segment_one",
+"example_segment_two"
+]
+},
+{
+"id": "POS-VOICE-REGISTER",
+"kind": "voice_register",
+"name": "Voice register references",
+"body": "Voice register references are cadence references only. Not category competitors. The brand does not sit next to them in any product sense. Borrow their period-terminated rhythm, their restraint, their unwillingness to oversell - not their semantic field.",
+"guidance": "Cadence reference only. Period-terminated declarative rhythm. Editorial restraint. Do not borrow their semantic field - only the cadence.",
+"tags": [
+"voice",
+"register",
+"cadence"
+],
+"vectors": [
+"example_segment_one",
+"example_segment_two"
+]
+},
+{
+"id": "POS-NEVER-NAME",
+"kind": "never_name_brands",
+"name": "Reference brands we do NOT name in copy",
+"body": "Reference brands the brand specifically does NOT name in customer copy. Defined per-brand in `08-templates/vocab/hygiene-vocab.json` under `never_name_brands`. They may appear in 05-evidence/ and 07-anti-patterns/ for internal pattern analysis only.",
+"guidance": "These brands appear in evidence files for tactical pattern analysis. They never appear in customer-facing copy. If a Brain query surfaces a tactic described as 'do what brand X does on the cart', extract the mechanic but never name brand X in shipped copy.",
+"tags": [
+"never_name",
+"anti_pattern",
+"category"
+],
+"vectors": [
+"example_segment_one",
+"example_segment_two"
+]
+}
+]
+}

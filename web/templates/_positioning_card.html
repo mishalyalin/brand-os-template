@@ -1,0 +1,29 @@
+<article class="result-card">
+    <div class="result-header">
+        <h3>{{ p.name }}</h3>
+        <span class="result-meta">{{ p.id }} - {{ p.kind }}</span>
+    </div>
+    {% if p.tags %}
+        <div class="tag-row">
+            {% for t in p.tags %}
+                <span class="chip">{{ t }}</span>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if p.vector_labels %}
+        <div class="tag-row">
+            {% if p.vector_labels|length == 6 %}
+                <span class="chip chip-vector">all 6 vectors (cross-cutting)</span>
+            {% else %}
+                {% for v in p.vector_labels %}
+                    <span class="chip chip-vector">{{ v }}</span>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endif %}
+    <p class="result-body">{{ p.body }}</p>
+    {% if p.guidance %}
+        <p class="guidance">{{ p.guidance }}</p>
+    {% endif %}
+    <p class="result-meta" style="margin-top: 10px;">Source file: <code>00-foundations/positioning.md</code></p>
+</article>

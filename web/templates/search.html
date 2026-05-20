@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Search - Brand OS{% endblock %}
+
+{% block content %}
+
+<h1>Marketing Brain</h1>
+<p class="lead">Search 15 positioning anchors, 15 cocktails, 51 canon principles, and 445 raw Vault rows in one query. Every result carries primary-source provenance.</p>
+
+<form class="search-form search-form-element" method="get" action="/">
+    <label for="search-q">Ask the Brain</label>
+    <input
+        type="search"
+        id="search-q"
+        name="q"
+        class="search-input"
+        value="{{ query|default('') }}"
+        placeholder='e.g. "founder pratfall for cart abandon" or "anchoring on PDP"'
+        autocomplete="off"
+        spellcheck="false"
+    >
+    <div class="button-row">
+        <button type="submit">Query</button>
+        <span class="help-text">Cmd/Ctrl + Enter to submit.</span>
+    </div>
+</form>
+
+{% if not query %}
+    <div class="search-shortcuts">
+        <div class="shortcut">
+            <h4>By content vector</h4>
+            {% for vec in vector_choices %}
+                <a href="/for-vector/{{ vec.key }}">{{ vec.name }}</a>
+            {% endfor %}
+        </div>
+        <div class="shortcut">
+            <h4>By funnel stage</h4>
+            {% for stage in stage_choices %}
+                <a href="/for-stage/{{ stage }}">{{ stage.replace('_', ' ') }}</a>
+            {% endfor %}
+        </div>
+        <div class="shortcut">
+            <h4>By tactic</h4>
+            {% for tactic in tactic_choices[:8] %}
+                <a href="/tactic/{{ tactic }}">{{ tactic.replace('_', ' ') }}</a>
+            {% endfor %}
+            <p style="margin-top: 12px;"><a href="/canon">All 41 tactics</a></p>
+        </div>
+    </div>
+{% endif %}
+
+{% if query %}
+    {% if detected_vectors %}
+        <p style="margin-bottom: 24px;">
+            <strong>ICP segments detected:</strong>
+            <span class="detected-vectors">
+                {% for v in detected_vectors %}
+                    <span class="chip chip-vector">{{ v }}</span>
+                {% endfor %}
+            </span>
+        </p>
+    {% endif %}
+
+    {% if not any_results %}
+        <div class="no-match-notice">
+            <strong>No match.</strong> Nothing across positioning, cocktails, canon, or Vault rows matches this query. Per the Brand OS verify-first rule, do not fabricate a study. Tell the user the corpus does not cover this and gather more evidence.
+        </div>
+    {% endif %}
+
+    {% if positioning %}
+        <section class="layer-section">
+            <h2><span class="layer-tag layer-tag-0">Layer 0</span>Positioning anchors</h2>
+            <p class="layer-intro">The strategic frame. Every tactic below must serve at least one of the 6 content vectors and respect both walls.</p>
+            {% for p in positioning %}
+                {% include "_positioning_card.html" %}
+            {% endfor %}
+        </section>
+    {% endif %}
+
+    {% if cocktails %}
+        <section class="layer-section">
+            <h2><span class="layer-tag layer-tag-1">Layer 1</span>cocktails</h2>
+            <p class="layer-intro">Pre-vetted stacks - use first when one matches.</p>
+            {% for c in cocktails %}
+                {% include "_cocktail_card.html" %}
+            {% endfor %}
+        </section>
+    {% endif %}
+
+    {% if canons %}
+        <section class="layer-section">
+            <h2><span class="layer-tag layer-tag-15">Layer 1.5</span>Canon principles</h2>
+            <p class="layer-intro">Behavioral Economics, Voss/NSTD, Cialdini-Sutherland with explicit Where-to-use guidance.</p>
+            {% for k in canons %}
+                {% include "_canon_card.html" %}
+            {% endfor %}
+        </section>
+    {% endif %}
+
+    {% if rows %}
+        <section class="layer-section">
+            <h2><span class="layer-tag layer-tag-2">Layer 2</span>Raw Vault rows</h2>
+            <p class="layer-intro">Primary-source citations from the Nudge Vault corpus.</p>
+            {% for r in rows %}
+                {% include "_row_card.html" %}
+            {% endfor %}
+        </section>
+    {% endif %}
+
+{% endif %}
+
+{% endblock %}

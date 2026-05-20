@@ -1,0 +1,88 @@
+name: Privacy scrub check
+
+# Fails the PR if any PranaSalt-specific or other personal-identifier strings
+# slip into the template. This file is the safety net for the source repo
+# (mishalyalin/brand-os-template). When you fork this template for your own
+# brand, you can delete this workflow or replace the deny-list with the
+# strings you want kept out of your public repo.
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scan for PranaSalt-specific tokens
+        run: |
+          set -e
+          DENY_LIST=(
+            "Misha Lyalin"
+            "Lyalin"
+            "Лялин"
+            "Лялина"
+            "Лялину"
+            "Timofey Braslavets"
+            "Braslavets"
+            "Timon Afinsky"
+            "Afinsky"
+            "ZeptoLab"
+            "Cut the Rope"
+            "Apple Design Award"
+            "PranaSalt"
+            "Pranasalt"
+            "PRANASALT"
+            "pranasalt.com"
+            "Pranauts"
+            "HUeligans"
+            "Ayurvedic recipe"
+            "Asif"
+            "Dasha"
+            "Eva"
+            "Tobi"
+            "Genofoods"
+            "Bunschoten"
+            "Tupak"
+            "Shiva Center"
+            "Huboo"
+            "Mercury Inc"
+            "Revolut Business"
+            "Wise Business"
+            "76.13.254.21"
+            "76-13-254-21"
+            "brain-kb4453f1ucfxvt8p"
+            "kb4453f1ucfxvt8p"
+            "1mWR0N0uMMvVxEH6n3zSnk39orY"
+          )
+
+          HITS=0
+          for term in "${DENY_LIST[@]}"; do
+            # exclude the workflow file itself (where the deny list lives)
+            # and any node_modules / venv / git artefacts
+            MATCHES=$(grep -rIn \
+              --exclude-dir=.git \
+              --exclude-dir=.venv \
+              --exclude-dir=.venv-web \
+              --exclude-dir=node_modules \
+              --exclude="privacy-scrub-check.yml" \
+              -- "$term" . 2>/dev/null || true)
+            if [ -n "$MATCHES" ]; then
+              echo "::error::Privacy scrub: found banned term '$term'"
+              echo "$MATCHES"
+              HITS=$((HITS + 1))
+            fi
+          done
+
+          if [ "$HITS" -gt 0 ]; then
+            echo "::error::Privacy scrub FAILED with $HITS banned term(s) present in the template."
+            echo "Either remove the matching content or, if it is a legitimate non-PII string, update the deny list."
+            exit 1
+          fi
+
+          echo "Privacy scrub PASS - no banned tokens found."
