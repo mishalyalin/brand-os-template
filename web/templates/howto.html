@@ -34,8 +34,8 @@
     <h2>2. Claude session</h2>
     <p>For drafting customer copy, generating email sequences, building landing pages, or any task where the answer becomes shipped text.</p>
     <p>Clone the repo into your working directory and open Claude Code in it:</p>
-    <pre><code>git clone git@github.com:mishalyalin/pranasalt-brand-os.git
-cd pranasalt-brand-os
+    <pre><code>git clone git@github.com:YOUR-ORG/YOUR-BRAND-OS-REPO.git
+cd YOUR-BRAND-OS-REPO
 python3 tools/marketing_brain.py stats
 claude</code></pre>
     <p>The repo's <code>CLAUDE.md</code> auto-loads as the system prompt and tells Claude:</p>
@@ -82,7 +82,7 @@ claude</code></pre>
     <h2>Edit workflow</h2>
     <ol>
         <li>Edit the canon file in the repo (Markdown for content, JSON for vocab).</li>
-        <li>Open a PR on <code>mishalyalin/pranasalt-brand-os</code>.</li>
+        <li>Open a PR on your fork of this Brand OS repo.</li>
         <li>CI runs the Brand Voice Check, Claims Trace, and the auto-merge tier decision.</li>
         <li>Once merged, the deploy hook rebuilds the Brain index on the VPS and the web interface picks up the change within seconds.</li>
     </ol>

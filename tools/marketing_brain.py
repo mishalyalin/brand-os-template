@@ -3,49 +3,41 @@
 Marketing Brain - structured retrieval over the Brand OS canon.
 
 What this is:
-    A CLI that lets Claude (or any caller) query a Brand OS for
-    evidence-backed marketing recommendations. The Brain searches
-    multiple layers in priority order:
+    A CLI that lets Claude (or any caller) query the canonical the brand
+    Brand OS for evidence-backed marketing recommendations. The Brain
+    searches three layers in priority order:
 
-    Layer 0 - positioning anchors from `00-foundations/positioning.md`
-              (ICP + content vectors + walls + founder anchor)
-    Layer 1 - cocktails in `01-canon/cocktail-recipes.md`
-              (the brand has already decided how a principle stacks here)
-    Layer 1.5 - canon principles in
-              `01-canon/{behavioral-economics,nstd-tactics,cialdini-sutherland}.md`
-              (51 principles with Where-to-use / Where-NOT guidance)
-    Layer 2 - optional raw research rows
-              (`01-canon/nudge-vault-raw-capture-*.txt`, NV-NNN block format)
+    Layer 1 - existing the brand cocktails in `01-canon/cocktail-recipes.md`
+              (the brand has already decided how this principle stacks for us)
+    Layer 2 - net-new candidates documented in `01-canon/nudge-vaults-mined-2026-05.md`
+              (sprint-tagged but not yet integrated into cocktails)
+    Layer 3 - raw research insights from the Nudge Vault corpus
+              (`01-canon/nudge-vault-raw-capture-2026-05-19.txt`, 445 rows)
 
     Every answer carries (a) the recommended tactic, (b) the primary-source
     citation, (c) a link to the cocktail recipe if one exists, (d) a Wall-1
-    / Wall-2 hygiene flag, (e) a one-line rationale tying back to positioning.
-
-    Layer 2 raw rows are optional - the Brain works fine on Layers 0 + 1 + 1.5
-    if no research corpus is present.
+    (medicine) / Wall-2 (category-comparison) hygiene flag, (e) a 1-line
+    rationale tying it back to the brand positioning.
 
 How to invoke:
     python3 tools/marketing_brain.py search "<natural language query>" [--top N]
     python3 tools/marketing_brain.py tactic "<tactic name>"
     python3 tools/marketing_brain.py for-stage "<funnel stage>"
-    python3 tools/marketing_brain.py for-vector "<content vector>"
     python3 tools/marketing_brain.py explain "<question>"
-    python3 tools/marketing_brain.py icp
-    python3 tools/marketing_brain.py canon [school]
     python3 tools/marketing_brain.py list-tactics
     python3 tools/marketing_brain.py list-stages
-    python3 tools/marketing_brain.py stats
     python3 tools/marketing_brain.py rebuild-index
 
 Repo-relative paths are auto-resolved from this file's location.
 
-Design rules:
-- Stdlib only. No external API, no vector DB.
-- Brand-agnostic. Brand-specific content lives in the canon and foundation
-  files this script reads at index-build time.
-- The Brain never fabricates. If a query has no hit in the corpus, it
-  returns `no-match` explicitly and tells the caller to gather more
-  evidence rather than guessing.
+Author: Brand OS Template. Per
+`memory/feedback_do_everything_now_no_sprint_planning.md` - built in same
+session as the Vault mine. Per `memory/feedback_marketing_panel_default.md` -
+the Brain enforces 3-lens output (BE + NSTD + DTC mechanics) on every
+synthesis call. Per `memory/feedback_never_imagine_always_verify.md` - the
+Brain never fabricates studies or stats; if a query has no hit in the corpus,
+the Brain returns `no-match` explicitly and tells the caller to gather more
+evidence rather than guessing.
 """
 
 import argparse
@@ -129,11 +121,10 @@ TACTICS: dict[str, list[str]] = _require_key(_TACTICS_DATA, "vocab", TACTICS_VOC
 _STAGES_DATA = _load_vocab_file(STAGES_VOCAB_FILE)
 STAGES: dict[str, list[str]] = _require_key(_STAGES_DATA, "vocab", STAGES_VOCAB_FILE)
 
-# Content vectors (your ICP sub-segments) - defined by the brand owner
-# in positioning.md and mirrored in content-vectors.json. Every customer-facing
-# creative must fit one of them. Edit `content-vectors.json` to add/remove/
-# rename a vector AND update positioning.md in the same PR (positioning.md is
-# the source of truth).
+# The 6 canonical content vectors (the brand ICP sub-segments) - locked in
+# positioning.md 2026-05-19. Every customer-facing creative must fit one of
+# these six. Edit `content-vectors.json` to add/remove/rename a vector AND
+# update positioning.md in the same PR (positioning.md is the source of truth).
 _VECTORS_DATA = _load_vocab_file(VECTORS_VOCAB_FILE)
 CONTENT_VECTORS: dict[str, dict[str, Any]] = _require_key(_VECTORS_DATA, "vectors", VECTORS_VOCAB_FILE)
 
@@ -174,6 +165,30 @@ CANON_FILES = [
         "label": "Cialdini & Sutherland canon",
         "source_marker": "Canon reference:",
     },
+    {
+        "path": REPO_ROOT / "01-canon" / "llm-seo-canon.md",
+        "school": "llm_seo",
+        "label": "LLM SEO & Content Engineering canon",
+        "source_marker": "Canon reference:",
+    },
+    {
+        "path": REPO_ROOT / "01-canon" / "dtc-mechanics.md",
+        "school": "dtc_mechanics",
+        "label": "DTC mechanics canon",
+        "source_marker": "Canonical source:",
+    },
+    {
+        "path": REPO_ROOT / "01-canon" / "subscription-mechanics.md",
+        "school": "subscription_mechanics",
+        "label": "Subscription mechanics canon",
+        "source_marker": "Canonical source:",
+    },
+    {
+        "path": REPO_ROOT / "01-canon" / "pricing-mechanics.md",
+        "school": "pricing_mechanics",
+        "label": "Pricing mechanics canon",
+        "source_marker": "Canonical source:",
+    },
 ]
 
 EXISTING_COCKTAILS_SECTION_RE = re.compile(
@@ -198,10 +213,8 @@ def parse_raw_capture() -> list[dict[str, Any]]:
         - rest = body
     """
     if not RAW_CAPTURE.exists():
-        # Layer 2 raw research rows are optional - the Brain works fine on
-        # Layers 0 (positioning) + 1 (cocktails) + 1.5 (canon) without them.
-        # Drop a file named `01-canon/nudge-vault-raw-capture-<date>.txt`
-        # with NV-NNN block format if you have a research corpus to add.
+        # Layer 2 raw evidence is optional. The Brain works on Layers 0 + 1 + 1.5
+        # without it. Drop a `01-canon/nudge-vault-raw-capture-*.txt` file to enable.
         return []
 
     text = RAW_CAPTURE.read_text(encoding="utf-8")
@@ -291,15 +304,15 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
 
     Anchors produced:
       - positioning_line: "Make Healthy Food Taste Great"
-      - icp_definition: the ICP bullet from positioning.md
-      - content_vector_1..N: the ICP sub-segments
-      - wall_1: the first brand-safety wall (typically regulatory)
-      - wall_2: the second brand-safety wall (typically strategic positioning)
+      - icp_definition: brand-specific - see your positioning.md
+      - content_vector_1..6: the 6 ICP sub-segments
+      - wall_1: medicine/wellness wall (we do not climb)
+      - wall_2: salt/spice category wall (we do not climb)
       - forbids_list: what positioning forbids in copy
       - licenses_list: what positioning licenses in copy
-      - founder_anchor: founder credential paragraph
-      - voice_register_refs: cadence reference brands
-      - never_name_brands: brands not named in customer copy
+      - founder_anchor: brand-specific founder credential (replace in positioning.md)
+      - voice_register_refs: Aesop + Le Labo (cadence only)
+      - never_name_brands: AG1 + IM8 + LMNT + Liquid Death
     """
     if not POSITIONING_FILE.exists():
         return []
@@ -322,8 +335,9 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
             "vectors": list(CONTENT_VECTORS.keys()),
         })
 
-    # ICP definition - the bullet starting with "- ICP" in positioning.md,
-    # captured until the next bullet at the same indent or section break.
+    # ICP definition - adapt parsing to your positioning.md format.
+    # The ICP line is the full bullet starting with "- ICP" until the next bullet
+    # at the same indent or section break.
     icp_match = re.search(
         r"^- ICP[^\n]*?:\s*(.+?)(?=\n- |\n\n|\Z)",
         text,
@@ -336,12 +350,13 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
             "name": "Ideal Customer Profile",
             "body": icp_match.group(1).strip()[:1500],
             "guidance": (
-                "The ideal customer profile is the gate. If a tactic does not "
-                "serve this customer, reject it before going further. Edit "
-                "00-foundations/positioning.md to refine the ICP, then rebuild "
-                "the index."
+                "The single canonical ICP for this brand. Replace via positioning.md - "
+                "the parser pulls this into Brain as the Layer 0 ICP gate. "
+                "Adapt the ICP shape to your category - it must be specific "
+                "enough that a tactic can be rejected for not serving it. "
+                "If a tactic does not serve this customer, reject it."
             ),
-            "tags": ["icp", "core"],
+            "tags": ["icp", "core", "locked"],
             "vectors": list(CONTENT_VECTORS.keys()),
         })
 
@@ -382,12 +397,10 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
             "id": "POS-WALL-1",
             "kind": "wall_rule",
             "name": "Wall 1 - we do not go here",
-            "body": "Wall 1 - the first brand-safety register (typically regulatory). See positioning.md for what your brand does not say.",
+            "body": "Health / medicine / wellness. Forbidden register: immunity, digestion, energy, longevity, boost, ritual, heal, cure, remedy. UK VAT zero-rate + EU 1924/2006 + editorial register all enforce this.",
             "guidance": (
-                "Wall 1 is the regulatory or category-trust wall. Define yours "
-                "in 00-foundations/positioning.md. The trigger words live in "
-                "08-templates/vocab/hygiene-vocab.json and the Brain auto-flags "
-                "any retrieved row that contains one."
+                "Wall 1 violation example: 'the brand boosts immunity.' Out. "
+                "Wall-1 hygiene check runs on every retrieved Vault row + cocktail."
             ),
             "tags": ["wall_1", "hygiene", "regulatory"],
             "vectors": list(CONTENT_VECTORS.keys()),
@@ -396,12 +409,11 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
             "id": "POS-WALL-2",
             "kind": "wall_rule",
             "name": "Wall 2 - we do not go here",
-            "body": "Wall 2 - the second brand-safety register (typically strategic positioning). See positioning.md for what your brand does not say.",
+            "body": "Salt category / spice category / 'premium salt' / 'spice rack replacement'. No comparisons to Maldon, Tabasco, supermarket salt, other spice brands. No 'beats X' framing. No per-product cost comparison.",
             "guidance": (
-                "Wall 2 is the strategic-positioning wall. Define yours in "
-                "00-foundations/positioning.md. The trigger words live in "
-                "08-templates/vocab/hygiene-vocab.json and the Brain auto-flags "
-                "any retrieved row that contains one."
+                "Wall 2 violation example: 'the brand beats Maldon.' Out. "
+                "Per-meal cost anchoring against actual meals is fine. "
+                "Per-product cost comparison against salt/spice price ladder is banned."
             ),
             "tags": ["wall_2", "hygiene", "category"],
             "vectors": list(CONTENT_VECTORS.keys()),
@@ -449,8 +461,8 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
         })
 
     # Founder anchor - locked since 28 Apr 2026, revised 19 May 2026 PM
-    # Accept either parenthesised form "Founder credential (Name...)" or
-    # colon form "Founder credential: Name..."
+    # Accept either parenthesised form "Founder credential (...)" or
+    # colon form "Founder credential: ..."
     founder_match = re.search(
         r"Founder credential[:\s]*\(([^)]+)\)", text
     )
@@ -466,9 +478,12 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
             "name": "Founder credential anchor",
             "body": founder_match.group(1).strip()[:1200],
             "guidance": (
-                "The founder credential is the authority anchor. State it "
-                "factually, avoid hype. Full story in `00-foundations/founder-stories.md`. "
-                "Edit there + rebuild the index when the framing changes."
+                "The single approved founder framing for this brand. Replace via "
+                "00-foundations/positioning.md - the parser pulls it into the Brain "
+                "as the canonical Layer 0 founder anchor that every tactic must "
+                "respect. Use a one-paragraph framing that links the founder "
+                "credential to the product's authority claim - ideally a "
+                "category-non-adjacent credential the customer can verify."
             ),
             "tags": ["founder", "authority", "credential"],
             "vectors": list(CONTENT_VECTORS.keys()),
@@ -480,15 +495,16 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
         "kind": "voice_register",
         "name": "Voice register references",
         "body": (
-            "Voice register references are cadence references only. Not category "
-            "competitors. The brand does not sit next to them in any product sense. "
-            "Borrow their period-terminated rhythm, their restraint, their "
-            "unwillingness to oversell - not their semantic field."
+            "Aesop and Le Labo are voice-register references for cadence and restraint, "
+            "NOT category competitors. We do not sit next to them in any product sense. "
+            "If a copywriter asks 'what should this sound like', the answer is "
+            "'imagine Aesop wrote about the food you eat for British home cooks who watch "
+            "the same Netflix as you.'"
         ),
         "guidance": (
             "Cadence reference only. Period-terminated declarative rhythm. "
-            "Editorial restraint. Do not borrow their semantic field - "
-            "only the cadence."
+            "Editorial restraint. Do not borrow their semantic field (botanicals, "
+            "skincare, fragrance) - only the cadence."
         ),
         "tags": ["voice", "register", "cadence"],
         "vectors": list(CONTENT_VECTORS.keys()),
@@ -500,16 +516,18 @@ def parse_positioning_anchors() -> list[dict[str, Any]]:
         "kind": "never_name_brands",
         "name": "Reference brands we do NOT name in copy",
         "body": (
-            "Reference brands the brand specifically does NOT name in customer copy. "
-            "Defined per-brand in `08-templates/vocab/hygiene-vocab.json` under "
-            "`never_name_brands`. They may appear in 05-evidence/ and "
-            "07-anti-patterns/ for internal pattern analysis only."
+            "AG1 - wellness register, body-transformation framing, celebrity-laddered (Stephen Curry, Andrew Huberman). "
+            "IM8 - same register as AG1, celebrity-laddered (David Beckham). "
+            "LMNT - functional electrolyte, ironic-bro register. "
+            "Liquid Death - irreverent register, water-as-Vacancy Records. "
+            "Maldon / Tabasco / supermarket salt brands - Wall 2 violation if named in copy. "
+            "All live in 05-evidence/ and 07-anti-patterns/ for internal reference only."
         ),
         "guidance": (
-            "These brands appear in evidence files for tactical pattern analysis. "
-            "They never appear in customer-facing copy. If a Brain query surfaces a "
-            "tactic described as 'do what brand X does on the cart', extract the "
-            "mechanic but never name brand X in shipped copy."
+            "These brands appear in evidence files for tactical pattern analysis only. "
+            "They NEVER appear in customer-facing copy. If a Brain query surfaces a tactic "
+            "described as 'do what IM8 does on the cart', extract the mechanic but never "
+            "name IM8 in shipped copy."
         ),
         "tags": ["never_name", "anti_pattern", "category"],
         "vectors": list(CONTENT_VECTORS.keys()),
@@ -630,7 +648,7 @@ def parse_canon_principles() -> list[dict[str, Any]]:
 
 
 def parse_cocktail_recipes() -> list[dict[str, Any]]:
-    """Pull existing cocktails from cocktail-recipes.md.
+    """Pull existing the brand cocktails from cocktail-recipes.md.
 
     Each cocktail is a `### <Name>` block. We capture the heading + body until
     the next heading at level <= 3 or end of file.
@@ -982,7 +1000,7 @@ def search_canons(query: str, top_n: int = 5) -> list[dict[str, Any]]:
     """Search BE / NSTD / Cialdini-Sutherland canon principles.
 
     Higher base weight than raw Vault rows because these are pre-curated for
-    the funnel application (each has Where-to-use / Where-NOT-to-use).
+    the brand funnel application (each has Where-to-use / Where-NOT-to-use).
     """
     idx = load_index()
     q_lower = query.lower()
@@ -1014,6 +1032,31 @@ def search_canons(query: str, top_n: int = 5) -> list[dict[str, Any]]:
             "nstd_voss": ["voss", "nstd", "never split", "negotiation"],
             "behavioral_economics": ["behavioral economics", "be canon", "kahneman", "ariely", "thaler", "sunstein"],
             "cialdini_sutherland": ["cialdini", "sutherland", "influence", "alchemy"],
+            "llm_seo": ["llm seo", "ai seo", "ai citation", "ai overview", "chatgpt seo", "perplexity",
+                        "programmatic seo", "topical authority", "brand seo", "page refresh",
+                        "content engineering", "geo", "generative engine optimization",
+                        "rask", "aithor", "airops", "growthx", "lovable", "webflow",
+                        "skyscraper", "core update", "se ranking", "searchengineland"],
+            "dtc_mechanics": ["dtc", "direct to consumer", "olipop", "lmnt", "magic spoon",
+                              "ag1", "liquid death", "graza", "patagonia", "kind snacks",
+                              "founder led", "founder voice", "influencer seeding", "qr on box",
+                              "reddit long game", "anti discount", "unboxing", "creator marketing"],
+            "subscription_mechanics": ["subscription", "retention", "churn", "pause", "winback",
+                                       "annual prepay", "first 60 days", "onboarding sequence",
+                                       "payment recovery", "smart retry", "dunning",
+                                       "recurly", "stripe smart retries", "klaviyo flow",
+                                       "subscription as stage", "forever transaction",
+                                       "membership economy", "patrick campbell", "profitwell",
+                                       "eli weiss", "robbie kellman baxter", "subscriber lifecycle"],
+            "pricing_mechanics": ["pricing", "price", "willingness to pay", "wtp",
+                                  "plassmann", "neural pricing", "pennies a day", "gourville",
+                                  "high to low tier", "tier ordering", "anchor price",
+                                  "premium pricing", "promotional discipline", "no discount",
+                                  "sustainability premium", "ppwr", "mono pp",
+                                  "charm pricing", "charm endings", "rule of 100",
+                                  "per meal", "per day", "monetizing innovation",
+                                  "hermann simon", "ramanujam", "marn rosiello",
+                                  "reference price", "bcg pricing", "simon kucher"],
         }
         for hint in school_hints.get(k["school"], []):
             if hint in q_lower:
@@ -1219,19 +1262,19 @@ def cmd_search(args: argparse.Namespace) -> int:
             print()
 
     if cocktails:
-        print("## Layer 1 - Existing cocktails (use first if relevant)")
+        print("## Layer 1 - Existing the brand cocktails (use first if relevant)")
         print()
         for i, c in enumerate(cocktails, 1):
             print(format_cocktail(c, i))
             print()
     else:
-        print("## Layer 1 - Existing cocktails: NO MATCH")
+        print("## Layer 1 - Existing the brand cocktails: NO MATCH")
         print()
         print("→ Net-new opportunity: if a canon principle or Vault row below scores well, propose a new cocktail in `01-canon/cocktail-recipes.md`.")
         print()
 
     if canons:
-        print("## Layer 1.5 - canon principles (BE / NSTD / Cialdini-Sutherland)")
+        print("## Layer 1.5 - the brand canon principles (BE / NSTD / Cialdini-Sutherland)")
         print()
         print("These are the curated foundation principles with explicit Where-to-use / Where-NOT-to-use guidance for our funnel. Stack them into a cocktail; do not skip them for raw Vault rows.")
         print()
@@ -1239,7 +1282,7 @@ def cmd_search(args: argparse.Namespace) -> int:
             print(format_canon(k, i))
             print()
     else:
-        print("## Layer 1.5 - canon principles: NO MATCH")
+        print("## Layer 1.5 - the brand canon principles: NO MATCH")
         print()
 
     print("## Layer 2 - Raw Vault evidence")
@@ -1289,7 +1332,7 @@ def cmd_tactic(args: argparse.Namespace) -> int:
     print(f"# Marketing Brain tactic lookup: {canonical}\n")
 
     if cocktail_hits:
-        print(f"## Layer 1 - {len(cocktail_hits)} cocktail(s) stack this tactic\n")
+        print(f"## Layer 1 - {len(cocktail_hits)} the brand cocktail(s) stack this tactic\n")
         for i, c in enumerate(cocktail_hits, 1):
             print(format_cocktail(c, i))
             print()
@@ -1369,7 +1412,7 @@ def cmd_explain(args: argparse.Namespace) -> int:
         print(f"## Recommended cocktail: {c['name']}\n")
         print(f"Location: `01-canon/cocktail-recipes.md` §{c['name']}\n")
         print(f"Tactics stacked: {', '.join(c['tactics']) if c['tactics'] else 'see body'}\n")
-        print(f"Why this fits the brand: this cocktail is already pre-vetted against the positioning (Wall-1 + Wall-2 hygiene applied) and is wired to the funnel stages where it works. Use it as-is unless an owner-level override is documented in `06-decisions/`.\n")
+        print(f"Why this fits the brand: this cocktail is already pre-vetted against our positioning (Wall-1 + Wall-2 hygiene applied) and is wired to the funnel stages where it works. Use it as-is unless an explicit override is documented in this brand's positioning.md in `06-decisions/`.\n")
         print(f"**Cocktail body excerpt:**\n\n{c['body'][:800]}\n")
 
     if canons:
@@ -1395,7 +1438,7 @@ def cmd_explain(args: argparse.Namespace) -> int:
     print("3. Wall-1 check: no medicinal vocabulary (remedy / heal / wellness / cure)")
     print("4. Wall-2 check: no salt-category / spice-category comparisons - use per-meal anchors")
     print("5. Cocktail > canon principle > raw Vault row when picking what to ship")
-    print("6. If proposing a NEW cocktail (Layer 1 returned no-match), add to `01-canon/cocktail-recipes.md` AFTER Misha review")
+    print("6. If proposing a NEW cocktail (Layer 1 returned no-match), add to `01-canon/cocktail-recipes.md` AFTER founder review")
     return 0
 
 
@@ -1434,8 +1477,8 @@ def cmd_icp(_args: argparse.Namespace) -> int:
     if not positioning:
         print("**no-match** - positioning anchors not in index. Run `rebuild-index`.")
         return 1
-    print("# ICP + positioning anchors\n")
-    print("Source: `00-foundations/positioning.md`. Run `python3 tools/onboard.py` first if it still contains placeholders.")
+    print("# the brand ICP + positioning anchors\n")
+    print("Source: `00-foundations/positioning.md` (locked 28 Apr 2026, sharpened 19 May 2026).")
     print()
     # Render by kind so the output is structured
     order = [
@@ -1507,7 +1550,7 @@ def cmd_for_vector(args: argparse.Namespace) -> int:
     print("2. Cite the primary source, not Phill / Nudge / VaultsGPT")
     print("3. Short hyphens only - run `skills/marketing-apply-brand-voice/SKILL.md`")
     print("4. Visual structure for this vector: same food, same person, sachet appears, person's face changes")
-    print("5. Use the founder as the protagonist by default; respect any on-camera policies in `00-foundations/founder-stories.md`")
+    print("5. Use the canonical brand protagonist per positioning.md; respect any never-on-camera exclusions in voice-anti-patterns.md")
     return 0
 
 
@@ -1515,7 +1558,13 @@ def cmd_canon(args: argparse.Namespace) -> int:
     idx = load_index()
     canons = idx.get("canons", [])
     schools = {"be": "behavioral_economics", "nstd": "nstd_voss", "voss": "nstd_voss",
-               "cialdini": "cialdini_sutherland", "sutherland": "cialdini_sutherland"}
+               "cialdini": "cialdini_sutherland", "sutherland": "cialdini_sutherland",
+               "llm": "llm_seo", "seo": "llm_seo", "geo": "llm_seo", "ai-seo": "llm_seo",
+               "dtc": "dtc_mechanics", "dtc-mechanics": "dtc_mechanics",
+               "direct-to-consumer": "dtc_mechanics",
+               "subscription": "subscription_mechanics", "sub": "subscription_mechanics",
+               "retention": "subscription_mechanics",
+               "pricing": "pricing_mechanics", "price": "pricing_mechanics"}
     if not args.school:
         # List all
         by_school: dict[str, list] = {}
@@ -1547,7 +1596,7 @@ def cmd_stats(_args: argparse.Namespace) -> int:
     idx = load_index()
     print("# Marketing Brain - index stats\n")
     print(f"- Positioning anchors (Layer 0): {idx.get('positioning_count', 0)}")
-    print(f"- cocktails (Layer 1): {idx['cocktail_count']}")
+    print(f"- the brand cocktails (Layer 1): {idx['cocktail_count']}")
     print(f"- Canon principles BE/NSTD/Cialdini-Sutherland (Layer 1.5): {idx.get('canon_count', 0)}")
     print(f"- Raw Vault rows (Layer 2): {idx['raw_row_count']}")
     print(f"- Content vector vocab size: {len(idx.get('vector_vocab', []))}")

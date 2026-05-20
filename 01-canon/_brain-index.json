@@ -3,7 +3,7 @@
 "built_at": "2026-05-19",
 "raw_row_count": 0,
 "cocktail_count": 1,
-"canon_count": 51,
+"canon_count": 88,
 "positioning_count": 9,
 "tactic_vocab": [
 "pratfall_effect",
@@ -407,24 +407,148 @@
 "name": "Phantom commitment manufacturing",
 "heading": "16. Phantom commitment manufacturing",
 "definition": "Construct a phantom commitment state - \"your cart\", \"your box\", \"your reserved code\" - that exploits memory uncertainty, status-quo verbs (\"continue\"), and foot-in-the-door bridging to make the user feel they have already committed when they have not.",
-"body": "**Canonical source:** Compound mechanic. Closest single sources: Freedman and Fraser foot-in-the-door, Journal of Personality and Social Psychology 1966. Cialdini commitment-and-consistency, _Influence_ Chapter 3. Ariely confabulation experiments, _Predictably Irrational_ Chapter 5.\n\n**One-line definition:** Construct a phantom commitment state - \"your cart\", \"your box\", \"your reserved code\" - that exploits memory uncertainty, status-quo verbs (\"continue\"), and foot-in-the-door bridging to make the user feel they have already committed when they have not.\n\n**Where to use:** ONLY via a transparency-engineered variant where the phantom-state attaches to things the brand genuinely has reserved (the code, the discount, the bonus), never to a fictional cart. See `02-funnel-architecture/cart-abandon-cascade.md` and the relevant `06-decisions/` record for the brand-safe implementation.\n\n**Where NOT to use:** Direct copy of a competitor's \"Your Cart\" subject line when no cart actually exists. This is likely to breach consumer-protection law on misleading commercial practices in most jurisdictions. The mechanism is too valuable to skip; the literal deceptive copy is too exposed to use.\n\n## The six-lever cocktail (a phantom-commitment hero case)\n\nWhen a brand manufactures a phantom-commitment moment well, the cocktail typically stacks six BE principles in a single 60-90 word email:\n\n1. Endowment via possessive (\"Your [thing]\")\n2. Loss aversion via incompleteness (\"Just one step left!\")",
+"body": "**Canonical source:** Compound mechanic. Closest single sources: Freedman and Fraser foot-in-the-door, Journal of Personality and Social Psychology 1966. Cialdini commitment-and-consistency, _Influence_ Chapter 3. Ariely confabulation experiments, _Predictably Irrational_ Chapter 5.\n\n**One-line definition:** Construct a phantom commitment state - \"your cart\", \"your box\", \"your reserved code\" - that exploits memory uncertainty, status-quo verbs (\"continue\"), and foot-in-the-door bridging to make the user feel they have already committed when they have not.\n\n**Where to use:** ONLY via a transparency-engineered variant where the phantom-state attaches to things the brand genuinely has reserved (the code, the discount, the bonus), never to a fictional cart. See `02-funnel-architecture/cart-abandon-cascade.md` and the relevant `06-decisions/` record for the brand-safe implementation.\n\n**Where NOT to use:** Direct copy of a competitor's \"Your Cart\" subject line when no cart actually exists. This is likely to breach consumer-protection law on misleading commercial practices in most jurisdictions. The mechanism is too valuable to skip; the literal deceptive copy is too exposed to use.",
+"tactics": [
+"authority",
+"commitment_consistency"
+],
+"stages": [
+"cart_abandon",
+"email_subject",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Compound mechanic. Closest single sources: Freedman and Fraser foot-in-the-door, Journal of Personality and Social Psychology 1966. Cialdini commitment-and-consistency, _Influence_ Chapter 3. Ariely confabulation experiments, _Predictably Irrational_ Chapter 5.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-17",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Taste-first labeling",
+"heading": "17. Taste-first labeling",
+"definition": "When the same product can be described by a health attribute or a taste attribute, lead with taste. The health attribute can follow as a secondary descriptor, never as the primary frame, because virtue-coded labels are taste-coded as inferior by default.",
+"body": "**Canonical source:** Wansink and Just, \"Healthy Foods First\", _Cornell Food and Brand Lab_ working paper 2012, replicated and extended in Turnwald, Boles and Crum, \"Association Between Indulgent Descriptions and Vegetable Consumption\", _JAMA Internal Medicine_ 177:8 (2017) - replacing virtue-coded labels with indulgent taste descriptors lifted vegetable purchase 25-41% on identical contents. Adapted in Ariely consulting interventions for school-cafeteria menu design via the Center for Advanced Hindsight 2014-2018.\n\n**One-line definition:** When the same product can be described by a health attribute or a taste attribute, lead with taste. The health attribute can follow as a secondary descriptor, never as the primary frame, because virtue-coded labels are taste-coded as inferior by default.\n\n**Where to use:** PDP hero copy, paid ad creative, recipe-page meta description, founder-story opener. Lead with sensory descriptors (warm, savoury, brown-butter depth, smoky, bright). The health attribute follows as a secondary descriptor or never appears. This is also Wall-1 hygiene expressed positively - culinary or sensory frame first, body claim never on the public surface.\n\n**Where NOT to use:** Direct-to-clinician or B2B contexts where the health attribute carries the buying decision. Most DTC brands do not sell into those channels.",
+"tactics": [
+"default_effect",
+"liking"
+],
+"stages": [
+"founder_section",
+"hero_landing",
+"pdp_pricing",
+"social_tiktok",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Wansink and Just, \"Healthy Foods First\", _Cornell Food and Brand Lab_ working paper 2012, replicated and extended in Turnwald, Boles and Crum, \"Association Between Indulgent Descriptions and Vegetable Consumption\", _JAMA Internal Medicine_ 177:8 (2017) - replacing virtue-coded labels with indulgent ",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-18",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Implementation-intention activation",
+"heading": "18. Implementation-intention activation",
+"definition": "After purchase, send a single concrete if-then prompt that binds the product to a specific cue, time, and place. A concrete prompt (\"when X happens, do Y with the product\") beats a vague prompt (\"incorporate the product into your routine\") by a factor of 2-3 on observed first-use within 7 days.",
+"body": "**Canonical source:** Gollwitzer, \"Implementation Intentions: Strong Effects of Simple Plans\", _American Psychologist_ 54:7 (1999) - if-then plans lift behaviour-change adherence from ~30% to ~70% on observed first action within 7 days. Meta-analysed in Gollwitzer and Sheeran, _Advances in Experimental Social Psychology_ 38 (2006) across 94 independent studies, mean effect size d = 0.65. Applied in BEworks consulting interventions for utility energy-saving programmes and retail-subscription onboarding 2016-2021.\n\n**One-line definition:** After purchase, send a single concrete if-then prompt that binds the product to a specific cue, time, and place. A concrete prompt (\"when X happens, do Y with the product\") beats a vague prompt (\"incorporate the product into your routine\") by a factor of 2-3 on observed first-use within 7 days.\n\n**Where to use:** Day-2 post-purchase email (between order confirmation and shipment). In-pack card with concrete use scenarios. Subscription month-2 retention email - if-then plan for the second box. Onboarding SMS the day the parcel is marked delivered.\n\n**Where NOT to use:** Pre-purchase landing pages. Implementation intentions presume commitment; firing them before checkout muddles the decision. Keep landing pages on the why; reserve if-then prompts for post-commitment surfaces.",
+"tactics": [
+"commitment_consistency",
+"specificity_concrete"
+],
+"stages": [
+"hero_landing",
+"retention",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Gollwitzer, \"Implementation Intentions: Strong Effects of Simple Plans\", _American Psychologist_ 54:7 (1999) - if-then plans lift behaviour-change adherence from ~30% to ~70% on observed first action within 7 days. Meta-analysed in Gollwitzer and Sheeran, _Advances in Experimental Social Psychology_",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-19",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Sensory rotation as retention defence",
+"heading": "19. Sensory rotation as retention defence",
+"definition": "A subscriber who uses the same product the same way for six months will tire of it whether or not the product is good. Defend retention by rotating the surface the customer interacts with, not by changing the core product.",
+"body": "**Canonical source:** Galak and Redden, \"The Properties and Antecedents of Hedonic Adaptation\", _Annual Review of Psychology_ 69:1 (2018) - hedonic adaptation is the dominant cause of subscription cancellation in repeatable-consumption categories. Original mechanism in Frederick and Loewenstein, \"Hedonic Adaptation\", _Well-Being: Foundations of Hedonic Psychology_ (1999). Applied in Irrational Labs interventions for meal-kit and grocery DTC subscriptions 2017-2021. Rotating the sensory surface around an otherwise stable product extends time-to-tire by 40-60% on observed subscriber retention curves.\n\n**One-line definition:** A subscriber who uses the same product the same way for six months will tire of it whether or not the product is good. Defend retention by rotating the surface the customer interacts with, not by changing the core product.\n\n**Where to use:** Recipe Pack v2 or use-guide v2 sent at month 2 of subscription. Founder-led video at month 4 showing a new application. Limited-edition packaging insert at month 6 (different artwork on the same product structure, no product change). Monthly recipe-email or routine-email rotation. The product is one SKU; the perception of the product cycles.\n\n**Where NOT to use:** Do not rotate the actual product. The product is the brand. Wall-2 hygiene also blocks \"new improved\" copy that implies a category move. Rotation is in the wrapper, not in the product.",
+"tactics": [
+"curiosity_gap",
+"scarcity"
+],
+"stages": [
+"founder_section",
+"retention",
+"social_tiktok",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Galak and Redden, \"The Properties and Antecedents of Hedonic Adaptation\", _Annual Review of Psychology_ 69:1 (2018) - hedonic adaptation is the dominant cause of subscription cancellation in repeatable-consumption categories. Original mechanism in Frederick and Loewenstein, \"Hedonic Adaptation\", _We",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-20",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Vice-virtue bundling",
+"heading": "20. Vice-virtue bundling",
+"definition": "Frame the product as the bridge that turns a virtue (\"I should do X\") into a vice-grade reward (\"X now feels indulgent\"). The customer keeps the virtue identity and gets the vice payoff.",
+"body": "**Canonical source:** Milkman, Rogers and Bazerman, \"Highbrow Films Gather Dust\", _Management Science_ 55:6 (2009) and Milkman's follow-up \"Temptation Bundling\", _Management Science_ 60:2 (2014) - pairing a \"want\" reward with a \"should\" behaviour lifts adherence ~51% on observed gym attendance. Generalised to healthy-product DTC categories in Ariely consulting work on Center for Advanced Hindsight grocery interventions - the \"should\" of cooking vegetables gets paired with the \"want\" of indulgent flavour, lifting first-time purchase intent on identical inventory.\n\n**One-line definition:** Frame the product as the bridge that turns a virtue (\"I should do X\") into a vice-grade reward (\"X now feels indulgent\"). The customer keeps the virtue identity and gets the vice payoff.\n\n**Where to use:** Founder-story long-form, social tile copy, launch email subject line, in-pack card, cart-abandon recovery email. The bridge frame works at any funnel stage that asks the customer to commit to a behaviour change.\n\n**Where NOT to use:** Per Wall 1, do not pair the bundling with medicinal framing. Pair with identity claims instead. Body claims trip regulatory walls; identity claims do not.",
+"tactics": [
+"framing",
+"identity_priming"
+],
+"stages": [
+"cart_abandon",
+"email_subject",
+"founder_section"
+],
+"vectors": [],
+"primary_source": "Milkman, Rogers and Bazerman, \"Highbrow Films Gather Dust\", _Management Science_ 55:6 (2009) and Milkman's follow-up \"Temptation Bundling\", _Management Science_ 60:2 (2014) - pairing a \"want\" reward with a \"should\" behaviour lifts adherence ~51% on observed gym attendance. Generalised to healthy-pro",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "BE-21",
+"school": "behavioral_economics",
+"school_label": "BE canon",
+"source_file": "behavioral-economics.md",
+"name": "Mental-accounting redirect",
+"heading": "21. Mental-accounting redirect",
+"definition": "The monthly subscription does not compete against the cheap commodity it sits next to in the customer's mind; it competes against the category of spend it actually replaces. Anchor the price against the mental-account it actually replaces, not the mental-account it sits next to.",
+"body": "**Canonical source:** Thaler, \"Mental Accounting Matters\", _Journal of Behavioral Decision Making_ 12:3 (1999) - customers slot expenses into category-specific budgets that are not fungible across categories. Applied in Ariely consulting work on subscription-pricing architecture and grocery-DTC pricing via Center for Advanced Hindsight 2014-2018. Reframing a monthly subscription from \"groceries\" to \"category-X replacement\" lifts willingness-to-pay 30-50% on the same monetary amount because the redirected account contains a higher reference price.\n\n**One-line definition:** The monthly subscription does not compete against the cheap commodity it sits next to in the customer's mind; it competes against the category of spend it actually replaces. Anchor the price against the mental-account it actually replaces, not the mental-account it sits next to.\n\n**Where to use:** Pricing-page copy under the subscription tier (\"less than X-equivalent-experience\"). Subscription-decision email at the cart-abandon stage. Founder-led answer to \"why so expensive\" objections - it is not expensive against the experience it replaces; it is expensive against the commodity it is not.\n\n**Where NOT to use:** Do not anchor against another product in your category (Wall 2 - no category comparisons). The mental-account is the experience the product replaces, not the commodity the product is.\n\n## The six-lever cocktail (a phantom-commitment hero case)\n\nWhen a brand manufactures a phantom-commitment moment w",
 "tactics": [
 "anchoring",
 "authority",
 "commitment_consistency",
 "costly_signaling",
 "curiosity_gap",
+"framing",
 "loss_aversion",
 "reciprocity"
 ],
 "stages": [
 "cart_abandon",
-"email_subject",
+"founder_section",
 "hero_landing",
+"pdp_pricing",
+"subscription_tier",
 "trust_certification"
 ],
 "vectors": [],
-"primary_source": "Compound mechanic. Closest single sources: Freedman and Fraser foot-in-the-door, Journal of Personality and Social Psychology 1966. Cialdini commitment-and-consistency, _Influence_ Chapter 3. Ariely confabulation experiments, _Predictably Irrational_ Chapter 5.",
+"primary_source": "Thaler, \"Mental Accounting Matters\", _Journal of Behavioral Decision Making_ 12:3 (1999) - customers slot expenses into category-specific budgets that are not fungible across categories. Applied in Ariely consulting work on subscription-pricing architecture and grocery-DTC pricing via Center for Adv",
 "wall_1_flag": false,
 "wall_2_flag": false
 },
@@ -1143,10 +1267,189 @@
 "name": "The dopamine of small reveals",
 "heading": "2.7 The dopamine of small reveals",
 "definition": "Small, unexpected surprises hit the same neural circuit as gambling wins. Cumulative effect of multiple small reveals is disproportionately retentive.",
-"body": "**Canon reference:** Sutherland, _Alchemy_, Chapter 7. Spectator columns on scratch-cards, lotteries, and small dopamine hits.\n\n**One-line definition:** Small, unexpected surprises hit the same neural circuit as gambling wins. Cumulative effect of multiple small reveals is disproportionately retentive.\n\n**Where to use:** A reveal mechanic at the capture popup (scratch-to-reveal, spin-to-win - only if the reward is genuine and the experience matches the brand voice). One unannounced second gift in the first box. A monthly extra in subscription boxes 2, 3, 4. Weekly ritual content with a small reveal element. Vary the founder DM or video monthly.\n\n**Where NOT to use:** Reveals that promise more than they deliver. Sutherland rule: \"Always promise less than you deliver, but only by a known small amount.\"\n\n## Schwartz awareness-stages (the third lens)\n\n[SOURCE: Eugene Schwartz, _Breakthrough Advertising_ (1966).]\n\nSchwartz's five stages: Unaware → Problem-aware → Solution-aware → Product-aware → Most-aware. Copy must match the prospect's current stage.\n\n**Stage-by-stage register:**\n\n- **Stage 1 (Unaware):** Does not know the problem the brand solves exists for them. Register: storytelling, not product. Ad creative usually does this work, not the funnel itself.\n- **Stage 2 (Problem-aware):** Knows the problem, has not yet looked for a solution. Register: problem-naming, sensory, lived-experience language. Landers and the second welcome email tend to live here.\n- **Stage 3 (Solution",
+"body": "**Canon reference:** Sutherland, _Alchemy_, Chapter 7. Spectator columns on scratch-cards, lotteries, and small dopamine hits.\n\n**One-line definition:** Small, unexpected surprises hit the same neural circuit as gambling wins. Cumulative effect of multiple small reveals is disproportionately retentive.\n\n**Where to use:** A reveal mechanic at the capture popup (scratch-to-reveal, spin-to-win - only if the reward is genuine and the experience matches the brand voice). One unannounced second gift in the first box. A monthly extra in subscription boxes 2, 3, 4. Weekly ritual content with a small reveal element. Vary the founder DM or video monthly.\n\n**Where NOT to use:** Reveals that promise more than they deliver. Sutherland rule: \"Always promise less than you deliver, but only by a known small amount.\"\n\n## Cialdini Pre-Suasion and Influence at Work additions\n\nThese three principles extend the seven classical Cialdini principles with research from Cialdini's _Pre-Suasion_ (2016) and the Influence at Work consulting practice (2018-2025).",
+"tactics": [
+"authority"
+],
+"stages": [
+"founder_section",
+"social_tiktok",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_, Chapter 7. Spectator columns on scratch-cards, lotteries, and small dopamine hits.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-15",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Geography of Cues (environmental pre-suasion)",
+"heading": "8. Geography of Cues (environmental pre-suasion)",
+"definition": "The cue that fires in the half-second before the customer reads the call to action determines whether the call to action lands. Design the cue (hero image, ambient colour, time-of-day, first sentence) before you design the ask.",
+"body": "**Canon reference:** Cialdini, _Pre-Suasion_ (2016) Chapter 5 \"Geography of Influence\". Goldstein, Cialdini and Griskevicius, \"A Room with a Viewpoint\", _Journal of Consumer Research_ 35 (2008) - hotel-towel-reuse signs that named the specific room outperformed generic-guest signs by 33% reuse compliance across 190 rooms at Holiday Inn Tempe. Applied in Influence at Work consulting engagements 2018-2024 for retail hero-image and email-send-time architecture.\n\n**One-line definition:** The cue that fires in the half-second before the customer reads the call to action determines whether the call to action lands. Design the cue (hero image, ambient colour, time-of-day, first sentence) before you design the ask.\n\n**Where to use:** Lander hero-image selection - match the image to the customer's just-before-purchase mental state. Email send-time architecture: match the send time to the moment the cue is most active in the customer's context. Founder-video opening shot: environment that primes the use of the product.\n\n**Where NOT to use:** Do not pair an environmental cue with a contradictory ask. Wall-1 hygiene applies to the cue as well as to the copy.",
+"tactics": [
+"authority"
+],
+"stages": [
+"founder_section",
+"hero_landing",
+"social_tiktok"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Pre-Suasion_ (2016) Chapter 5 \"Geography of Influence\". Goldstein, Cialdini and Griskevicius, \"A Room with a Viewpoint\", _Journal of Consumer Research_ 35 (2008) - hotel-towel-reuse signs that named the specific room outperformed generic-guest signs by 33% reuse compliance across 190 room",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-16",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "The Privileged Moment",
+"heading": "9. The Privileged Moment",
+"definition": "The cue and the ask must be visible in the same viewport at the same moment. If the customer has to scroll to find the cue or click to find the ask, the pre-suasion effect collapses.",
+"body": "**Canon reference:** Cialdini, _Pre-Suasion_ (2016) Chapter 7 \"The Primary Causes of Pre-Suasion: Attention\" - the pre-suasive cue must coexist with the call to action in the same viewport. Separating cue from ask by a scroll-fold or click-through drops the effect by 60-80% (165% pre-suasion-opener lift compresses to 30-40% when cue is on the previous page).\n\n**One-line definition:** The cue and the ask must be visible in the same viewport at the same moment. If the customer has to scroll to find the cue or click to find the ask, the pre-suasion effect collapses.\n\n**Where to use:** Lander hero block contains the environmental cue AND the call to action inside the first 100vh on mobile. Email subject line plus preheader carry the cue AND the ask in the inbox-preview frame. PDP hero holds the cue image AND the \"Add to cart\" button inside the first 80vh on desktop and 100vh on mobile.\n\n**Where NOT to use:** Do not split cue and ask across a multi-step checkout. The pre-suasion effect is single-viewport-bound. Use commitment-and-consistency (Cialdini principle 2) for multi-step flows.",
 "tactics": [
 "authority",
+"commitment_consistency"
+],
+"stages": [
+"email_subject",
+"hero_landing",
+"pdp_pricing"
+],
+"vectors": [],
+"primary_source": "Cialdini, _Pre-Suasion_ (2016) Chapter 7 \"The Primary Causes of Pre-Suasion: Attention\" - the pre-suasive cue must coexist with the call to action in the same viewport. Separating cue from ask by a scroll-fold or click-through drops the effect by 60-80% (165% pre-suasion-opener lift compresses to 30",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-17",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Defaults as the strongest pre-suasive cue",
+"heading": "10. Defaults as the strongest pre-suasive cue",
+"definition": "The default option is the strongest pre-suasive cue in commercial decision architecture. Make the desired path the default and let opt-out do the work. Default-opt-in beats default-opt-out by 4-10x on observed compliance.",
+"body": "**Canon reference:** Johnson and Goldstein, \"Do Defaults Save Lives?\", _Science_ 302 (2003) - organ-donation default-opt-in countries hold 86-99% consent rates vs 4-28% in default-opt-out countries on culturally-matched populations. Reframed by Cialdini in _Pre-Suasion_ (2016) as the strongest cue we know. HMRC + Behavioural Insights Team 140,000-taxpayer field trial 2012-2013 - default tax-payment letters using social-proof language lifted compliance 5.1pp on a 210M tax base.\n\n**One-line definition:** The default option is the strongest pre-suasive cue in commercial decision architecture. Make the desired path the default and let opt-out do the work. Default-opt-in beats default-opt-out by 4-10x on observed compliance.\n\n**Where to use:** Subscription tier default-selected on the PDP only if the brand has chosen subscription as the desired default (see DTC subscription-as-a-stage-not-a-default principle for the case against this on long-term retention). Recipe pack or add-on added by default in the first box with opt-out checkbox. Day-7 post-purchase email default-CTA matches the desired next action. Cookie consent default-decline only.\n\n**Where NOT to use:** Do not name the mechanism in customer-facing copy - it is a mechanism, not a benefit. Customer-facing copy describes the default option itself.\n\n## Sutherland _Alchemy_ and Ogilvy BSP additions\n\nThese five principles extend Sutherland's seven moves with research from Rory Sutherland's _Alchemy_ (2019), Nudgestock 2024 ke",
+"tactics": [
+"authority",
+"default_effect"
+],
+"stages": [
+"pdp_pricing",
+"retention",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Johnson and Goldstein, \"Do Defaults Save Lives?\", _Science_ 302 (2003) - organ-donation default-opt-in countries hold 86-99% consent rates vs 4-28% in default-opt-out countries on culturally-matched populations. Reframed by Cialdini in _Pre-Suasion_ (2016) as the strongest cue we know. HMRC + Behavi",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-18",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "The costly-signal test",
+"heading": "2.8 The costly-signal test",
+"definition": "A brand earns trust by visibly absorbing a cost the cheap competitor would never pay. The signal is not the marketing claim; the signal is the production decision that costs money and shows up in the product. Make the costly decision and tell the story of the cost.",
+"body": "**Canon reference:** Sutherland, _Alchemy_ (2019) Chapter \"Costly Signalling and Trust Placebos\". Sutherland on the Knowledge Project podcast (fs.blog, 2021). Tested empirically in Thinkbox \"Signalling Success\" research 2020 - brands that visibly absorb costs signal trustworthiness on observed purchase intent at +15-25pp vs equivalent-priced brands without visible cost signals.\n\n**One-line definition:** A brand earns trust by visibly absorbing a cost the cheap competitor would never pay. The signal is not the marketing claim; the signal is the production decision that costs money and shows up in the product. Make the costly decision and tell the story of the cost.\n\n**Where to use:** Founder-story page, recipe-card insert, day-2 implementation-intention email, mid-lifecycle founder-video. Surface costly production decisions (sustainable packaging, certified ingredients, single-source supplier, hand-assembly steps) as the proof beneath the brand promise.\n\n**Where NOT to use:** Do not surface costly signals in promotional copy. The signal works only when it is presented as a production decision, not as a sales argument. Wall-2 hygiene also blocks comparison framing - the contrast stays implicit.",
+"tactics": [
+"costly_signaling",
+"framing"
+],
+"stages": [
+"founder_section",
+"social_tiktok",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Sutherland, _Alchemy_ (2019) Chapter \"Costly Signalling and Trust Placebos\". Sutherland on the Knowledge Project podcast (fs.blog, 2021). Tested empirically in Thinkbox \"Signalling Success\" research 2020 - brands that visibly absorb costs signal trustworthiness on observed purchase intent at +15-25p",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-19",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Satisficing at consumption, maximising at acquisition",
+"heading": "2.9 Satisficing at consumption, maximising at acquisition",
+"definition": "The customer researches the product before they buy it; they do not research the product every time they use it. Design the acquisition surface for the maximising customer. Design the consumption surface for the satisficing customer.",
+"body": "**Canon reference:** Sutherland, \"Maximizing vs Satisficing Brands\", David Perell essay (2020) synthesising Sutherland's 15 years of Wiki Man column commentary. Herbert Simon, _Models of Bounded Rationality_ (1982) - the original satisficing-vs-maximising distinction.\n\n**One-line definition:** The customer researches the product before they buy it; they do not research the product every time they use it. Design the acquisition surface for the maximising customer. Design the consumption surface for the satisficing customer.\n\n**Where to use:** Acquisition surface (lander, PDP, founder-story) carries the maximising depth - ingredient origins, founder credentials, recipe library, costly-signal evidence. Consumption surface (package artwork, recipe-card, in-product experience) carries the satisficing simplicity. The two registers are functionally separate.\n\n**Where NOT to use:** Do not put maximising-depth content on the consumption surface and do not put satisficing-simplicity on the acquisition surface. Mixing the registers breaks both.",
+"tactics": [
+"authority"
+],
+"stages": [
+"founder_section",
+"hero_landing",
+"pdp_pricing"
+],
+"vectors": [],
+"primary_source": "Sutherland, \"Maximizing vs Satisficing Brands\", David Perell essay (2020) synthesising Sutherland's 15 years of Wiki Man column commentary. Herbert Simon, _Models of Bounded Rationality_ (1982) - the original satisficing-vs-maximising distinction.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-20",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Unboxing as primacy-lock",
+"heading": "2.10 Unboxing as primacy-lock",
+"definition": "The first 60 seconds of unboxing locks the primacy memory for the entire relationship. Every detail of the first unboxing must serve the primacy lock; nothing in the first unboxing is small.",
+"body": "**Canon reference:** Sutherland TED 2010 \"Sweat the Small Stuff\" + Sutherland on Knowledge Project 2021. Kahneman, _Thinking Fast and Slow_ (2011) Chapter 35 \"Two Selves\" - the experiencing-self memory of a product is dominated by the first and last moments of contact, not by the average experience. Applied in Ogilvy BSP Annual 2024 unboxing case studies.\n\n**One-line definition:** The first 60 seconds of unboxing locks the primacy memory for the entire relationship. Every detail of the first unboxing must serve the primacy lock; nothing in the first unboxing is small.\n\n**Where to use:** Package outer artwork carries the costly-signal messaging where the customer sees it when they first open the box. Hand-signed founder note in the first 200 subscriber boxes. Recipe-card or use-guide insert positioned on top of the product stack. The QR-on-package from DTC-03 sits in the unboxing moment.\n\n**Where NOT to use:** Do not change the first-unboxing experience after launch. The primacy lock is set in the first 60 seconds of the first box and re-set every time a new subscriber joins. Iterating the artwork by box 2 breaks the primacy promise.",
+"tactics": [
+"anchoring",
+"primacy_effect"
+],
+"stages": [
+"founder_section",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Sutherland TED 2010 \"Sweat the Small Stuff\" + Sutherland on Knowledge Project 2021. Kahneman, _Thinking Fast and Slow_ (2011) Chapter 35 \"Two Selves\" - the experiencing-self memory of a product is dominated by the first and last moments of contact, not by the average experience. Applied in Ogilvy BS",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-21",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Sweat the small stuff",
+"heading": "2.11 Sweat the small stuff",
+"definition": "When in doubt, fix a small detail nobody asked about. The compounding effect of 50 small fixes outperforms a single big campaign on customer-perceived quality. Pre-launch budget is best allocated to small details, not to a hero campaign.",
+"body": "**Canon reference:** Sutherland TED 2010 \"Sweat the Small Stuff\". Sutherland, _Alchemy_ (2019) Rule 4 \"Solve the right problem, even if it is a small problem\". Ogilvy BSP Annual 2024.\n\n**One-line definition:** When in doubt, fix a small detail nobody asked about. The compounding effect of 50 small fixes outperforms a single big campaign on customer-perceived quality. Pre-launch budget is best allocated to small details, not to a hero campaign.\n\n**Where to use:** Pre-launch budget allocation. Prioritise package tactility, founder-note paper weight, recipe-card illustration detail, email send-time precision, QR scan latency optimisation. Do not allocate the same budget to a hero paid-social campaign.\n\n**Where NOT to use:** Do not sweat small stuff that the customer cannot perceive. A tolerance tightening that costs supplier energy and produces no customer-perceptible difference is waste.",
+"tactics": [],
+"stages": [
+"founder_section",
+"hero_landing"
+],
+"vectors": [],
+"primary_source": "Sutherland TED 2010 \"Sweat the Small Stuff\". Sutherland, _Alchemy_ (2019) Rule 4 \"Solve the right problem, even if it is a small problem\". Ogilvy BSP Annual 2024.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "CI-22",
+"school": "cialdini_sutherland",
+"school_label": "Cialdini & Sutherland canon",
+"source_file": "cialdini-sutherland.md",
+"name": "Deliberate slowing as a quality cue",
+"heading": "2.12 Deliberate slowing as a quality cue",
+"definition": "When the customer expects fast and gets slow, the brand can either apologise (and lose) or narrate the slowness as the proof of quality (and win). The slow batch is the costly-signal slowed-down.",
+"body": "**Canon reference:** Sutherland on Nudgestock 2024 \"Are We Too Impatient to Be Intelligent\" (Behavioral Scientist transcript). Shotton, _The Choice Factory_ (2018) Chapter 4 \"The Pratfall Effect\".\n\n**One-line definition:** When the customer expects fast and gets slow, the brand can either apologise (and lose) or narrate the slowness as the proof of quality (and win). The slow batch is the costly-signal slowed-down.\n\n**Where to use:** First-batch production narrative. Slow supplier timelines. Hand-finished product steps. Limited-edition batches. The slow narrative belongs on the founder-story page, the day-14 founder-video email, and the in-pack card.\n\n**Where NOT to use:** Do not narrate slowness in customer-service replies to delivery-delay complaints. The narrative works when set up before the customer waits, not after the customer is impatient.\n\n## Schwartz awareness-stages (the third lens)\n\n[SOURCE: Eugene Schwartz, _Breakthrough Advertising_ (1966).]\n\nSchwartz's five stages: Unaware → Problem-aware → Solution-aware → Product-aware → Most-aware. Copy must match the prospect's current stage.\n\n**Stage-by-stage register:**\n\n- **Stage 1 (Unaware):** Does not know the problem the brand solves exists for them. Register: storytelling, not product. Ad creative usually does this work, not the funnel itself.\n- **Stage 2 (Problem-aware):** Knows the problem, has not yet looked for a solution. Register: problem-naming, sensory, lived-experience language. Landers and the second welcom",
+"tactics": [
+"apology_opener",
+"authority",
 "curiosity_gap",
+"pratfall_effect",
 "scarcity",
 "social_proof"
 ],
@@ -1154,12 +1457,574 @@
 "founder_section",
 "hero_landing",
 "social_tiktok",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Sutherland on Nudgestock 2024 \"Are We Too Impatient to Be Intelligent\" (Behavioral Scientist transcript). Shotton, _The Choice Factory_ (2018) Chapter 4 \"The Pratfall Effect\".",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "LL-01",
+"school": "llm_seo",
+"school_label": "LLM SEO & Content Engineering canon",
+"source_file": "llm-seo-canon.md",
+"name": "Topical Authority (Semantic SEO)",
+"heading": "1. Topical Authority (Semantic SEO)",
+"definition": "Win the LLM's mental map of a single topic cluster by being the source of breadth + depth across every adjacent question the customer might ask.",
+"body": "**Canon reference:** ESA Digital _How to Get Cited by AI in 2026_ (Dennis Lazard, May 2026); RASK AI case study (50% of sign-ups from AI search, 12,100 AI LLM traffic per month); AITHOR case study (50,000 AI LLM traffic per month, 5,000 AI citations per month); Eugene Schwartz _Breakthrough Advertising_ (1966) - awareness-stages framework underneath the topical-authority mechanic.\n\n**One-line definition:** Win the LLM's mental map of a single topic cluster by being the source of breadth + depth across every adjacent question the customer might ask.\n\n**Where to use in the brand funnel:** Build the \"Make healthy food taste good\" cluster as a content cathedral. Pillar page (the homepage) anchors the cluster. Sub-pillar pages cover the six content vectors (bodybuilder plate, bland-plate rescue, sweet pairing, avocado moment, salad-bar fix, chicken-and-rice rescue) as deep sub-clusters. Recipe pages stack underneath - one recipe per typical meal occasion, each anchored to one content vector, each citing primary sources (Eurofins ICP-MS panel, the founder's lived Ayurvedic-eating period). Multilingual: UK English at launch, then DE / FR / NL as EU shipping lane spins up. Editorial register throughout (Aesop / Le Labo cadence). Founder credential (the founder + a prior venture + a prior product) cited on About page + cross-linked from every cluster anchor.\n\n**Where NOT to use:** Skyscraper-style \"everything you need to know about salt\" listicles - April 2026 Gemini 4.0 flags semanti",
+"tactics": [
+"anchoring",
+"authority"
+],
+"stages": [
+"founder_section",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "ESA Digital _How to Get Cited by AI in 2026_ (Dennis Lazard, May 2026); RASK AI case study (50% of sign-ups from AI search, 12,100 AI LLM traffic per month); AITHOR case study (50,000 AI LLM traffic per month, 5,000 AI citations per month); Eugene Schwartz _Breakthrough Advertising_ (1966) - awarene",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "LL-02",
+"school": "llm_seo",
+"school_label": "LLM SEO & Content Engineering canon",
+"source_file": "llm-seo-canon.md",
+"name": "Programmatic SEO",
+"heading": "2. Programmatic SEO",
+"definition": "Generate pages by formula - one templated page per cell of an `<input> × <output>` matrix - so the LLM can match a long-tail query directly to a destination page that answers it precisely.",
+"body": "**Canon reference:** ESA Digital case studies - RASK AI tools matrix (language × voice clone, document × translator, video / audio × translator: 12,100 traffic per month per page family); Lovable Templates; Webflow Integration pages; Augment Code Tools.\n\n**One-line definition:** Generate pages by formula - one templated page per cell of an `<input> × <output>` matrix - so the LLM can match a long-tail query directly to a destination page that answers it precisely.\n\n**Where to use in the brand funnel:** The the brand matrices are constrained by Wall 2 (no competitor comparison pages, no category-vs-category pages). What survives Wall 2: (a) protein × meal-occasion recipe matrix - \"the brand for grilled chicken thigh dinner\", \"the brand on poached eggs at breakfast\", \"the brand on smashed avocado at brunch\"; (b) diet × use-case pages - \"the brand for bodybuilder cutting protocol\", \"the brand for Ayurvedic limited-set vegan plate\"; (c) free-tool pages with behavioural signals - per-meal sodium tracker, flavour-balance score calculator, salt-on-fruit pairing recommender. The free-tool pages double as the proprietary-data layer the LLMs reward.\n\n**Where NOT to use:** Anything that violates Wall 2 - \"the brand vs Maldon\" pages, \"the brand vs Tabasco\" pages, \"best salt brand\" listicles seeded from our domain. We accept being placed in third-party best-of lists via Pillar 3 but never publish category comparison from our own domain. Per-product cost comparison pages also banned per th",
+"tactics": [
+"anchoring",
+"scarcity"
+],
+"stages": [
+"social_tiktok",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "ESA Digital case studies - RASK AI tools matrix (language × voice clone, document × translator, video / audio × translator: 12,100 traffic per month per page family); Lovable Templates; Webflow Integration pages; Augment Code Tools.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "LL-03",
+"school": "llm_seo",
+"school_label": "LLM SEO & Content Engineering canon",
+"source_file": "llm-seo-canon.md",
+"name": "Brand SEO",
+"heading": "3. Brand SEO",
+"definition": "Get the brand name to appear in third-party top / best lists, guest posts, AI Overview citations, podcast transcripts, and structured data so the LLM treats the brand as a known entity with a defined position when answering customer queries.",
+"body": "**Canon reference:** ESA Digital case studies - Marketplace UGC Music Marketplace (400 AI citations per month, 250,000 AI traffic per month); Enterprise CRM case (500 AI citations per month, 80% AI traffic share US). Per the same source: sites with high direct / brand traffic share lost 1.5x less visibility in the April 2026 update than sites without.\n\n**One-line definition:** Get the brand name to appear in third-party top / best lists, guest posts, AI Overview citations, podcast transcripts, and structured data so the LLM treats the brand as a known entity with a defined position when answering customer queries.\n\n**Where to use in the brand funnel:** Build inbound brand mentions in three layers: (a) editorial mentions in cooking blogs, fitness blogs, nutrition newsletters, behavioural-economics newsletters - the founder can appear as a guest writer leveraging the a prior venture credential; (b) AI Overview citations - publish structured-data PDP + structured-data founder credential + structured-data quality-report PDF so LLMs have crawlable facts; (c) podcast appearances and editorial profiles for the founder. Founder credential is the authority anchor - amortise it across as many media surfaces as schedule allows. When the customer asks ChatGPT \"what's a good seasoning blend for high-protein meal prep that isn't loaded with junk?\", the brand needs to be in the answer.\n\n**Where NOT to use:** Paid placements that look like editorial without disclosure (Wall-1 adjacent regula",
+"tactics": [
+"anchoring",
+"authority"
+],
+"stages": [
+"founder_section",
+"pdp_pricing",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "ESA Digital case studies - Marketplace UGC Music Marketplace (400 AI citations per month, 250,000 AI traffic per month); Enterprise CRM case (500 AI citations per month, 80% AI traffic share US). Per the same source: sites with high direct / brand traffic share lost 1.5x less visibility in the April",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "LL-04",
+"school": "llm_seo",
+"school_label": "LLM SEO & Content Engineering canon",
+"source_file": "llm-seo-canon.md",
+"name": "Regular Page Refresh",
+"heading": "4. Regular Page Refresh",
+"definition": "Conversion pages, pillar pages, and high-value programmatic pages are refreshed on a calendarized cadence - the LLM treats freshness + active maintenance as a quality signal.",
+"body": "**Canon reference:** ESA Digital RASK AI + Enterprise CRM case studies - both flagged \"regular page refresh: regular updates and maintenance of the main conversion pages\" as one of four winning strategies. Per the March 2026 SE Ranking analysis, 80% of content in the Top-3 was changed during the update period - the brands that maintained Top-10 were the ones already refreshing on rolling cadence.\n\n**One-line definition:** Conversion pages, pillar pages, and high-value programmatic pages are refreshed on a calendarized cadence - the LLM treats freshness + active maintenance as a quality signal.\n\n**Where to use in the brand funnel:** Quarterly refresh of the four high-stakes surfaces - homepage hero, PDP main, About / founder section, welcome-flow email sequence. Monthly refresh of programmatic pages (Pillar 2 matrices) as new recipes / new use cases / new evidence emerge. Annual refresh of the canonical foundation files (positioning.md, brand-voice.md) only when the founder makes a positioning-level decision documented in `06-decisions/`. Maintenance log in `06-decisions/refreshes/YYYY-MM-DD-<surface>.md` so the refresh history itself becomes a freshness signal for LLM crawlers.\n\n**Where NOT to use:** Cosmetic-only refreshes that do not change substance - LLMs are getting better at detecting this and treat it as a negative signal. Refreshing immediately after a the founder-level positioning lock - let the positioning rest for 6+ weeks before the next refresh to avoid the \"unce",
+"tactics": [],
+"stages": [
+"founder_section",
+"hero_landing",
+"pdp_pricing",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "ESA Digital RASK AI + Enterprise CRM case studies - both flagged \"regular page refresh: regular updates and maintenance of the main conversion pages\" as one of four winning strategies. Per the March 2026 SE Ranking analysis, 80% of content in the Top-3 was changed during the update period - the bran",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "LL-05",
+"school": "llm_seo",
+"school_label": "LLM SEO & Content Engineering canon",
+"source_file": "llm-seo-canon.md",
+"name": "Content Engineering",
+"heading": "5. Content Engineering",
+"definition": "Content engineering is the practice of building systems that help teams create, update, reuse, and distribute content at scale without losing accuracy, consistency, or voice.",
+"body": "**Canon reference:** AirOps blog _Content Engineering_ (2026); GrowthX overview deck (2026); n8n node-based workflow patterns; ESA Digital observation that the top-10% of surviving sites all use this operating pattern.\n\n**One-line definition:** Content engineering is the practice of building systems that help teams create, update, reuse, and distribute content at scale without losing accuracy, consistency, or voice.\n\n**Where to use in the brand funnel:** The Brand OS itself IS the content engineering platform - the Brain CLI is the retrieval layer (RAG over positioning + cocktails + canon + Vault rows); the canon files are the spec; the hygiene vocab + Wall-1 / Wall-2 scan + the seven hard rules are the constraint layer; the GitHub Actions (brand-voice-check, claims-trace) are the CI quality gate; the decision records in `06-decisions/` are the institutional memory; when a Claude session loads the repo, CLAUDE.md is the plug-in contract; the Brain answers any tactic query in one call. For new content sprints - (a) define the spec in plain English in a Google Doc, (b) analyse where person-hours go now (research, brief, writing, refresh), (c) ask Claude or ChatGPT to draft the workflow spec, (d) implement as either a Brain-prompted Claude session for low-volume / high-stakes work, or as a node-based n8n / Make workflow for programmatic-SEO scale. The Brand OS is the constraint contract every workflow passes through before publication.\n\n**Where NOT to use:** Full automation with",
+"tactics": [
+"commitment_consistency"
+],
+"stages": [
+"founder_section",
+"hero_landing",
+"pdp_pricing"
+],
+"vectors": [],
+"primary_source": "AirOps blog _Content Engineering_ (2026); GrowthX overview deck (2026); n8n node-based workflow patterns; ESA Digital observation that the top-10% of surviving sites all use this operating pattern.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "LL-06",
+"school": "llm_seo",
+"school_label": "LLM SEO & Content Engineering canon",
+"source_file": "llm-seo-canon.md",
+"name": "April 2026 anti-patterns (ranking-collapse triggers)",
+"heading": "6. April 2026 anti-patterns (ranking-collapse triggers)",
+"definition": "The four documented failure modes from the April 2026 Google core update window - approaches that lost between 28% and 100% of visibility and which the Brain auto-flags when surfaced by any retrieved row.",
+"body": "**Canon reference:** SE Ranking March 2026 core update analysis via SearchEngineLand; Originality.ai _AI Content in Google Search Results_ (September 2025); Graphite _Five Percent: More Articles are Created by AI than Humans_.\n\n**One-line definition:** The four documented failure modes from the April 2026 Google core update window - approaches that lost between 28% and 100% of visibility and which the Brain auto-flags when surfaced by any retrieved row.\n\n**Where to use in the brand funnel:** Apply as a hygiene scan on every content production decision, the same way Wall-1 and Wall-2 hygiene scans run on every cocktail and Vault row. (a) Skyscraper rewrites - \"make it longer and better than competitors\" is dead, Gemini 4.0 flags semantically perfect rewrites as derivative and demotes them out of the Top-100. (b) Pure aggregation / scraping - job aggregators dropped 28% in coverage, dictionary sites dropped 35%. (c) Brand-agnostic traffic plays - sites with low direct / brand traffic share lost 1.5x more visibility than sites with strong brand signals. (d) Generative AI content without proprietary data + human review - 17.31% of the Top is now 100% AI content, but only the slice combined with proprietary data and behavioural signals stayed in the Top-10.\n\n**Where NOT to use:** This principle is the negative space of the other four pillars - it is itself the anti-pattern list. Do not interpret it as \"do not use AI content\" - the case studies are explicit that AI content + propri",
+"tactics": [
+"anchoring",
+"authority",
+"costly_signaling",
+"default_effect",
+"specific_numbers"
+],
+"stages": [
+"cart_abandon",
+"founder_section",
+"hero_landing",
+"pdp_pricing",
 "subscription_tier",
 "trust_certification",
 "welcome_flow"
 ],
 "vectors": [],
-"primary_source": "Sutherland, _Alchemy_, Chapter 7. Spectator columns on scratch-cards, lotteries, and small dopamine hits.",
+"primary_source": "SE Ranking March 2026 core update analysis via SearchEngineLand; Originality.ai _AI Content in Google Search Results_ (September 2025); Graphite _Five Percent: More Articles are Created by AI than Humans_.",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-01",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "Influencer seeding without mandates",
+"heading": "1. Influencer seeding without mandates",
+"definition": "Send product to creators in your ICP without asking for anything in return. The ~30% who post produce content the brand could not have written. The ~70% who do not post still hold the product and remember the brand. The contractual version of the same spend produces less authentic content at higher cost.",
+"body": "**Canonical source:** Olipop seeding playbook reconstructed in Common Thread Collective 2024 case study and Eli Weiss public commentary (Olipop former Head of CX, 2022-2024) - Olipop sent free product to 2,000+ creators over 18 months with no contract, no required post, no approval gate. ~30% of recipients posted organically. Cost per organic mention ~$8-12. Magic Spoon (Gabi Lewis founder podcasts 2020-2022) ran the same playbook to 4,000+ creators in their first 24 months. Liquid I.V. (Brandon Cohen interviews 2021) seeded ~10,000 creators in their first 36 months without paid-post mandates.\n\n**One-line definition:** Send product to creators in your ICP without asking for anything in return. The ~30% who post produce content the brand could not have written. The ~70% who do not post still hold the product and remember the brand. The contractual version of the same spend produces less authentic content at higher cost.\n\n**Where to use:** Months 1-6 post-launch. Identify 200-500 creators in your category-adjacent niches. Send your hero SKU with a hand-signed founder note and any in-pack recipe or use-instruction card. No required post. No tracking pixel. No promo code asking for attribution. The creators who post produce the founder-led credibility wall; the creators who do not post seed the relationship for month 12.\n\n**Where NOT to use:** Do not pair seeding with an affiliate code or mandated post - that converts the mechanic into paid creator marketing and breaks the trust ",
+"tactics": [],
+"stages": [
+"founder_section",
+"hero_landing",
+"social_tiktok",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Olipop seeding playbook reconstructed in Common Thread Collective 2024 case study and Eli Weiss public commentary (Olipop former Head of CX, 2022-2024) - Olipop sent free product to 2,000+ creators over 18 months with no contract, no required post, no approval gate. ~30% of recipients posted organic",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-02",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "Day-7 post-purchase repeat-purchase email",
+"heading": "2. Day-7 post-purchase repeat-purchase email",
+"definition": "Seven days after delivery, send one email that asks how the first use went and includes one frictionless repeat-purchase CTA. This single email outperforms every other automated email in the DTC stack on attributable revenue.",
+"body": "**Canonical source:** Klaviyo 2024 DTC food and beverage benchmark dataset (n=4,200 brands) - the highest-performing single email in the post-purchase sequence is the day-7 first-use-feedback email with a one-tap repeat-purchase CTA. Median open rate 52%, click rate 18%, repeat-purchase conversion 11-14%. Outperforms day-1 thank-you (open 38%, click 7%) and day-14 review-request (open 31%, click 4%) by 2-3x on attributable revenue. Validated in Olipop, LMNT, Daily Harvest, Native post-purchase architectures via Eli Weiss and Patrick Campbell public commentary 2022-2024.\n\n**One-line definition:** Seven days after delivery, send one email that asks how the first use went and includes one frictionless repeat-purchase CTA. This single email outperforms every other automated email in the DTC stack on attributable revenue.\n\n**Where to use:** Day-7 from \"Delivered\" tracking webhook. Subject line asks about the first use of the product. Body: two sentences from the founder asking what they tried first, single CTA for repeat purchase or subscription. Pair with an implementation-intention prompt earlier in the lifecycle (day-2) so the day-7 message closes a loop rather than introducing one.\n\n**Where NOT to use:** Do not send the day-7 email if delivery confirmation is missing. Do not include more than one CTA. Do not use the day-7 slot for a survey or NPS request - those have their own touchpoint slots later in the lifecycle.",
+"tactics": [],
+"stages": [
+"email_subject",
+"founder_section",
+"retention",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Klaviyo 2024 DTC food and beverage benchmark dataset (n=4,200 brands) - the highest-performing single email in the post-purchase sequence is the day-7 first-use-feedback email with a one-tap repeat-purchase CTA. Median open rate 52%, click rate 18%, repeat-purchase conversion 11-14%. Outperforms day",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-03",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "QR-on-package to recipe or use-guide with email capture",
+"heading": "3. QR-on-package to recipe or use-guide with email capture",
+"definition": "Print a QR code on every package that points to a single high-signal use-page (recipe, routine, walkthrough) with email-capture, not to a generic homepage. The owned-list growth from inserted packages outperforms paid email-capture ads on cost per email by an order of magnitude.",
+"body": "**Canonical source:** Magic Spoon launch analysis 2019 (Gabi Lewis founder commentary on My First Million podcast 2020) - QR code on first 50,000 boxes pointed to a recipe page with email-capture overlay. 31% scan rate (industry baseline 6-8%). 44% of scanners gave email at the recipe page. Net 13.6% of all boxes converted to a captured email, compounding the owned-list growth without paid acquisition cost. Replicated in Olipop (2022 hot-tub recipe QR), Liquid I.V. (2023 marathon-route QR), AG1 (2023 morning-routine QR) per Eli Weiss commentary.\n\n**One-line definition:** Print a QR code on every package that points to a single high-signal use-page (recipe, routine, walkthrough) with email-capture, not to a generic homepage. The owned-list growth from inserted packages outperforms paid email-capture ads on cost per email by an order of magnitude.\n\n**Where to use:** Reserve a slot on the package artwork for the QR placement. Land the QR on a specific high-signal page that pays the scanner off immediately (a useful recipe, a walkthrough, a tool). Email-capture overlay offers the next level of payoff (\"get five more\"). Tie the captured email into the day-7 post-purchase sequence so the QR and email become a closed loop.\n\n**Where NOT to use:** Do not point the QR at the homepage, the about page, or the founder story - those have lower scan-conversion. The QR earns its scan only when the recipient already expects a payoff in the form of immediate utility.",
+"tactics": [],
+"stages": [
+"founder_section"
+],
+"vectors": [],
+"primary_source": "Magic Spoon launch analysis 2019 (Gabi Lewis founder commentary on My First Million podcast 2020) - QR code on first 50,000 boxes pointed to a recipe page with email-capture overlay. 31% scan rate (industry baseline 6-8%). 44% of scanners gave email at the recipe page. Net 13.6% of all boxes convert",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-04",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "Founder-led forum long game",
+"heading": "4. Founder-led forum long game",
+"definition": "Founder spends 30 minutes per week for 18-24 months answering technical questions in the forum where the ICP already lives (Reddit, Discord, Substack-comments, specialist Facebook groups). The brand is not mentioned in 80% of comments. Branded-search lift becomes observable at month 12-18, compounds through year 3.",
+"body": "**Canonical source:** LMNT founder Robb Wolf's two-year (2019-2021) presence on r/keto, r/leangains, r/electrolytes - 800+ comments, zero paid promotion, observable inflection in branded-search traffic at month 14. Reconstructed in LMNT founder interviews on Dom D'Agostino podcast 2022 and the Tim Ferriss show 2023. Olipop (Ben Goodwin) ran a parallel pattern on r/SeriousEats and r/GutHealth 2021-2023. Liquid I.V. has not run this pattern; AG1 has explicitly avoided it. The case studies converge on one operator commitment: the founder shows up weekly for two years before the inflection.\n\n**One-line definition:** Founder spends 30 minutes per week for 18-24 months answering technical questions in the forum where the ICP already lives (Reddit, Discord, Substack-comments, specialist Facebook groups). The brand is not mentioned in 80% of comments. Branded-search lift becomes observable at month 12-18, compounds through year 3.\n\n**Where to use:** Founder posts as a verified-founder account in 3-5 subreddits or forums where the ICP already discusses your category. 30 minutes weekly, 3-4 substantive comments. The 80/20 rule: 80% comments answer the user's question without mentioning the brand; 20% mention the brand when directly relevant to the question. Track inflection at month 14 via branded-search Google Trends or equivalent.\n\n**Where NOT to use:** Do not run this mechanic with a delegated community manager. Forum communities detect non-founder voice within 2-3 posts and downvot",
+"tactics": [
+"commitment_consistency",
+"unity"
+],
+"stages": [
+"founder_section",
+"social_tiktok"
+],
+"vectors": [],
+"primary_source": "LMNT founder Robb Wolf's two-year (2019-2021) presence on r/keto, r/leangains, r/electrolytes - 800+ comments, zero paid promotion, observable inflection in branded-search traffic at month 14. Reconstructed in LMNT founder interviews on Dom D'Agostino podcast 2022 and the Tim Ferriss show 2023. Olip",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-05",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "Anti-discount posture",
+"heading": "5. Anti-discount posture",
+"definition": "Never run a promotional discount. The subscription tier sits below the one-time tier because the customer commits, not because the brand is on sale. Event-based promotional discounts (Black Friday, launch promo, \"first month free\") erode the reference price and the recovery cycle is 6-9 months long.",
+"body": "**Canonical source:** AG1 / Athletic Greens has not run a discount in 12+ years of public-facing pricing (verified via Wayback Machine snapshots 2013-2025). LMNT has not run a discount since 2019. Olipop ran two discounts in 2022 - both followed by a measurable reference-price reset that took 6-9 months to recover (Eli Weiss commentary 2023). The pattern is structural rather than promotional: subscription is the only price tier below RRP, and the subscription discount is mechanical (commitment-based), not promotional (event-based). Validated against Hermann Simon _Confessions of the Pricing Man_ 2015 reference-price chapter.\n\n**One-line definition:** Never run a promotional discount. The subscription tier sits below the one-time tier because the customer commits, not because the brand is on sale. Event-based promotional discounts (Black Friday, launch promo, \"first month free\") erode the reference price and the recovery cycle is 6-9 months long.\n\n**Where to use:** Hold subscription-vs-one-time pricing structure as the only sub-RRP path. Founder-led answer to \"is there a discount code\" is \"subscription is the discount\". A small structural trial tier may exist as the deliberate entry point (different from a promotional discount) but it cannot drift into time-limited framing.\n\n**Where NOT to use:** Do not introduce a \"limited time\" frame on any pricing tier - that converts structural pricing into event-pricing and resets the reference price.",
+"tactics": [
+"anchoring",
+"commitment_consistency",
+"framing",
+"scarcity"
+],
+"stages": [
+"founder_section",
+"pdp_pricing",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "AG1 / Athletic Greens has not run a discount in 12+ years of public-facing pricing (verified via Wayback Machine snapshots 2013-2025). LMNT has not run a discount since 2019. Olipop ran two discounts in 2022 - both followed by a measurable reference-price reset that took 6-9 months to recover (Eli W",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-06",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "Founder-on-audio, brand-on-product",
+"heading": "6. Founder-on-audio, brand-on-product",
+"definition": "Founder carries the brand authority on audio (podcasts, founder-led video, written long-form). Product carries the brand visual on the package, the shelf, and the unboxing. The two surfaces never blend - audio is the founder, product is the brand.",
+"body": "**Canonical source:** Mike Cessario (Liquid Death) public posture 2019-2025 - founder appears on every long-form audio interview (How I Built This, Joe Rogan, My First Million, Acquired) while the brand never features Cessario on the can or in product photography. Chris Ashenden (AG1) sat ~40 podcast appearances 2019-2024 with zero founder face on the AG1 packet. Daniel Lubetzky (KIND Snacks) appeared on Shark Tank and 60+ podcasts 2008-2020 - the KIND bar wrapper carries Lubetzky's grandfather's story, not Lubetzky's face.\n\n**One-line definition:** Founder carries the brand authority on audio (podcasts, founder-led video, written long-form). Product carries the brand visual on the package, the shelf, and the unboxing. The two surfaces never blend - audio is the founder, product is the brand.\n\n**Where to use:** Founder appears on category-adjacent podcasts and writes the founder-story video, the day-2 and day-7 onboarding emails, and the customer-service replies in first person. The product packaging, the recipe-card insert, and the shelf-facing artwork carry the brand wordmark and the product content - not the founder's photo. This pattern resolves any \"co-founder never on camera\" constraint at the structural level - the brand stands on its own product surface; the founder stands on the audio surface.\n\n**Where NOT to use:** Do not put founder face on the package. Do not put a generic stock-photo founder shot in the day-7 email signature. The audio-vs-product separation is th",
+"tactics": [
+"authority",
+"scarcity"
+],
+"stages": [
+"founder_section",
+"social_tiktok",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Mike Cessario (Liquid Death) public posture 2019-2025 - founder appears on every long-form audio interview (How I Built This, Joe Rogan, My First Million, Acquired) while the brand never features Cessario on the can or in product photography. Chris Ashenden (AG1) sat ~40 podcast appearances 2019-202",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-07",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "Founder voice equals brand voice (no register switch)",
+"heading": "7. Founder voice equals brand voice (no register switch)",
+"definition": "Every customer-facing surface uses the same voice the founder uses when speaking to friends. No agency register, no copywriter polish, no professional-marketing-team smoothing. The cadence, syntax, and word choice that show up on a founder podcast also show up in the customer-service auto-reply.",
+"body": "**Canonical source:** Andrew Benin (Graza founder) 2023-2025 - every customer-service reply, every Instagram caption, every email is in Benin's first-person voice with the same syntax and the same cadence Benin uses on podcasts. Ben Goodwin (Olipop) 2022-2024 - same pattern, no copywriter register-switching between founder voice on social and brand voice on PDP. Daniel Lubetzky (KIND) 2010-2018 ran the same architecture. Verified via 60 direct quotes sampled from graza.co, drinkolipop.com, kindsnacks.com on 2026-05-20.\n\n**One-line definition:** Every customer-facing surface uses the same voice the founder uses when speaking to friends. No agency register, no copywriter polish, no professional-marketing-team smoothing. The cadence, syntax, and word choice that show up on a founder podcast also show up in the customer-service auto-reply.\n\n**Where to use:** Founder voice carries across the founder-story page, the day-2 email, the day-7 email, the customer-service replies, the social captions, the forum comments, and the press responses. Copywriters and agencies match the voice; they do not smooth it.\n\n**Where NOT to use:** Do not switch to corporate-marketing voice on B2B surfaces (wholesale enquiry replies, retailer onboarding emails) - those surfaces also stay in founder voice with a formal-register variant.",
+"tactics": [],
+"stages": [
+"founder_section",
+"pdp_pricing",
+"social_tiktok",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Andrew Benin (Graza founder) 2023-2025 - every customer-service reply, every Instagram caption, every email is in Benin's first-person voice with the same syntax and the same cadence Benin uses on podcasts. Ben Goodwin (Olipop) 2022-2024 - same pattern, no copywriter register-switching between found",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "DT-08",
+"school": "dtc_mechanics",
+"school_label": "DTC mechanics canon",
+"source_file": "dtc-mechanics.md",
+"name": "Founder formulates in public, on monthly cadence",
+"heading": "8. Founder formulates in public, on monthly cadence",
+"definition": "Once per month, the founder publishes a short note (300-500 words) explaining one specific product decision - why this ingredient, why this supplier, why this packaging, why this price. The note is not marketing; it is the founder thinking out loud about a real trade-off.",
+"body": "**Canonical source:** Ben Goodwin (Olipop) \"Recipe Notes\" Instagram cadence 2022-2024 - founder posts one monthly note explaining a flavour decision, a sourcing trade-off, or a recipe iteration. Yvon Chouinard (Patagonia) \"Field Reports\" 1980-2015 - founder and product-team published seasonal essays explaining material-sourcing decisions. The pattern lifts founder-credibility-perception 2-3x on observed brand-search lift over 18 months.\n\n**One-line definition:** Once per month, the founder publishes a short note (300-500 words) explaining one specific product decision - why this ingredient, why this supplier, why this packaging, why this price. The note is not marketing; it is the founder thinking out loud about a real trade-off.\n\n**Where to use:** \"Founder's Notebook\" cadence on the website plus social plus email. Each month picks one specific decision and explains the trade-off. The cadence builds the founder credibility wall over 18 months; the inflection lands at month 14 in combination with the founder-led-forum-long-game pattern above.\n\n**Where NOT to use:** Do not write the Notebook in agency-copywriter voice. Do not skip a month - the cadence is the credibility. Do not turn the Notebook into a product-launch announcement channel - that breaks the genuine-trade-off framing.\n\n## Sources\n\n- Eli Weiss public commentary on Olipop CX architecture, 2022-2024 (Twitter / Substack / podcast appearances).\n- Patrick Campbell / ProfitWell public commentary on subscription mechanic",
+"tactics": [
+"framing"
+],
+"stages": [
+"founder_section",
+"pdp_pricing",
+"social_tiktok",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Ben Goodwin (Olipop) \"Recipe Notes\" Instagram cadence 2022-2024 - founder posts one monthly note explaining a flavour decision, a sourcing trade-off, or a recipe iteration. Yvon Chouinard (Patagonia) \"Field Reports\" 1980-2015 - founder and product-team published seasonal essays explaining material-s",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "SU-01",
+"school": "subscription_mechanics",
+"school_label": "Subscription mechanics canon",
+"source_file": "subscription-mechanics.md",
+"name": "The first 60 days decide everything",
+"heading": "1. The first 60 days decide everything",
+"definition": "Whether a subscriber stays past month 6 is decided in the first 60 days, not in the second box. The entire onboarding architecture (day-2 email, day-7 email, box-2 timing, month-1 founder video) is the retention strategy. Everything after month 2 is downstream.",
+"body": "**Canonical source:** Recurly Research 2024 cross-vertical retention study (n=18,000 subscription businesses) - 30-50% of all subscriber churn occurs within the first 90 days; subscribers who receive their second box within 30-60 days of the first show 3x long-term retention vs subscribers whose second box ships at 60+ days. Validated in Eli Weiss (Olipop former Head of CX) public commentary 2023-2024 and Patrick Campbell / ProfitWell appearances 2022-2024. McKinsey 2018 \"Thinking inside the subscription box\" reaches the same conclusion on a different dataset.\n\n**One-line definition:** Whether a subscriber stays past month 6 is decided in the first 60 days, not in the second box. The entire onboarding architecture (day-2 email, day-7 email, box-2 timing, month-1 founder video) is the retention strategy. Everything after month 2 is downstream.\n\n**Where to use:** Default subscription cadence ships box-2 inside the 30-60-day retention sweet spot (28-day window typically works best for monthly products). Architect 4-5 distinct onboarding touchpoints across days 1-28: a day-1 thank-you, a day-2 implementation-intention prompt, a day-7 first-use-feedback email, a day-14 founder video, a day-21 add-on or recipe announcement, a day-28 box-2 confirmation. Months 3-12 carry fewer.\n\n**Where NOT to use:** Do not over-touch in days 1-7. More than three emails in the first 14 days drops aggregate open rate by 8-12pp on observed cohort data. Reserve the surveys, NPS prompts, and review-requ",
+"tactics": [
+"default_effect"
+],
+"stages": [
+"email_subject",
+"founder_section",
+"retention",
+"social_tiktok",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Recurly Research 2024 cross-vertical retention study (n=18,000 subscription businesses) - 30-50% of all subscriber churn occurs within the first 90 days; subscribers who receive their second box within 30-60 days of the first show 3x long-term retention vs subscribers whose second box ships at 60+ d",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "SU-02",
+"school": "subscription_mechanics",
+"school_label": "Subscription mechanics canon",
+"source_file": "subscription-mechanics.md",
+"name": "Pause is the highest-ROI save",
+"heading": "2. Pause is the highest-ROI save",
+"definition": "When a subscriber clicks cancel, the first save option presented is \"pause for 1 / 2 / 3 months\" - not \"discount\", not \"skip a box\", not \"downgrade tier\". Pause keeps the relationship alive without the brand paying a price; 75% of pausers return.",
+"body": "**Canonical source:** Recurly Research 2024 churn-recovery dataset (n=4,200 subscription brands) - 25% of would-be-cancellers accept a pause offer when offered as the first save option; pausers stay 5.5 months longer than non-paused subscribers; 3 out of 4 pausers resume within 90 days. Validated in Skio + Recharge operator-aggregated retention benchmarks 2023-2024. Patrick Campbell on Lenny's Newsletter podcast 2024 - \"Pause is the cheapest retention dollar in subscription.\"\n\n**One-line definition:** When a subscriber clicks cancel, the first save option presented is \"pause for 1 / 2 / 3 months\" - not \"discount\", not \"skip a box\", not \"downgrade tier\". Pause keeps the relationship alive without the brand paying a price; 75% of pausers return.\n\n**Where to use:** Cancellation flow first save option is Pause (1 / 2 / 3 month dropdown). Second save option is Skip a box. Third save option is a founder-led save email or chat. Discount is not a save option in the cancellation flow if the brand holds the anti-discount posture (see DTC-05). Pause acknowledgement email stays in founder voice.\n\n**Where NOT to use:** Do not gate pause behind a phone call or a customer-service ticket. The mechanic works only when pause is one-click. Do not pre-fill pause with the longest option (3 months) - default to the shortest (1 month) so the customer accepts the pause without feeling locked out.",
+"tactics": [
+"default_effect"
+],
+"stages": [
+"founder_section",
+"retention",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Recurly Research 2024 churn-recovery dataset (n=4,200 subscription brands) - 25% of would-be-cancellers accept a pause offer when offered as the first save option; pausers stay 5.5 months longer than non-paused subscribers; 3 out of 4 pausers resume within 90 days. Validated in Skio + Recharge opera",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "SU-03",
+"school": "subscription_mechanics",
+"school_label": "Subscription mechanics canon",
+"source_file": "subscription-mechanics.md",
+"name": "Annual prepay frames as months saved, not as percentage saved",
+"heading": "3. Annual prepay frames as months saved, not as percentage saved",
+"definition": "Annual prepay tier exists. The frame is \"save 2 months\" not \"save 15%\". Annual-prepay subscribers retain 30% better than monthly subscribers, so the annual tier is a retention defence, not a discount.",
+"body": "**Canonical source:** Patrick Campbell / ProfitWell A/B test corpus 2018-2022 (n=200+ subscription pricing experiments) - \"save 2 months\" frame outperforms \"save 15%\" frame on annual-prepay conversion by 30-40% on identical economics. Reichheld and Teal _The Loyalty Effect_ 1996 - annual-prepay subscribers retain 30% better than monthly-billing subscribers in matched cohorts. Validated in Recurly 2025 Consumer Goods report and HelloFresh / AG1 annual-tier conversion data 2023-2024.\n\n**One-line definition:** Annual prepay tier exists. The frame is \"save 2 months\" not \"save 15%\". Annual-prepay subscribers retain 30% better than monthly subscribers, so the annual tier is a retention defence, not a discount.\n\n**Where to use:** Add an annual-prepay tier once the monthly subscriber base is large enough (typically 1,000+ active subscribers). Pricing: 10 months at the monthly rate equals 12 months prepaid. Frame: \"Save 2 months when you prepay annually.\" Place between the monthly subscription and the one-time tier on the PDP. The internal comparison stays Wall-2-safe.\n\n**Where NOT to use:** Do not launch the annual tier on day 1. The annual tier converts best on existing monthly subscribers approaching month 5-6 of their first subscription year (the \"renewal\" anchor moment). Pre-launch, ship monthly + one-time only.",
+"tactics": [
+"anchoring"
+],
+"stages": [
+"pdp_pricing",
+"retention",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Patrick Campbell / ProfitWell A/B test corpus 2018-2022 (n=200+ subscription pricing experiments) - \"save 2 months\" frame outperforms \"save 15%\" frame on annual-prepay conversion by 30-40% on identical economics. Reichheld and Teal _The Loyalty Effect_ 1996 - annual-prepay subscribers retain 30% bet",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "SU-04",
+"school": "subscription_mechanics",
+"school_label": "Subscription mechanics canon",
+"source_file": "subscription-mechanics.md",
+"name": "Subscription is a stage, not a default",
+"heading": "4. Subscription is a stage, not a default",
+"definition": "The subscription option must be opt-in, not opt-out, at checkout. The customer who chooses subscription deliberately stays 2-3x longer than the customer who got subscribed by default and discovered it later. Apparent short-term conversion lift is the long-term retention killer.",
+"body": "**Canonical source:** Eli Weiss (Olipop former Head of CX) \"Subscription is a stage\" framework 2023-2024 - self-selected subscribers retain 2-3x better than checkout-pre-ticked subscribers, despite checkout-pre-ticked tactic lifting initial subscription rate 40-60%. The pre-ticked subscribers churn within 60 days at rates that erase the initial lift. Validated in Olipop 2022-2023 checkout A/B test corpus and HBR May 2026 + Stanford GSB on auto-renew transparency. The FTC Click-to-Cancel rule (October 2024) reinforces this structurally - dark-pattern subscription enrolment is regulatorily exposed.\n\n**One-line definition:** The subscription option must be opt-in, not opt-out, at checkout. The customer who chooses subscription deliberately stays 2-3x longer than the customer who got subscribed by default and discovered it later. Apparent short-term conversion lift is the long-term retention killer.\n\n**Where to use:** PDP presents subscription tier as a deliberate selection (not pre-ticked). The one-time tier is the default; subscription is the up-sell. This pairs with the defaults principle in the Cialdini-Sutherland canon - the default is the one-time purchase, and the subscription option is the deliberate consumer choice that the customer actively makes.\n\n**Where NOT to use:** Do not pre-tick subscription anywhere - PDP, cart, post-purchase upsell, or email-CTA. Per the FTC Click-to-Cancel rule and the UK DMCC Act 2024 subscription-disclosure rules, pre-ticked subscription enr",
+"tactics": [
+"authority",
+"default_effect"
+],
+"stages": [
+"pdp_pricing",
+"retention",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Eli Weiss (Olipop former Head of CX) \"Subscription is a stage\" framework 2023-2024 - self-selected subscribers retain 2-3x better than checkout-pre-ticked subscribers, despite checkout-pre-ticked tactic lifting initial subscription rate 40-60%. The pre-ticked subscribers churn within 60 days at rate",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "SU-05",
+"school": "subscription_mechanics",
+"school_label": "Subscription mechanics canon",
+"source_file": "subscription-mechanics.md",
+"name": "Payment recovery is the cheapest retention dollar",
+"heading": "5. Payment recovery is the cheapest retention dollar",
+"definition": "A failed payment is not a churn event - it is a recoverable event. Smart-retry logic recovers 55%+ of failed payments; those subscribers continue 7 more months on average. 16x ROI vs the cost of building the infrastructure. Payment recovery is the cheapest retention dollar in the subscription stack.",
+"body": "**Canonical source:** Stripe Smart Retries 2023-2024 production data (n=millions of failed charges) - intelligent retry logic recovers 55-57% of failed payments, recovered subscribers continue an average of 7 more months on the same subscription. 16x ROI on the cost of building the retry infrastructure. Validated in Recurly 2024 churn-decomposition study - involuntary churn (payment failures) accounts for ~25% of total churn at near-zero recovery cost. Chargebee 2024 State of Subscription Industry confirms the same magnitude.\n\n**One-line definition:** A failed payment is not a churn event - it is a recoverable event. Smart-retry logic recovers 55%+ of failed payments; those subscribers continue 7 more months on average. 16x ROI vs the cost of building the infrastructure. Payment recovery is the cheapest retention dollar in the subscription stack.\n\n**Where to use:** Native dunning + Stripe Smart Retries enabled at launch. Retry schedule: day 1, day 3, day 7 of failure. Day-7 retry pairs with a founder-voice email asking the customer to update their card. Day-14 final retry pairs with a personalized founder save email. Failed-payment-recovery flow uses the same first-person voice as the rest of the founder-led touchpoints (see DTC-07).\n\n**Where NOT to use:** Do not retry more than 3 times on the same card with the same error. Do not bundle payment-failure messaging with any other CTA (no \"and check out our new product\" cross-sell in the dunning email). The recovery surface stay",
+"tactics": [
+"authority",
+"framing"
+],
+"stages": [
+"founder_section",
+"retention",
+"subscription_tier",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Stripe Smart Retries 2023-2024 production data (n=millions of failed charges) - intelligent retry logic recovers 55-57% of failed payments, recovered subscribers continue an average of 7 more months on the same subscription. 16x ROI on the cost of building the retry infrastructure. Validated in Recu",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "PR-01",
+"school": "pricing_mechanics",
+"school_label": "Pricing mechanics canon",
+"source_file": "pricing-mechanics.md",
+"name": "Price-sets-taste (the Plassmann neural mechanism)",
+"heading": "1. Price-sets-taste (the Plassmann neural mechanism)",
+"definition": "The price the customer pays literally changes how the product is experienced. The premium-tier product tastes better than the discount-tier version of the same product because the neural pleasure-signal scales with the price-anchor. This is the strongest single argument against under-pricing.",
+"body": "**Canonical source:** Plassmann, O'Doherty, Shiv and Rangel, \"Marketing actions can modulate neural representations of experienced pleasantness\", _Proceedings of the National Academy of Sciences_ 105:3 (2008) - fMRI study showing that identical wine tasted \"better\" (measured at the medial orbitofrontal cortex) when labelled at $90 vs $10. The price label literally rewrites the experienced-taste neural signal, not just the verbal report. Replicated in coffee, beer, and chocolate studies 2010-2018. Validated in Hermann Simon, _Confessions of the Pricing Man_ (2015) Chapter 4 - \"Price is the strongest perception-shaper marketing has.\"\n\n**One-line definition:** The price the customer pays literally changes how the product is experienced. The premium-tier product tastes better than the discount-tier version of the same product because the neural pleasure-signal scales with the price-anchor. This is the strongest single argument against under-pricing.\n\n**Where to use:** Hold the locked premium price points without flinching at launch. Do not run launch discounts. Do not run \"introducing at low price for the first 100 customers\" anchoring tricks that reset the perceived-quality benchmark below the operating price. The first cohort paying full price is more valuable than 3x the cohort paying half price - both for cash and for product-perception conditioning.\n\n**Where NOT to use:** Do not over-extend into price ranges that drop out of the customer's plausible-quality-perception band. ",
+"tactics": [
+"anchoring"
+],
+"stages": [
+"founder_section",
+"pdp_pricing",
+"subscription_tier",
+"trust_certification"
+],
+"vectors": [],
+"primary_source": "Plassmann, O'Doherty, Shiv and Rangel, \"Marketing actions can modulate neural representations of experienced pleasantness\", _Proceedings of the National Academy of Sciences_ 105:3 (2008) - fMRI study showing that identical wine tasted \"better\" (measured at the medial orbitofrontal cortex) when label",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "PR-02",
+"school": "pricing_mechanics",
+"school_label": "Pricing mechanics canon",
+"source_file": "pricing-mechanics.md",
+"name": "Per-use anchoring (the Gourville pennies-a-day mechanism)",
+"heading": "2. Per-use anchoring (the Gourville pennies-a-day mechanism)",
+"definition": "The subscription price does not anchor against itself; it anchors against the per-use denominator. Per-use framing that sits inside the trivial-purchase threshold lifts purchase intent on observed conversion. Pick the denominator that matches actual consumption frequency (per-meal, per-application, per-use) - not the dishonest per-day frame if usage is intermittent.",
+"body": "**Canonical source:** Gourville, \"Pandering to Pennies-a-Day: Temporal Reframing in Comparative Advertising\", _Journal of Consumer Research_ 24:4 (1998) - reframing an annual cost as a small-denomination per-day cost lifts purchase intent 30-50% when the per-day cost is under the customer's mental \"trivial purchase\" threshold. The threshold sits at approximately one-half of one currency unit per day for UK / EU / US adult food customers in 2026.\n\n**One-line definition:** The subscription price does not anchor against itself; it anchors against the per-use denominator. Per-use framing that sits inside the trivial-purchase threshold lifts purchase intent on observed conversion. Pick the denominator that matches actual consumption frequency (per-meal, per-application, per-use) - not the dishonest per-day frame if usage is intermittent.\n\n**Where to use:** PDP pricing block sub-headline frames the per-use denominator. Price-objection emails. Founder-led answer to \"why so expensive\" in customer-service replies. The denominator reinforces the ICP positioning without requiring the math to be re-explained.\n\n**Where NOT to use:** Do not anchor per-day if the product is used less often than daily - that is dishonest and the customer notices. Do not anchor per-unit if the per-unit cost sits below the meaningful-purchase threshold (reads as cheap rather than as value). Do not anchor against another product in your category (Wall-2). The mental-account redirect (see BE-21 in behavioral eco",
+"tactics": [
+"anchoring",
+"framing",
+"hyperbolic_discounting"
+],
+"stages": [
+"founder_section",
+"hero_landing",
+"pdp_pricing",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Gourville, \"Pandering to Pennies-a-Day: Temporal Reframing in Comparative Advertising\", _Journal of Consumer Research_ 24:4 (1998) - reframing an annual cost as a small-denomination per-day cost lifts purchase intent 30-50% when the per-day cost is under the customer's mental \"trivial purchase\" thre",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "PR-03",
+"school": "pricing_mechanics",
+"school_label": "Pricing mechanics canon",
+"source_file": "pricing-mechanics.md",
+"name": "High-to-low tier ordering",
+"heading": "3. High-to-low tier ordering",
+"definition": "Present pricing tiers highest first. The highest tier anchors the middle tier as the value choice. The reverse order (cheapest first) produces the opposite effect - the cheapest tier anchors the next tier up as expensive.",
+"body": "**Canonical source:** Suk, Lee and Lichtenstein, \"The Effects of Price Presentation on Consumer Purchase Decisions\", _Journal of Consumer Research_ 39:2 (2012) - presenting pricing tiers in descending order (highest first) lifts mid-tier conversion 25-60% vs ascending order (lowest first). The effect persists even when consumers are explicitly told about the anchoring mechanism. Validated in Marn and Rosiello, \"Managing Price, Gaining Profit\", _Harvard Business Review_ 70:5 (1992) - the anchor tier sets the perceived value of every tier below it.\n\n**One-line definition:** Present pricing tiers highest first. The highest tier anchors the middle tier as the value choice. The reverse order (cheapest first) produces the opposite effect - the cheapest tier anchors the next tier up as expensive.\n\n**Where to use:** PDP pricing block ordering: one-time tier (top, anchor) -> subscription tier (middle, target) -> trial tier if applicable (bottom, opt-in for new customers). Pricing-page table column ordering. Subscription-cancellation flow tier-comparison ordering. Email price-comparison ordering in the day-2 onboarding email.\n\n**Where NOT to use:** Do not present the trial tier in isolation on a separate landing page without the anchor tier above. The trial tier in isolation reads as a cheap-product cue and primes the customer to question the value of the subscription tier on the next page.",
+"tactics": [
+"anchoring"
+],
+"stages": [
+"hero_landing",
+"pdp_pricing",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "Suk, Lee and Lichtenstein, \"The Effects of Price Presentation on Consumer Purchase Decisions\", _Journal of Consumer Research_ 39:2 (2012) - presenting pricing tiers in descending order (highest first) lifts mid-tier conversion 25-60% vs ascending order (lowest first). The effect persists even when c",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "PR-04",
+"school": "pricing_mechanics",
+"school_label": "Pricing mechanics canon",
+"source_file": "pricing-mechanics.md",
+"name": "Premium promotional discipline",
+"heading": "4. Premium promotional discipline",
+"definition": "Premium DTC brands do not run promotional discounts. The subscription tier sits below the one-time tier because the customer commits, not because the brand is on sale. Event-based discounts (Black Friday, launch promo, \"first month free\") erode the reference price and the recovery cycle is 6-9 months long.",
+"body": "**Canonical source:** Hermann Simon, _Confessions of the Pricing Man_ (2015) Chapter 7 - promotional discounts in premium categories produce a 6-9 month reference-price reset cycle. The post-discount conversion rate drops below the pre-discount baseline because the customer's mental reference-price has shifted downward. Validated in BCG 2024 \"Inflation and Pricing\" report - 67% of premium brands that ran 2022-2023 discount cycles failed to recover to pre-discount full-price conversion within 12 months. AG1 / Athletic Greens has run zero promotional discounts in 12+ years of public pricing (verified via Wayback Machine 2013-2025).\n\n**One-line definition:** Premium DTC brands do not run promotional discounts. The subscription tier sits below the one-time tier because the customer commits, not because the brand is on sale. Event-based discounts (Black Friday, launch promo, \"first month free\") erode the reference price and the recovery cycle is 6-9 months long.\n\n**Where to use:** Holiday windows: no discount, founder-led essay instead (\"why we don't discount\"). Launch day: no founder discount; the trial tier (if you have one) is the structural entry point, not a launch promo. Customer-service replies to \"is there a code\": \"subscription is the discount\" - founder-voice answer, not deflection.\n\n**Where NOT to use:** The trial tier (if it exists) is the one exception - it is a structural trial price, not an event-based discount, and it pairs with conversion mechanics (trial-to-subsc",
+"tactics": [
+"anchoring",
+"scarcity"
+],
+"stages": [
+"founder_section",
+"pdp_pricing",
+"subscription_tier"
+],
+"vectors": [],
+"primary_source": "Hermann Simon, _Confessions of the Pricing Man_ (2015) Chapter 7 - promotional discounts in premium categories produce a 6-9 month reference-price reset cycle. The post-discount conversion rate drops below the pre-discount baseline because the customer's mental reference-price has shifted downward. ",
+"wall_1_flag": false,
+"wall_2_flag": false
+},
+{
+"id": "PR-05",
+"school": "pricing_mechanics",
+"school_label": "Pricing mechanics canon",
+"source_file": "pricing-mechanics.md",
+"name": "Sustainability premium headroom",
+"heading": "5. Sustainability premium headroom",
+"definition": "A verified-sustainable production decision creates approximately 9.7% pricing headroom on the operating price tier. The premium does not require a price increase to capture - it requires the existing price to be felt as well-earned because the customer can name the sustainability decision behind it.",
+"body": "**Canonical source:** BCG 2025 \"Luxury Sustainability Premium\" report - consumers in DTC food + beverage + supplement categories pay an average 9.7% premium for verified-sustainable products vs equivalent non-sustainable products, on observed cross-category survey data (n=12,000 UK + EU + US adults). The premium is contingent on (a) the sustainability claim being verifiable (third-party cert or visible production decision), (b) the brand making the claim prominently rather than as a footer disclosure, (c) the customer being able to articulate the sustainability decision to a friend.\n\n**One-line definition:** A verified-sustainable production decision creates approximately 9.7% pricing headroom on the operating price tier. The premium does not require a price increase to capture - it requires the existing price to be felt as well-earned because the customer can name the sustainability decision behind it.\n\n**Where to use:** Founder-story page section on the specific verifiable sustainability decision (recyclable packaging, third-party certification, ingredient sourcing). Day-14 founder-video email subject line. Recipe-card insert footer naming the decision. Pricing-page sub-headline tying the price to the costly signal. The premium does not require a price increase - it requires the existing price to be felt as well-earned.\n\n**Where NOT to use:** Do not lead the lander hero with sustainability. The Layer 0 ICP gate is the brand promise; sustainability is the costly-signal layer",
+"tactics": [
+"charm_pricing",
+"costly_signaling",
+"default_effect",
+"framing"
+],
+"stages": [
+"email_subject",
+"founder_section",
+"hero_landing",
+"pdp_pricing",
+"social_tiktok",
+"subscription_tier",
+"trust_certification",
+"welcome_flow"
+],
+"vectors": [],
+"primary_source": "BCG 2025 \"Luxury Sustainability Premium\" report - consumers in DTC food + beverage + supplement categories pay an average 9.7% premium for verified-sustainable products vs equivalent non-sustainable products, on observed cross-category survey data (n=12,000 UK + EU + US adults). The premium is conti",
 "wall_1_flag": false,
 "wall_2_flag": false
 }
@@ -1185,10 +2050,11 @@
 "kind": "icp_definition",
 "name": "Ideal Customer Profile",
 "body": "{{ ICP_DESCRIPTION }}",
-"guidance": "The ideal customer profile is the gate. If a tactic does not serve this customer, reject it before going further. Edit 00-foundations/positioning.md to refine the ICP, then rebuild the index.",
+"guidance": "The single canonical ICP for this brand. Replace via positioning.md - the parser pulls this into Brain as the Layer 0 ICP gate. Adapt the ICP shape to your category - it must be specific enough that a tactic can be rejected for not serving it. If a tactic does not serve this customer, reject it.",
 "tags": [
 "icp",
-"core"
+"core",
+"locked"
 ],
 "vectors": [
 "example_segment_one",
@@ -1268,7 +2134,7 @@
 "kind": "founder_anchor",
 "name": "Founder credential anchor",
 "body": "{{ FOUNDER_CREDENTIAL_PARAGRAPH }}",
-"guidance": "The founder credential is the authority anchor. State it factually, avoid hype. Full story in `00-foundations/founder-stories.md`. Edit there + rebuild the index when the framing changes.",
+"guidance": "The single approved founder framing for this brand. Replace via 00-foundations/positioning.md - the parser pulls it into the Brain as the canonical Layer 0 founder anchor that every tactic must respect. Use a one-paragraph framing that links the founder credential to the product's authority claim - ideally a category-non-adjacent credential the customer can verify.",
 "tags": [
 "founder",
 "authority",
@@ -1283,8 +2149,8 @@
 "id": "POS-VOICE-REGISTER",
 "kind": "voice_register",
 "name": "Voice register references",
-"body": "Voice register references are cadence references only. Not category competitors. The brand does not sit next to them in any product sense. Borrow their period-terminated rhythm, their restraint, their unwillingness to oversell - not their semantic field.",
-"guidance": "Cadence reference only. Period-terminated declarative rhythm. Editorial restraint. Do not borrow their semantic field - only the cadence.",
+"body": "Aesop and Le Labo are voice-register references for cadence and restraint, NOT category competitors. We do not sit next to them in any product sense. If a copywriter asks 'what should this sound like', the answer is 'imagine Aesop wrote about the food you eat for British home cooks who watch the same Netflix as you.'",
+"guidance": "Cadence reference only. Period-terminated declarative rhythm. Editorial restraint. Do not borrow their semantic field (botanicals, skincare, fragrance) - only the cadence.",
 "tags": [
 "voice",
 "register",
@@ -1299,8 +2165,8 @@
 "id": "POS-NEVER-NAME",
 "kind": "never_name_brands",
 "name": "Reference brands we do NOT name in copy",
-"body": "Reference brands the brand specifically does NOT name in customer copy. Defined per-brand in `08-templates/vocab/hygiene-vocab.json` under `never_name_brands`. They may appear in 05-evidence/ and 07-anti-patterns/ for internal pattern analysis only.",
-"guidance": "These brands appear in evidence files for tactical pattern analysis. They never appear in customer-facing copy. If a Brain query surfaces a tactic described as 'do what brand X does on the cart', extract the mechanic but never name brand X in shipped copy.",
+"body": "AG1 - wellness register, body-transformation framing, celebrity-laddered (Stephen Curry, Andrew Huberman). IM8 - same register as AG1, celebrity-laddered (David Beckham). LMNT - functional electrolyte, ironic-bro register. Liquid Death - irreverent register, water-as-Vacancy Records. Maldon / Tabasco / supermarket salt brands - Wall 2 violation if named in copy. All live in 05-evidence/ and 07-anti-patterns/ for internal reference only.",
+"guidance": "These brands appear in evidence files for tactical pattern analysis only. They NEVER appear in customer-facing copy. If a Brain query surfaces a tactic described as 'do what IM8 does on the cart', extract the mechanic but never name IM8 in shipped copy.",
 "tags": [
 "never_name",
 "anti_pattern",

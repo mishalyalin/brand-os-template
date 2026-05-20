@@ -44,13 +44,19 @@ python3 tools/marketing_brain.py for-vector <content_vector>
 python3 tools/marketing_brain.py icp
 ```
 
-The Brain wraps three layers, each filtered through the layer above it:
+The Brain wraps four layers, each filtered through the layer above it:
 
 - **Layer 0 - positioning anchors** (ICP + content vectors + Wall 1 + Wall 2 + founder anchor + forbids/licenses lists + voice register refs + never-name list). The strategic frame.
 - **Layer 1 - cocktails** in `01-canon/cocktail-recipes.md`. Pre-vetted stacks with Wall-1 / Wall-2 hygiene applied. Use them first.
-- **Layer 1.5 - canon principles** in `01-canon/behavioral-economics.md`, `nstd-tactics.md`, `cialdini-sutherland.md`. 51 principles with explicit Where-to-use / Where-NOT guidance.
+- **Layer 1.5 - canon principles** in 7 school files: `behavioral-economics.md` (21 BE principles), `nstd-tactics.md` (21 Voss / NSTD tactics), `cialdini-sutherland.md` (22 Cialdini + Sutherland + Ogilvy BSP), `llm-seo-canon.md` (6 LLM SEO and Content Engineering), `dtc-mechanics.md` (8 post-iOS-14 DTC operating mechanics), `subscription-mechanics.md` (5 subscription retention mechanics), `pricing-mechanics.md` (5 premium-pricing mechanics). 88 principles with explicit Where-to-use / Where-NOT guidance.
 
 Optionally a **Layer 2 - raw evidence rows** if you have a third-party research corpus. Drop it as `01-canon/nudge-vault-raw-capture.txt` (one block per `--- ID ---` line) and the Brain auto-indexes it.
+
+The Brain serves three surfaces:
+
+- **CLI** via `python3 tools/marketing_brain.py search "<query>"` (stdlib only, no external API)
+- **HTML web interface** via `python3 web/app.py` -> `http://127.0.0.1:8081/` (pages for search / ICP / canon / tactic / vector / stage / guidelines / assets / howto / stats)
+- **JSON API** at `/api/search`, `/api/explain`, `/api/icp`, `/api/canon`, `/api/tactic/<name>`, `/api/for-vector/<key>`, `/api/for-stage/<name>`, `/api/list-tactics`, `/api/list-stages`, `/api/stats` for programmatic consumers
 
 Layer 0 is the GATE: any tactic that does not serve at least one of the content vectors AND respect both walls gets rejected. Beneath that gate, priority is cocktail > canon principle > raw evidence row.
 

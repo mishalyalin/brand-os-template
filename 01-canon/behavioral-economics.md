@@ -8,7 +8,7 @@ Compressed reference for the sixteen behavioural economics principles that gover
 
 A premium DTC funnel is not a sales process. It is a sequence of cognitive frames, each engineered to make the next commitment feel smaller than it actually is. Each frame stacks two to three persuasion principles into a single felt state. Compound effect across a six-touchpoint funnel separates a 2 percent conversion from a 6 percent conversion. The funnel is not selling the product. It is constructing the frames that make the product the most rational thing to buy this week.
 
-## The sixteen principles
+## The twenty-one principles
 
 ### 1. Anchoring
 
@@ -169,6 +169,56 @@ A premium DTC funnel is not a sales process. It is a sequence of cognitive frame
 **Where to use:** ONLY via a transparency-engineered variant where the phantom-state attaches to things the brand genuinely has reserved (the code, the discount, the bonus), never to a fictional cart. See `02-funnel-architecture/cart-abandon-cascade.md` and the relevant `06-decisions/` record for the brand-safe implementation.
 
 **Where NOT to use:** Direct copy of a competitor's "Your Cart" subject line when no cart actually exists. This is likely to breach consumer-protection law on misleading commercial practices in most jurisdictions. The mechanism is too valuable to skip; the literal deceptive copy is too exposed to use.
+
+### 17. Taste-first labeling
+
+**Canonical source:** Wansink and Just, "Healthy Foods First", _Cornell Food and Brand Lab_ working paper 2012, replicated and extended in Turnwald, Boles and Crum, "Association Between Indulgent Descriptions and Vegetable Consumption", _JAMA Internal Medicine_ 177:8 (2017) - replacing virtue-coded labels with indulgent taste descriptors lifted vegetable purchase 25-41% on identical contents. Adapted in Ariely consulting interventions for school-cafeteria menu design via the Center for Advanced Hindsight 2014-2018.
+
+**One-line definition:** When the same product can be described by a health attribute or a taste attribute, lead with taste. The health attribute can follow as a secondary descriptor, never as the primary frame, because virtue-coded labels are taste-coded as inferior by default.
+
+**Where to use:** PDP hero copy, paid ad creative, recipe-page meta description, founder-story opener. Lead with sensory descriptors (warm, savoury, brown-butter depth, smoky, bright). The health attribute follows as a secondary descriptor or never appears. This is also Wall-1 hygiene expressed positively - culinary or sensory frame first, body claim never on the public surface.
+
+**Where NOT to use:** Direct-to-clinician or B2B contexts where the health attribute carries the buying decision. Most DTC brands do not sell into those channels.
+
+### 18. Implementation-intention activation
+
+**Canonical source:** Gollwitzer, "Implementation Intentions: Strong Effects of Simple Plans", _American Psychologist_ 54:7 (1999) - if-then plans lift behaviour-change adherence from ~30% to ~70% on observed first action within 7 days. Meta-analysed in Gollwitzer and Sheeran, _Advances in Experimental Social Psychology_ 38 (2006) across 94 independent studies, mean effect size d = 0.65. Applied in BEworks consulting interventions for utility energy-saving programmes and retail-subscription onboarding 2016-2021.
+
+**One-line definition:** After purchase, send a single concrete if-then prompt that binds the product to a specific cue, time, and place. A concrete prompt ("when X happens, do Y with the product") beats a vague prompt ("incorporate the product into your routine") by a factor of 2-3 on observed first-use within 7 days.
+
+**Where to use:** Day-2 post-purchase email (between order confirmation and shipment). In-pack card with concrete use scenarios. Subscription month-2 retention email - if-then plan for the second box. Onboarding SMS the day the parcel is marked delivered.
+
+**Where NOT to use:** Pre-purchase landing pages. Implementation intentions presume commitment; firing them before checkout muddles the decision. Keep landing pages on the why; reserve if-then prompts for post-commitment surfaces.
+
+### 19. Sensory rotation as retention defence
+
+**Canonical source:** Galak and Redden, "The Properties and Antecedents of Hedonic Adaptation", _Annual Review of Psychology_ 69:1 (2018) - hedonic adaptation is the dominant cause of subscription cancellation in repeatable-consumption categories. Original mechanism in Frederick and Loewenstein, "Hedonic Adaptation", _Well-Being: Foundations of Hedonic Psychology_ (1999). Applied in Irrational Labs interventions for meal-kit and grocery DTC subscriptions 2017-2021. Rotating the sensory surface around an otherwise stable product extends time-to-tire by 40-60% on observed subscriber retention curves.
+
+**One-line definition:** A subscriber who uses the same product the same way for six months will tire of it whether or not the product is good. Defend retention by rotating the surface the customer interacts with, not by changing the core product.
+
+**Where to use:** Recipe Pack v2 or use-guide v2 sent at month 2 of subscription. Founder-led video at month 4 showing a new application. Limited-edition packaging insert at month 6 (different artwork on the same product structure, no product change). Monthly recipe-email or routine-email rotation. The product is one SKU; the perception of the product cycles.
+
+**Where NOT to use:** Do not rotate the actual product. The product is the brand. Wall-2 hygiene also blocks "new improved" copy that implies a category move. Rotation is in the wrapper, not in the product.
+
+### 20. Vice-virtue bundling
+
+**Canonical source:** Milkman, Rogers and Bazerman, "Highbrow Films Gather Dust", _Management Science_ 55:6 (2009) and Milkman's follow-up "Temptation Bundling", _Management Science_ 60:2 (2014) - pairing a "want" reward with a "should" behaviour lifts adherence ~51% on observed gym attendance. Generalised to healthy-product DTC categories in Ariely consulting work on Center for Advanced Hindsight grocery interventions - the "should" of cooking vegetables gets paired with the "want" of indulgent flavour, lifting first-time purchase intent on identical inventory.
+
+**One-line definition:** Frame the product as the bridge that turns a virtue ("I should do X") into a vice-grade reward ("X now feels indulgent"). The customer keeps the virtue identity and gets the vice payoff.
+
+**Where to use:** Founder-story long-form, social tile copy, launch email subject line, in-pack card, cart-abandon recovery email. The bridge frame works at any funnel stage that asks the customer to commit to a behaviour change.
+
+**Where NOT to use:** Per Wall 1, do not pair the bundling with medicinal framing. Pair with identity claims instead. Body claims trip regulatory walls; identity claims do not.
+
+### 21. Mental-accounting redirect
+
+**Canonical source:** Thaler, "Mental Accounting Matters", _Journal of Behavioral Decision Making_ 12:3 (1999) - customers slot expenses into category-specific budgets that are not fungible across categories. Applied in Ariely consulting work on subscription-pricing architecture and grocery-DTC pricing via Center for Advanced Hindsight 2014-2018. Reframing a monthly subscription from "groceries" to "category-X replacement" lifts willingness-to-pay 30-50% on the same monetary amount because the redirected account contains a higher reference price.
+
+**One-line definition:** The monthly subscription does not compete against the cheap commodity it sits next to in the customer's mind; it competes against the category of spend it actually replaces. Anchor the price against the mental-account it actually replaces, not the mental-account it sits next to.
+
+**Where to use:** Pricing-page copy under the subscription tier ("less than X-equivalent-experience"). Subscription-decision email at the cart-abandon stage. Founder-led answer to "why so expensive" objections - it is not expensive against the experience it replaces; it is expensive against the commodity it is not.
+
+**Where NOT to use:** Do not anchor against another product in your category (Wall 2 - no category comparisons). The mental-account is the experience the product replaces, not the commodity the product is.
 
 ## The six-lever cocktail (a phantom-commitment hero case)
 

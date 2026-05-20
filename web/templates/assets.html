@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Brand Assets - Brand OS{% endblock %}
+{% block content %}
+<h1>Brand Assets</h1>
+<p class="lead">The visual identity layer of the Brand OS. Colour, type, wordmark, photography direction, social template, and the site-building directive. Hand this URL to any external designer or in-house designer when commissioning a visual asset that must read as your brand.</p>
+
+<p class="layer-intro" style="background:#fef9e7;border-left:4px solid #f4d03f;padding:16px;margin:16px 0;">
+  <strong>Template stub.</strong> This page surfaces visual-identity tokens that the Marketing Brain reads from your brand's source files. Edit <code>web/app.py</code> route <code>/assets</code> to populate these blocks with your brand's actual colour palette, typography, wordmark, photography direction, and site-building gates after you run the onboarding wizard. The page architecture and CSS scaffolding ship in the template; the brand-specific content is yours to fill.
+</p>
+
+<h2>What this page is meant to surface</h2>
+<ul>
+  <li><strong>Colour palette swatches</strong> with hex + token + use guidance</li>
+  <li><strong>Pack PMS references</strong> (if your packaging requires specific Pantone)</li>
+  <li><strong>Type specimens</strong> at the weights your brand uses</li>
+  <li><strong>Logo + wordmark rules</strong> (casing, never-do list)</li>
+  <li><strong>Photography do / dont</strong> (e.g. cooking-in-progress vs finished-plate, kitchen vs office environment, founder face vs product-only)</li>
+  <li><strong>Social template</strong> (e.g. Friday grid, story cadence, founder-led only flag)</li>
+  <li><strong>Site-building directive</strong> verbatim from your brand owner</li>
+  <li><strong>Brief-an-external-designer playbook</strong></li>
+</ul>
+
+<h2>How to populate this page</h2>
+<ol>
+  <li>Run the onboarding wizard: <code>python3 tools/onboard.py</code></li>
+  <li>Edit <code>00-foundations/visual-identity.md</code> with your locked palette, typography, wordmark rules</li>
+  <li>Edit <code>web/app.py</code> route <code>/assets</code> to either render that file directly or to populate the page from a dict</li>
+  <li>Re-run <code>python3 tools/marketing_brain.py rebuild-index</code></li>
+  <li>The page is then the single URL you hand any designer or external collaborator</li>
+</ol>
+
+<h2>Why a separate page</h2>
+<p>The marketing layer (canon principles, cocktails, ICP, voice rules) is one thing. The visual identity layer (palette, type, photography) is another. Both must travel together when you brief any external collaborator, but the audiences for the two are different. The single-URL handoff means designers, developers, and agency collaborators all get the same source of truth without you forwarding 12 PDFs.</p>
+
+<p>A reference implementation of this route surfaces a locked palette, typography spec, sentence-case wordmark rules, photography do/dont matrix, social grid template, and the brand owner's site-building directive. Adapt the same pattern to your brand.</p>
+{% endblock %}

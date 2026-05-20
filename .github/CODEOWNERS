@@ -1,0 +1,33 @@
+# CODEOWNERS template
+#
+# GitHub auto-assigns review requests when matching paths change. This is a
+# NOTIFICATION mechanism, not a permission gate. The repo owner can always
+# force-merge.
+#
+# Replace `@YOUR-GH-USER` and `@YOUR-DESIGNER-USER` with the actual GitHub
+# handles for your brand. Delete this comment block once filled in.
+
+# Default owner for the whole repo
+* @YOUR-GH-USER
+
+# Visual identity / design system - route notifications to the designer
+00-foundations/visual-identity.md            @YOUR-DESIGNER-USER @YOUR-GH-USER
+00-foundations/design-lab/                   @YOUR-DESIGNER-USER @YOUR-GH-USER
+web/static/style.css                         @YOUR-DESIGNER-USER @YOUR-GH-USER
+web/static/favicon.svg                       @YOUR-DESIGNER-USER @YOUR-GH-USER
+web/templates/assets.html                    @YOUR-DESIGNER-USER @YOUR-GH-USER
+
+# Brand voice + positioning - the owner reviews directly
+00-foundations/positioning.md                @YOUR-GH-USER
+00-foundations/brand-voice.md                @YOUR-GH-USER
+00-foundations/voice-anti-patterns.md        @YOUR-GH-USER
+
+# Canon files - the owner reviews directly
+01-canon/                                    @YOUR-GH-USER
+
+# Append-only directories - typically owner-only
+05-evidence/                                 @YOUR-GH-USER
+06-decisions/                                @YOUR-GH-USER
+
+# CI workflows - owner-only
+.github/workflows/                           @YOUR-GH-USER
