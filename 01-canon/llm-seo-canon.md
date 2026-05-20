@@ -100,7 +100,7 @@ The Brain returns all four schools in one search and the caller picks the right 
 - Which free tools / micro-apps to build first as Pillar 2 + proprietary-data anchors? Candidate list: per-meal sodium budget calculator, flavour-balance score, salt-on-fruit pairing recommender, weekly-meal-prep flavour planner. the founder to pick one or two for Y1.
 - Brand-mention partnership budget for Y1 (Pillar 3). Case studies imply 6-12 months of consistent guest-posting + podcast appearances before the AI citation flywheel turns. Allocate before launch.
 - Page-refresh cadence (Pillar 4) - confirm quarterly for high-stakes surfaces vs monthly for programmatic. Default in this canon = quarterly hero / PDP / About / welcome, monthly programmatic, annual foundations. Adjust based on Q1 launch data.
-- Multilingual roll-out timing for Pillar 1 - UK English at launch is locked. DE / FR / NL depend on EU shipping lane confirmation (Active Ants / Huboo NL / SEKO referral pipeline outcome).
+- Multilingual roll-out timing for Pillar 1 - if launching in a single market first, lock that market in English (or its primary language) first and only expand to additional languages once shipping/operational coverage is confirmed.
 
 ## Source materials
 

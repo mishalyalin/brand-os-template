@@ -4,9 +4,9 @@ Thin Flask wrapper over `tools/marketing_brain.py`. All search / scoring /
 parsing logic lives in the CLI module; this file only translates HTTP
 requests into Brain calls and renders results.
 
-Designed for self-hosted deploy on the existing VPS at 76.13.254.21 under an
-unguessable subdomain. nginx in front handles HTTPS + HTTP basic auth +
-rate limiting. The Flask app binds to 127.0.0.1:8081 only.
+Designed for self-hosted deploy on any small VPS under an unguessable
+subdomain. nginx in front handles HTTPS + HTTP basic auth + rate limiting.
+The Flask app binds to 127.0.0.1:8081 only.
 
 Routes:
     GET /                   - search page (renders results if ?q= present)
