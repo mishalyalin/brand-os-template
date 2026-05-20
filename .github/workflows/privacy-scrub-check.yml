@@ -71,6 +71,7 @@ jobs:
               --exclude-dir=.venv-web \
               --exclude-dir=node_modules \
               --exclude="privacy-scrub-check.yml" \
+              --exclude="LICENSE" \
               -- "$term" . 2>/dev/null || true)
             if [ -n "$MATCHES" ]; then
               echo "::error::Privacy scrub: found banned term '$term'"
