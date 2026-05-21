@@ -2,7 +2,7 @@
 "version": "1.3.0",
 "built_at": "2026-05-19",
 "raw_row_count": 0,
-"cocktail_count": 1,
+"cocktail_count": 2,
 "canon_count": 88,
 "positioning_count": 9,
 "tactic_vocab": [
@@ -71,8 +71,26 @@
 "tactics": [],
 "stages": [],
 "vectors": [],
-"body": "**Funnel stage:** {{ FUNNEL_STAGE }}.\n\n**Tactic stack:** {{ TACTIC_1 }} + {{ TACTIC_2 }} + {{ TACTIC_3 }}.\n\n**Verbatim copy:**\n\n> {{ VERBATIM_COPY }}\n\n**Why this cocktail fits the brand:**\n\n{{ FIT_RATIONALE }}\n\n**Primary citations:**\n\n- {{ TACTIC_1 }}: {{ CITATION_1 }}\n- {{ TACTIC_2 }}: {{ CITATION_2 }}\n- {{ TACTIC_3 }}: {{ CITATION_3 }}\n\n**Hygiene confirmation:**\n\n- Wall 1: {{ WALL_1_NOTE }}\n- Wall 2: {{ WALL_2_NOTE }}\n\n**When NOT to use:** {{ WHEN_NOT_TO_USE }}.\n\n---\n\nAdd additional cocktails below as the brand develops them. Cocktails are the most valuable layer of the Brain because each one represents a battle-tested combination - not theory, applied practice.",
+"body": "**Funnel stage:** {{ FUNNEL_STAGE }}.\n\n**Tactic stack:** {{ TACTIC_1 }} + {{ TACTIC_2 }} + {{ TACTIC_3 }}.\n\n**Verbatim copy:**\n\n> {{ VERBATIM_COPY }}\n\n**Why this cocktail fits the brand:**\n\n{{ FIT_RATIONALE }}\n\n**Primary citations:**\n\n- {{ TACTIC_1 }}: {{ CITATION_1 }}\n- {{ TACTIC_2 }}: {{ CITATION_2 }}\n- {{ TACTIC_3 }}: {{ CITATION_3 }}\n\n**Hygiene confirmation:**\n\n- Wall 1: {{ WALL_1_NOTE }}\n- Wall 2: {{ WALL_2_NOTE }}\n\n**When NOT to use:** {{ WHEN_NOT_TO_USE }}.\n\n---",
 "anchor": "{{-example_cocktail_name-}}"
+},
+{
+"name": "The honest-attribution testimonial cocktail (5-beat formula)",
+"tactics": [
+"social_proof",
+"authority",
+"unity",
+"specificity_concrete"
+],
+"stages": [
+"pdp_pricing",
+"founder_section",
+"social_tiktok",
+"trust_certification"
+],
+"vectors": [],
+"body": "This is a CANON cocktail. It is not a brand-specific example - it is the cross-brand pattern for every customer testimonial across every surface. Keep this entry; do not delete or replace.\n\n**Funnel stage:** review collection + every social-proof surface (PDP review widget, IG testimonial captions, day-7 post-purchase email, affiliate creator scripts, founder-section pull-out quotes).\n\n**Tactic stack:** Cialdini Social Proof + Voss \"That's Right\" elicitation + Sutherland Costly-Signal disclaimer + Cialdini Unity (community close, optional).\n\n**Verbatim template:**\n\n> Beat 1 (discipline + goal, customer-owned): \"I have been {{ DISCIPLINE_VERB }} for {{ TIMEFRAME }} to {{ GOAL }}.\"\n>\n> Beat 2 (honest disclaimer): \"The {{ MEASURABLE_RESULT }} came from {{ DISCIPLINE }}, not from {{ BRAND_NAME }}. {{ ATTRIBUTION_DETAIL }}.\"\n>\n> Beat 3 (specific failure mode the product prevented): \"What I would have failed on was {{ SPECIFIC_FAILURE_MODE }} - {{ CONCRETE_DETAIL }}. That is what {{ BRAND_NAME }} caught.\"\n>\n> Beat 4 (optional treat-within-the-frame): \"Now {{ TREAT }} is part of the routine instead of a cheat.\"\n>\n> Beat 5 (optional community close): \"I am {{ COMMUNITY_NAME_SINGULAR }} now",
+"anchor": "the-honest-attribution-testimonial-cocktail-(5-beat-formula)"
 }
 ],
 "canons": [

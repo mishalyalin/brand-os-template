@@ -52,4 +52,51 @@ Each cocktail entry should contain:
 
 ---
 
+### The honest-attribution testimonial cocktail (5-beat formula)
+
+This is a CANON cocktail. It is not a brand-specific example - it is the cross-brand pattern for every customer testimonial across every surface. Keep this entry; do not delete or replace.
+
+**Funnel stage:** review collection + every social-proof surface (PDP review widget, IG testimonial captions, day-7 post-purchase email, affiliate creator scripts, founder-section pull-out quotes).
+
+**Tactic stack:** Cialdini Social Proof + Voss "That's Right" elicitation + Sutherland Costly-Signal disclaimer + Cialdini Unity (community close, optional).
+
+**Verbatim template:**
+
+> Beat 1 (discipline + goal, customer-owned): "I have been {{ DISCIPLINE_VERB }} for {{ TIMEFRAME }} to {{ GOAL }}."
+>
+> Beat 2 (honest disclaimer): "The {{ MEASURABLE_RESULT }} came from {{ DISCIPLINE }}, not from {{ BRAND_NAME }}. {{ ATTRIBUTION_DETAIL }}."
+>
+> Beat 3 (specific failure mode the product prevented): "What I would have failed on was {{ SPECIFIC_FAILURE_MODE }} - {{ CONCRETE_DETAIL }}. That is what {{ BRAND_NAME }} caught."
+>
+> Beat 4 (optional treat-within-the-frame): "Now {{ TREAT }} is part of the routine instead of a cheat."
+>
+> Beat 5 (optional community close): "I am {{ COMMUNITY_NAME_SINGULAR }} now."
+
+**Why this cocktail fits any brand following the customer-owns-outcome positioning:**
+
+The 5-beat structure separates OUTCOME (owned by customer discipline) from MECHANISM (owned by the product). Wall-1 safe by construction - Beat 2 explicitly denies product-as-cause for the outcome, which earns the brand the right to take credit for the adherence-rescue moment in Beat 3.
+
+**Primary citations:**
+
+- Cialdini "Influence" - Social Proof (Chapter 4): testimonials work because they are not the brand speaking
+- Voss "Never Split the Difference" - That's Right elicitation: the 5-beat formula gives the customer a structure they can fill with their own truth, which produces more authentic testimonials than open-ended prompts
+- Sutherland "Alchemy" - Costly-Signal Theory: the honest disclaimer in Beat 2 signals confidence - the brand could overclaim and chose not to. Customers pattern-match honesty as trustworthiness.
+
+**Hygiene confirmation:**
+
+- Wall 1: PASS by construction. Beat 2 forces customer-ownership of the outcome.
+- Wall 2: PASS by construction. No category comparison required for the testimonial to land.
+
+**When NOT to use:**
+
+- The 5-beat formula is for CUSTOMER voice (Register B in `00-foundations/brand-voice.md`). The FOUNDER does not speak in this register. Founder content uses the chronological-correctness rule from `00-foundations/founder-stories.md` instead.
+- Anonymous press quotes or aggregated review-count claims ("4.9 stars from 1,200 reviews") sit beside the testimonial, not inside it.
+- One-line star-ratings without body text do not get the 5-beat treatment - they are a separate surface.
+
+**Day-7 review-request email template:** `03-touchpoint-copy/emails/review-request.md` (three variants A/B/C).
+
+**Wall-1 reject patterns and safe rewrites:** see `08-templates/testimonial-template.md` for the full table.
+
+---
+
 Add additional cocktails below as the brand develops them. Cocktails are the most valuable layer of the Brain because each one represents a battle-tested combination - not theory, applied practice.

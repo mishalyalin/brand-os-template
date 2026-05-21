@@ -82,16 +82,71 @@ Edit `00-foundations/brand-voice.md` and re-run `tools/marketing_brain.py rebuil
 
 The onboarding wizard captures founder name + co-founder names + on-camera policy. Once filled into `00-foundations/founder-stories.md`, treat those names as immutable - misspelling or substituting them is a brand failure.
 
+## Two voice registers (do not mix them)
+
+The brand speaks in two registers. They are not interchangeable. Pin every touchpoint-copy file to one register at the top of the file.
+
+- **Register A - founder narrative.** Content authored in the founder's voice (manifesto, About page, welcome flow E3, podcast intro). First-person or third-person narrative. Can carry the discipline arc. Wall 1 is less strict because the founder describes their own experience, not product claims. No medicinal vocabulary about what the product does.
+- **Register B - customer testimonial.** Content authored as a customer (review widgets, IG testimonial captions, affiliate scripts, day-7 review-request email). Must follow the 5-beat honest-attribution formula (see `01-canon/cocktail-recipes.md` "The honest-attribution testimonial cocktail"). Customer discipline + goal own the outcome. Product owns the adherence-rescue mechanism, never the outcome. Wall 1 is very strict.
+
+Mixing registers is the most common voice failure. A founder who sounds like a customer ("I lost N kg with our product") is a Wall-1 violation. A customer who sounds like a founder ("Our product is what got me through") is creepy. Each register stays in its lane.
+
+Full detail: `00-foundations/brand-voice.md` "Two voice registers" section.
+
+## Qualifier discipline rule (CI-enforced)
+
+Any reference in customer copy to the customer's INPUT or GOAL must pair with a customer-ownership qualifier within 200 characters. The qualifier-guard step in `.github/workflows/brand-voice-check.yml` enforces this on every PR. If the guard fires, fix the trigger phrase by adding the qualifier - do not bypass.
+
+Triggers and qualifiers are configurable. Default trigger phrases match a common diet/discipline brand pattern ("stick with your diet" / "reach your goal" / "achieve your goal"). Default qualifiers include both second-person ("the diet you chose" / "you chose") and third-person ("the diet they chose" / "their goal") customer-ownership phrases.
+
+The guard skips files that still contain `{{ PLACEHOLDER }}` markers - it only fires on authored customer copy. This means foundation-file documentation that uses trigger phrases as examples does not trigger the guard.
+
+Reference pattern: `06-decisions/REFERENCE-positioning-load-bearing-elements.md`.
+
+## ICP-defensiveness on founder labels
+
+Do not label the founder by specific lifestyle / diet / identity in customer copy if that label polarizes a meaningful share of the ICP. Use customer-owned framing instead. "Vegan founder" / "Keto founder" / "Marathoner founder" / "[Religion] founder" all polarize. "Founder on their own diet" / "Founder with their own discipline" / "Founder with their own goal" do not.
+
+The founder's specific lifestyle stays in long-form interview content where the reader has self-selected to hear the detail. It does not appear in hero / manifesto / paid-ad creative where it can flip a stranger against the brand before they hear the rest.
+
+Full detail: `00-foundations/founder-stories.md` Rule 2.
+
+## When you produce a manifesto
+
+The brand manifesto lives at `00-foundations/manifesto.md` and renders as the home page of the Brand OS web (`/` route) once authored. It has exactly seven sections in this order. Each section carries a specific function. Drop any one and the manifesto loses its load.
+
+1. **3-line hero** - compressed mission, period-terminated, one breath per line
+2. **Why we exist** - founder origin in narrative form (apply `00-foundations/founder-stories.md` Rule 1 chronological correctness + Rule 2 ICP-defensiveness)
+3. **What we do** - operational mission lifted from `00-foundations/positioning.md` Mission V1
+4. **Where we are going** - vision, future-state language
+5. **What we believe** - 5 belief statements
+6. **What we are not** - 3-line negation block (Wall-1 protection by explicit denial; the single place medicinal-register words appear in the manifesto)
+7. **You** - reader-as-protagonist + community identity close, ending with the founder sign-off
+
+Workflow:
+
+1. Lock positioning first (`00-foundations/positioning.md` Mission V1/V2/V3 + three pillars + 5 load-bearing elements)
+2. Lock founder arc (`00-foundations/founder-stories.md` Rule 1 + Rule 2)
+3. Fill `00-foundations/manifesto.md` - replace every `{{ PLACEHOLDER }}` marker
+4. Verify all 5 load-bearing positioning elements are present (manifesto.md has a verification checklist)
+5. Run brand voice check CI locally (em-dash + exclamation + qualifier guard)
+6. Open PR. CI green. Merge. Manifesto auto-renders as the `/` home page.
+
+Iteration policy: manifesto versions follow semantic versioning. Patch bumps (v1.0.1) for typos. Minor bumps (v1.1.0) for surgical edits that add imagery / scenes / reframes WITHOUT changing structure. Major bumps (v2.0.0) for structural rewrites (changing the 7 sections or the 5 load-bearing elements). Every iteration ships with a decision record in `06-decisions/`.
+
+Reference pattern: `06-decisions/REFERENCE-manifesto-architecture.md`.
+
 ## When you produce customer copy
 
 Workflow:
 
 1. Run the Brain to find the right cocktail or tactic with evidence
-2. Draft the copy stacking the recommended tactic(s)
-3. Run the brand voice check (em-dash scan, exclamation scan, medicinal scan, jargon scan)
-4. Run a regulatory exposure check if the copy makes any factual or pricing claim
-5. Save to the appropriate `03-touchpoint-copy/` file
-6. Open a PR; let CI run the same checks; the owner reviews
+2. Pin the file to one voice register (A founder narrative OR B customer testimonial) in its front matter
+3. Draft the copy stacking the recommended tactic(s) inside that register
+4. Run the brand voice check (em-dash scan, exclamation scan, medicinal scan, qualifier-guard scan)
+5. Run a regulatory exposure check if the copy makes any factual or pricing claim
+6. Save to the appropriate `03-touchpoint-copy/` file
+7. Open a PR; let CI run the same checks; the owner reviews
 
 ## When you produce a decision record
 

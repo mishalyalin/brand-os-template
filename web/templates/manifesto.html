@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}{% if manifesto_authored %}Manifesto - Brand OS{% else %}Brand OS{% endif %}{% endblock %}
+
+{% block content %}
+<section class="manifesto">
+
+{% if manifesto_authored %}
+
+  <div class="manifesto-rendered markdown-content">
+    {{ manifesto_html|safe }}
+  </div>
+
+  <div class="manifesto-footer">
+    <p class="manifesto-footer-note">
+      Canonical source: <code>00-foundations/manifesto.md</code>. Use the navigation above to query the rest of the Brand OS (search, ICP, canon, assets, guidelines, how-to).
+    </p>
+  </div>
+
+{% else %}
+
+  <div class="manifesto-stub">
+    <h1>Brand manifesto - not yet authored</h1>
+
+    <p class="lead">The home of this Brand OS web is the brand manifesto. The manifesto file <code>00-foundations/manifesto.md</code> still contains unfilled <code>{{ '{{ PLACEHOLDER }}' }}</code> markers, so this page shows a stub instead of the live manifesto.</p>
+
+    <h2>Author the manifesto in three steps</h2>
+
+    <ol>
+      <li><strong>Lock positioning first.</strong> Open <code>00-foundations/positioning.md</code> and fill the five load-bearing elements (customer-owns-input, customer-owns-goal, universalism, goal-agnostic disclaimer, three pillars). The manifesto compresses positioning - without positioning, the manifesto has nothing to compress.</li>
+      <li><strong>Lock the founder arc.</strong> Open <code>00-foundations/founder-stories.md</code> and apply the chronological-correctness rule (founder transformed WITHOUT the product) + ICP-defensiveness rule (no specific lifestyle label on the founder in customer copy).</li>
+      <li><strong>Fill the manifesto.</strong> Open <code>00-foundations/manifesto.md</code> and replace each <code>{{ '{{ PLACEHOLDER }}' }}</code> marker. The 7 sections are: 3-line hero, Why we exist, What we do, Where we are going, What we believe, What we are not, You. The structure is load-bearing - dropping a section breaks the architecture.</li>
+    </ol>
+
+    <h2>Until then, the search page is at <a href="/search">/search</a></h2>
+
+    <p>The Marketing Brain search across all four layers (positioning, cocktails, canon, raw evidence rows) is fully functional. Once you author the manifesto, this stub goes away and the manifesto becomes the home page automatically.</p>
+
+    <h2>Reference pattern</h2>
+
+    <p>The full architecture pattern is documented at <code>06-decisions/REFERENCE-manifesto-architecture.md</code>. It explains why each of the 7 sections is load-bearing and the rules for iterating manifesto versions.</p>
+  </div>
+
+{% endif %}
+
+</section>
+{% endblock %}

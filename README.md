@@ -45,31 +45,62 @@ That's it. You can now query the Brain for any marketing decision and get eviden
 ├── README.md                       # this file
 ├── LICENSE                         # MIT
 ├── 00-foundations/                 # the strategic frame
-│   ├── positioning.md              # filled by onboard.py
-│   ├── brand-voice.md              # filled by onboard.py
+│   ├── positioning.md              # mission V1/V2/V3, 5 load-bearing elements, 3 pillars, qualifier rule
+│   ├── brand-voice.md              # the 7 hard rules + two voice registers
 │   ├── voice-anti-patterns.md      # filled by onboard.py
 │   ├── regulatory-frames.md        # filled by onboard.py
-│   └── founder-stories.md          # filled by onboard.py
+│   ├── founder-stories.md          # chronological-correctness + ICP-defensiveness rules + on-camera policy
+│   └── manifesto.md                # 7-section brand manifesto, deployed as `/` home page when authored
 ├── 01-canon/                       # the persuasion library
-│   ├── behavioral-economics.md     # 16 BE principles, public academic
+│   ├── behavioral-economics.md     # 21 BE principles, public academic
 │   ├── nstd-tactics.md             # 21 Voss/NSTD tactics, public academic
-│   ├── cialdini-sutherland.md      # 14 Cialdini/Sutherland principles, public academic
-│   └── cocktail-recipes.md         # your applied stacks - empty until you add one
+│   ├── cialdini-sutherland.md      # 22 Cialdini/Sutherland/Ogilvy principles
+│   ├── llm-seo-canon.md            # 6 LLM SEO + content engineering principles
+│   ├── dtc-mechanics.md            # 8 post-iOS-14 DTC operating mechanics
+│   ├── subscription-mechanics.md   # 5 retention mechanics
+│   ├── pricing-mechanics.md        # 5 premium-pricing mechanics
+│   └── cocktail-recipes.md         # honest-attribution testimonial cocktail + your applied stacks
 ├── 03-touchpoint-copy/             # rendered customer copy by channel
+│   └── emails/
+│       └── review-request.md       # day-7 post-purchase review request, three A/B/C variants
 ├── 04-content-rules/               # operational rules (launch plan, content calendar)
 ├── 05-evidence/                    # append-only evidence library
 ├── 06-decisions/                   # append-only decision records
+│   ├── REFERENCE-positioning-load-bearing-elements.md
+│   └── REFERENCE-manifesto-architecture.md
 ├── 07-anti-patterns/               # the "do not do this" library
 ├── 08-templates/
+│   ├── founder-statement.md        # short / mid / long-form founder statement cuts
+│   ├── testimonial-template.md     # 5-beat honest-attribution customer testimonial template
+│   ├── creator-brief-template.md   # opening brief for affiliate / UGC creator / podcast guest
 │   └── vocab/                      # editable JSON: tactics, stages, vectors, hygiene
 ├── tools/
 │   ├── marketing_brain.py          # the Brain CLI
 │   └── onboard.py                  # the interview wizard
 ├── web/                            # local Flask interface to the Brain
+│   └── templates/manifesto.html    # `/` home page renders the manifesto, falls back to stub
 ├── skills/
 │   └── marketing-brain-query/      # SKILL.md for any Claude agent loading this repo
-└── .github/workflows/              # CI: brand-voice-check, claims-trace, privacy-scrub
+└── .github/workflows/              # CI: brand-voice-check (incl. qualifier guard), claims-trace, privacy-scrub
 ```
+
+## The brand manifesto pattern
+
+When you fill in `00-foundations/manifesto.md`, it auto-renders as the home page of the Brand OS web (`/` route). The manifesto answers three questions in this order:
+
+1. **Why we exist** - founder origin in narrative form (rooted in the chronologically-corrected arc from `00-foundations/founder-stories.md`)
+2. **What we do** - operational mission lifted from `00-foundations/positioning.md` Mission V1
+3. **Where we are going** - vision, the future-state language
+
+Three supports keep it load-bearing:
+
+4. **What we believe** - 5 belief statements
+5. **What we are not** - 3-line negation block (Wall-1 protection by explicit denial)
+6. **You** - reader-as-protagonist + community identity close
+
+The 7-section architecture is documented in `06-decisions/REFERENCE-manifesto-architecture.md`. Each section is load-bearing - drop one and the manifesto loses its load.
+
+Until you fill `manifesto.md`, the `/` home page shows an instructional stub. Search lives at `/search`.
 
 ## The Marketing Brain
 
