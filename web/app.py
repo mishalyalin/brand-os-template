@@ -123,12 +123,30 @@ def _enriched_positioning(p: dict[str, Any]) -> dict[str, Any]:
     return p
 
 
+def _parse_manifesto() -> dict[str, Any]:
+    """Read 00-foundations/manifesto.md and return rendered HTML + authored flag.
+
+    Heuristic: the manifesto is considered "authored" once the placeholder
+    `{{ HERO_LINE_1 }}` has been replaced with real content. Until then the
+    home page renders an instructional stub instead of the manifesto.
+    """
+    manifesto_path = REPO_ROOT / "00-foundations" / "manifesto.md"
+    if not manifesto_path.exists():
+        return {"authored": False, "html": ""}
+    content = manifesto_path.read_text(encoding="utf-8")
+    if "{{ HERO_LINE_1 }}" in content:
+        return {"authored": False, "html": ""}
+    md = markdown.Markdown(extensions=["tables", "fenced_code"])
+    return {"authored": True, "html": md.convert(content)}
+
+
 def _common_ctx() -> dict[str, Any]:
     """Context every template gets - nav links + vocab dropdowns."""
     idx = mb.load_index()
     return {
         "nav": [
-            {"href": "/", "label": "Search"},
+            {"href": "/", "label": "Manifesto"},
+            {"href": "/search", "label": "Search"},
             {"href": "/icp", "label": "ICP & vectors"},
             {"href": "/canon", "label": "Canon"},
             {"href": "/assets", "label": "Assets"},
@@ -165,6 +183,16 @@ def healthz() -> tuple[str, int]:
 
 @app.route("/")
 def index():
+    """Home page renders the brand manifesto if authored, else a stub."""
+    ctx = _common_ctx()
+    manifesto = _parse_manifesto()
+    ctx["manifesto_authored"] = manifesto["authored"]
+    ctx["manifesto_html"] = Markup(manifesto["html"])
+    return render_template("manifesto.html", **ctx)
+
+
+@app.route("/search")
+def search_page():
     query = (request.args.get("q") or "").strip()
     ctx = _common_ctx()
     ctx["query"] = query

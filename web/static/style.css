@@ -579,3 +579,234 @@ th {
         font-size: 13px;
     }
 }
+
+/* ===================================================================
+   Manifesto page (`/` route)
+   Renders 00-foundations/manifesto.md when authored, instructional
+   stub when the file still contains {{ HERO_LINE_1 }} placeholder.
+   Targets generic markdown output (h1/h2/p/ul/table) inside the
+   `.manifesto-rendered` wrapper so any markdown structure flows
+   through the brand visual system without per-section JS or
+   per-section Jinja blocks.
+   =================================================================== */
+
+.manifesto {
+    padding: 32px 0 64px;
+}
+
+/* Hero - the three top-level h1 lines from the manifesto markdown */
+.manifesto-rendered h1 {
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    margin: 8px 0;
+    color: var(--ink);
+    max-width: 18em;
+}
+
+.manifesto-rendered h1:first-of-type {
+    margin-top: 24px;
+}
+
+/* Section headings - "Why we exist", "What we do", etc */
+.manifesto-rendered h2 {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: var(--accent);
+    margin-top: 56px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule-faint);
+}
+
+/* Optional sub-headings (e.g. "Structure", "Editorial discipline") - smaller */
+.manifesto-rendered h3 {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--ink-faint);
+    margin-top: 32px;
+    margin-bottom: 10px;
+}
+
+/* Body paragraphs */
+.manifesto-rendered p {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 38em;
+    margin: 14px 0;
+}
+
+/* Beliefs list - five anchored bullets */
+.manifesto-rendered ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+}
+
+.manifesto-rendered li {
+    padding: 12px 0 12px 18px;
+    border-left: 3px solid var(--accent);
+    background: var(--paper-soft);
+    margin-bottom: 10px;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.manifesto-rendered li:last-child {
+    margin-bottom: 0;
+}
+
+.manifesto-rendered strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Tables - the structure / deployment / banned-framings tables in manifesto.md */
+.manifesto-rendered table {
+    margin-top: 24px;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.manifesto-rendered table th,
+.manifesto-rendered table td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule-faint);
+    vertical-align: top;
+}
+
+.manifesto-rendered table th {
+    color: var(--ink-faint);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.manifesto-rendered hr {
+    border: 0;
+    border-top: 1px solid var(--rule-faint);
+    margin: 40px 0;
+}
+
+.manifesto-rendered code {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 14px;
+    background: var(--paper-edge);
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+/* Sign-off line (paragraph starting with "-{{ FOUNDER_SHORTNAME }}" once authored) */
+.manifesto-rendered p:last-of-type {
+    margin-top: 28px;
+    color: var(--ink-faint);
+    font-size: 16px;
+    letter-spacing: 0.04em;
+}
+
+/* Footer note */
+.manifesto-footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-faint);
+}
+
+.manifesto-footer-note {
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin: 0;
+}
+
+.manifesto-footer-note code {
+    background: var(--paper-edge);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+/* Stub state - shown when manifesto.md still contains placeholders */
+.manifesto-stub {
+    padding: 32px 0;
+    max-width: 42em;
+}
+
+.manifesto-stub h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 16px;
+}
+
+.manifesto-stub h2 {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: var(--accent);
+    margin-top: 40px;
+    margin-bottom: 14px;
+}
+
+.manifesto-stub .lead {
+    font-size: 19px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+}
+
+.manifesto-stub ol {
+    padding-left: 20px;
+    margin: 12px 0;
+}
+
+.manifesto-stub ol li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.manifesto-stub code {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    background: var(--paper-edge);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.manifesto-stub a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Mobile manifesto */
+@media (max-width: 720px) {
+    .manifesto-rendered h1 {
+        font-size: 36px;
+    }
+
+    .manifesto-rendered h2 {
+        margin-top: 40px;
+    }
+
+    .manifesto-rendered p {
+        font-size: 18px;
+    }
+
+    .manifesto-rendered li {
+        font-size: 17px;
+    }
+
+    .manifesto-stub h1 {
+        font-size: 30px;
+    }
+}

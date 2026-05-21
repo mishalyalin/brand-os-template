@@ -5,9 +5,9 @@
 {% block content %}
 
 <h1>Marketing Brain</h1>
-<p class="lead">Search 15 positioning anchors, 15 cocktails, 51 canon principles, and 445 raw Vault rows in one query. Every result carries primary-source provenance.</p>
+<p class="lead">Search {{ stats.positioning }} positioning anchors, {{ stats.cocktails }} cocktails, {{ stats.canon }} canon principles, and {{ stats.rows }} raw Vault rows in one query. Every result carries primary-source provenance.</p>
 
-<form class="search-form search-form-element" method="get" action="/">
+<form class="search-form search-form-element" method="get" action="/search">
     <label for="search-q">Ask the Brain</label>
     <input
         type="search"

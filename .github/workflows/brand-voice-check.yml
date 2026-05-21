@@ -61,3 +61,80 @@ jobs:
             # warning, not fail - some brands allow this
           fi
           echo "Exclamation scan complete"
+
+      - name: Qualifier discipline guard (customer-ownership rule)
+        # Per the positioning architecture (see 00-foundations/positioning.md
+        # "Qualifier discipline rule"), any reference to "stick with your diet"
+        # / "reach your goal" / "achieve your goal" in customer-facing copy
+        # must pair with a customer-ownership qualifier within 200 chars
+        # ("the diet you chose" / "the goals you set" / "whatever they are" /
+        # "you chose" / "you set" / etc, plus third-person variants).
+        #
+        # The trigger phrases below match a common diet/discipline brand
+        # pattern. If your brand uses different triggers, replace `triggers`
+        # and `qualifiers` lists in the Python script with your locked
+        # phrases. See 06-decisions/REFERENCE-positioning-load-bearing-elements.md
+        # for the full pattern.
+        #
+        # Template-safe: the script skips any file that still contains
+        # `{{ PLACEHOLDER }}` markers, so it does not fire on unfilled
+        # template content. It fires only on authored customer copy.
+        run: |
+          set -e
+          cat > /tmp/qualifier-guard.py <<'PYEOF'
+          import re, sys
+          path = sys.argv[1]
+          try:
+              content = open(path, encoding='utf-8').read()
+          except Exception:
+              sys.exit(0)
+          # If the file still contains template placeholders, skip it - it has
+          # not been authored yet and any trigger phrase inside it is a
+          # documentation example, not customer copy.
+          if re.search(r'\{\{\s*[A-Z_][A-Z0-9_]*\s*\}\}', content):
+              sys.exit(0)
+          triggers = [
+              r'stick with your diet',
+              r'stick with the diet',
+              r'reach your goal',
+              r'reach the goals',
+              r'achieve your goal',
+              r'achieve the goals',
+          ]
+          qualifiers = [
+              r'the diet you chose', r'the goals you set', r'whatever they are',
+              r'whatever your goal', r"whatever you're eating for",
+              r'\byou chose\b', r'\byou set\b', r'\byour own goal',
+              r'the diet they chose', r'the goals they set',
+              r'\bthey chose\b', r'\bthey set\b', r'\btheir own goal',
+              r"\btheir goal", r'\bdiet they chose', r'\bgoals they set',
+          ]
+          issues = []
+          for m in re.finditer('|'.join(triggers), content, re.IGNORECASE):
+              start = max(0, m.start() - 200)
+              end = min(len(content), m.end() + 200)
+              window = content[start:end]
+              if not any(re.search(q, window, re.IGNORECASE) for q in qualifiers):
+                  line = content[:m.start()].count(chr(10)) + 1
+                  issues.append(f"{line}: {m.group(0)}")
+          for i in issues:
+              print(i)
+          PYEOF
+          FAIL=0
+          # Scan customer-facing surfaces only.
+          FILES=$(find 03-touchpoint-copy 01-canon/cocktail-recipes.md -type f \( -name '*.md' -o -name '*.mdx' -o -name '*.txt' -o -name '*.html' \) 2>/dev/null || true)
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            [ ! -f "$file" ] && continue
+            HITS=$(python3 /tmp/qualifier-guard.py "$file")
+            if [ -n "$HITS" ]; then
+              echo "::error file=$file::Qualifier discipline violation. A 'stick with your diet' / 'reach your goal' trigger has no customer-ownership qualifier within 200 chars. See 00-foundations/positioning.md 'Qualifier discipline rule' section."
+              echo "  Offending lines:"
+              echo "$HITS" | head -5 | sed 's/^/    /'
+              FAIL=1
+            fi
+          done <<< "$FILES"
+          if [ "$FAIL" -eq 0 ]; then
+            echo "Qualifier discipline scan PASS"
+          fi
+          exit $FAIL
