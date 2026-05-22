@@ -2,7 +2,7 @@
 "version": "1.3.0",
 "built_at": "2026-05-19",
 "raw_row_count": 0,
-"cocktail_count": 2,
+"cocktail_count": 4,
 "canon_count": 88,
 "positioning_count": 9,
 "tactic_vocab": [
@@ -91,6 +91,55 @@
 "vectors": [],
 "body": "This is a CANON cocktail. It is not a brand-specific example - it is the cross-brand pattern for every customer testimonial across every surface. Keep this entry; do not delete or replace.\n\n**Funnel stage:** review collection + every social-proof surface (PDP review widget, IG testimonial captions, day-7 post-purchase email, affiliate creator scripts, founder-section pull-out quotes).\n\n**Tactic stack:** Cialdini Social Proof + Voss \"That's Right\" elicitation + Sutherland Costly-Signal disclaimer + Cialdini Unity (community close, optional).\n\n**Verbatim template:**\n\n> Beat 1 (discipline + goal, customer-owned): \"I have been {{ DISCIPLINE_VERB }} for {{ TIMEFRAME }} to {{ GOAL }}.\"\n>\n> Beat 2 (honest disclaimer): \"The {{ MEASURABLE_RESULT }} came from {{ DISCIPLINE }}, not from {{ BRAND_NAME }}. {{ ATTRIBUTION_DETAIL }}.\"\n>\n> Beat 3 (specific failure mode the product prevented): \"What I would have failed on was {{ SPECIFIC_FAILURE_MODE }} - {{ CONCRETE_DETAIL }}. That is what {{ BRAND_NAME }} caught.\"\n>\n> Beat 4 (optional treat-within-the-frame): \"Now {{ TREAT }} is part of the routine instead of a cheat.\"\n>\n> Beat 5 (optional community close): \"I am {{ COMMUNITY_NAME_SINGULAR }} now",
 "anchor": "the-honest-attribution-testimonial-cocktail-(5-beat-formula)"
+},
+{
+"name": "The category-anchor reframe cocktail (Sutherland verb-not-noun)",
+"tactics": [
+"pratfall_effect",
+"anchoring",
+"loss_aversion",
+"liking",
+"commitment_consistency",
+"default_effect",
+"identity_priming"
+],
+"stages": [
+"hero_landing",
+"pdp_pricing",
+"founder_section",
+"subscription_tier",
+"social_tiktok",
+"retention",
+"trust_certification"
+],
+"vectors": [],
+"body": "**Where it fires:** Hero copy. PDP h1 + first body paragraph. IG bio. Founder essay opening. Press boilerplate. About page. Any surface where the reader's first mental category-lookup happens.\n\n**Why this is canon:**\n\nEvery product has two category anchors: the legal one (what regulators classify it as) and the customer mental one (what the customer's brain files it under at first contact). Most early brands assume these must be the same. They do not. The legal classification stays locked; the customer mental category is a marketing decision that lives in the hero copy.\n\nWhen a brand's customer mental anchor is set at the wrong reference class, the price will feel wrong no matter how good the copy is. The hero copy is where this is fixed. The Sutherland _Alchemy_ verb-not-noun lesson applied to product reveal: lead with what the product DOES in the customer's life, not with what it IS in the cupboard.\n\nFull pattern documented in `06-decisions/REFERENCE-category-anchor-reframe.md`.\n\n**Recipe (lead with verb / function, hold the noun):**\n\n- Open with what the product DOES in the customer's life, never with what the product IS\n- Anchor against the peer set in the NEW customer category",
+"anchor": "the-category-anchor-reframe-cocktail-(sutherland-verb-not-noun)"
+},
+{
+"name": "The multi-variant decision-support cocktail",
+"tactics": [
+"pratfall_effect",
+"anchoring",
+"decoy_effect",
+"loss_aversion",
+"authority",
+"liking",
+"unity",
+"default_effect",
+"identity_priming"
+],
+"stages": [
+"hero_landing",
+"pdp_pricing",
+"founder_section",
+"subscription_tier",
+"email_subject",
+"trust_certification"
+],
+"vectors": [],
+"body": "**Where it fires:** Default output format for any customer-facing copy generation request - hero copy, PDP h1, ad headline, subject line, sub-line, microcopy, CTA, captions, push notifications, SMS, email body openings, founder essay openings.\n\nSingle-variant mode is reserved. Trigger list and exclusion list documented in `06-decisions/REFERENCE-multi-variant-default-mode.md`.\n\n**Why this is canon:**\n\nA single-variant output (\"here is my best draft\") asks the decider to either accept or reject blind. Multi-variant output surfaces the option space, forces each variant to declare its canon source, and creates a tested ladder for free. Three jobs at once for the same effort.\n\n**Recipe (output format):**\n\n| # | Variant copy | Lens / canon principle | Wall-1 | Wall-2 | Stars | Notes |\n|---|---|---|---|---|---|---|\n| A | _line A_ | _e.g. Layer 0 ICP vector_ | OK / Risk | OK / Risk | ★★★★ | _why this might win_ |\n| B | _line B_ | _e.g. BE - loss aversion_ | OK / Risk | OK / Risk | ★★★ | _why this might win_ |\n| C | _line C_ | _e.g. Voss - calibrated label_ | OK / Risk | OK / Risk | ★★★★★ | PREFERRED. _why._ |\n| D | _line D_ | _e.g. Cialdini Unity_ | OK / Risk | OK / Risk | ★★ | _why this ",
+"anchor": "the-multi-variant-decision-support-cocktail"
 }
 ],
 "canons": [

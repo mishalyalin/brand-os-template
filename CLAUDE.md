@@ -169,6 +169,35 @@ Cocktails go in `01-canon/cocktail-recipes.md` as `### <Name>` blocks. Each cock
 
 Re-run `python3 tools/marketing_brain.py rebuild-index` after adding a new cocktail.
 
+## Multi-variant default output mode
+
+For any customer-facing copy generation slot (hero, PDP h1, ad headline, email subject + preview, microcopy, captions, push, SMS, founder essay opener, press boilerplate, About openers, welcome-flow openings), the default output is **N variants (4-6) per slot**. Each variant:
+
+- Cites a specific canon principle (Layer 0 / BE / Voss-NSTD / Cialdini-Sutherland / DTC / Pricing / LLM SEO)
+- Is tagged with Wall-1 and Wall-2 hygiene status
+- Is star-weighted 1-5 stars based on lens-fit + decider-veto risk + load-bearing principles served
+- One variant marked PREFERRED with a one-sentence rationale
+
+Single-variant mode is reserved for locked canon (manifesto, mission V1, hero 3-line, identity close, founder sign-off), single-word labels, time-sensitive ops, legal/regulatory copy, and surfaces where the brand owner specified exact wording.
+
+Full pattern: `06-decisions/REFERENCE-multi-variant-default-mode.md`. Cocktail implementation: "The multi-variant decision-support cocktail" in `01-canon/cocktail-recipes.md`.
+
+## Category-anchor reframe (legal vs customer mental categories)
+
+A product can legally be classified as one thing (food / supplement / cosmetic) while customer-side living in a different mental category (the protocol-stack slot / the discipline tool / the recovery tool). The two anchors are separable. If your price feels wrong against the customer's mental reference class, fix the reference class - not the price.
+
+Apply this pattern when your price feels "too expensive" against the customer's mental reference class, even though it is competitive against the actual peer set in the customer's life. The hero copy and PDP h1 are where the reframe is made: lead with what the product DOES, hold the product noun.
+
+Full pattern: `06-decisions/REFERENCE-category-anchor-reframe.md`. Cocktail implementation: "The category-anchor reframe cocktail" in `01-canon/cocktail-recipes.md`.
+
+## Founder credential is problem-anchored, never product-anchored
+
+**Founder credentials describe what the founders DID and what PROBLEM they solved. They never describe what the PRODUCT IS.** Product reveal comes later in the copy, after the problem frame has been established in the reader's head.
+
+Apply the verb-not-noun lesson to the founder credential paragraph: WHO, WHAT THEY DID, FOR WHOM. The founder credential does NOT answer what the product is, where it came from, or how it is made. Those answers come AFTER the problem-frame is locked.
+
+Full pattern: `06-decisions/REFERENCE-founder-credential-problem-not-product.md`. CI enforcement: add "founder credential product-noun scan" to your `.github/workflows/brand-voice-check.yml` if you want this rule enforced on every PR.
+
 ## Loading this repo as a plug-in into a fresh Claude session
 
 ```bash
