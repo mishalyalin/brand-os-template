@@ -198,6 +198,40 @@ Apply the verb-not-noun lesson to the founder credential paragraph: WHO, WHAT TH
 
 Full pattern: `06-decisions/REFERENCE-founder-credential-problem-not-product.md`. CI enforcement: add "founder credential product-noun scan" to your `.github/workflows/brand-voice-check.yml` if you want this rule enforced on every PR.
 
+## Phase 1 narrow / Phase 2 expand (PMF sequencing)
+
+When your brand has done category-anchor work and your pricing depends on the new mental category holding, Phase 1 customer-facing copy addresses your narrowest core ICP only. Phase 2 expansion copy widens to friend-of-friend / adjacent audiences after the Phase 1 base validates the category-anchor in the wild.
+
+The non-core-ICP friend-of-friend social-discovery channel is real and observable, but stays out of Phase 1 hero / PDP / paid social / IG / email / press copy. Surfacing those voices in Phase 1 collapses the category-anchor reframe because non-core-ICP audiences have no reference class to slot the new category into.
+
+This is not exclusion - anyone who finds the brand and chooses to buy is welcomed. It is sequencing of which voices surface in Phase 1 customer copy.
+
+Set a data-driven transition trigger (launch + 90 days OR N active subscribers; NPS target; press wave landed). When the trigger fires, Phase 2 expansion ADDS non-core-ICP testimonials ON TOP of the core-ICP base.
+
+Full pattern: `06-decisions/REFERENCE-pmf-sequencing-phase1-narrow-phase2-expand.md`.
+
+## Context exclusion (targeting rule, not gatekeeping rule)
+
+Not all target markets share the pain your product solves. Exclude markets where the pain does not land from your acquisition targeting (paid social geo, creator partnerships, IG / TikTok briefs, PR pitches). Welcome anyone who finds the brand organically and chooses to buy.
+
+The exclusion criterion can be palate / climate / life stage / income tier / existing-solution density / cultural-regulatory.
+
+The wording is load-bearing: this is a **targeting rule**, not a **gatekeeping mechanism**. "We will not target X audience in our acquisition channels because the pain we solve does not land for them as a daily condition; we welcome anyone from X who finds us and wants to buy" - this reads as honest product-pain-fit. "We will not sell to X audience" - this reads as exclusion-as-judgement and creates legal exposure.
+
+Full pattern: `06-decisions/REFERENCE-context-exclusion-targeting-not-gatekeeping.md`.
+
+## Contrarian voices: capture as evidence, not as canon override
+
+When a stakeholder voice contradicts a locked canon decision, capture the dissent as evidence in `05-evidence/contrarian-hypotheses/<date>-<short-slug>.md`, not as a canon edit.
+
+The locked decision stands until the priority-hierarchy authority that locked it re-decides. Capture trigger conditions for re-evaluation so the contrarian voice gets honest reconsideration when those conditions land.
+
+Three failure modes this rule prevents: (a) silent burying (brand learns the same lesson twice); (b) unauthorized override (priority hierarchy violated); (c) conflict-avoidance dilution (canon becomes mushy and unactionable).
+
+The contrarian voice is honored by being captured, not by overriding. Honest record-keeping wins over silent burying or unauthorized override.
+
+Full pattern: `06-decisions/REFERENCE-contrarian-evidence-not-canon-override.md`.
+
 ## Loading this repo as a plug-in into a fresh Claude session
 
 ```bash
