@@ -45,14 +45,16 @@ If any answer points to product-anchored framing, rewrite to problem-anchored.
 
 | Anti-pattern (product-anchored) | Safe (problem-anchored) |
 |---|---|
-| "We researched ancient salt and spice traditions" | "We researched methods that work for the customer segment we are solving for" |
-| "We perfected an Ayurvedic recipe" | "We refined a method that survives the actual conditions our customer lives in" |
-| "We blended Himalayan salt with rare herbs" | "We packaged what worked into something portable" |
-| "We sourced the world's best seasonings" | "We tested approaches until we found one that survives modern training and modern travel" |
-| "We perfected a 5000-year-old salt recipe" | "We found the method disciplined eaters used for centuries and tested it against modern life" |
+| "We researched ancient food traditions" | "We researched methods that work for the customer segment we are solving for" |
+| "We perfected a heritage formula" | "We refined a method that survives the actual conditions our customer lives in" |
+| "We blended rare ingredients from the highlands" | "We packaged what worked into something portable" |
+| "We sourced the world's best ingredients" | "We tested approaches until we found one that survives modern training and modern travel" |
+| "We perfected a 5000-year-old formula" | "We found the method our customer segment used for centuries and tested it against modern life" |
 | "We developed a tea blend with rare adaptogens" | "We developed a method for people who cannot afford the afternoon crash" |
 | "We engineered a fitness mat with antimicrobial coating" | "We engineered a surface that does not become a problem at month 3 of daily use" |
 | "We designed a leather wallet with RFID blocking" | "We designed a wallet for the year-long carry, not the seasonal Instagram moment" |
+| "We built an inbox client with three-pane layout and keyboard shortcuts" | "We built an inbox for people who get more email than they can read and still need to ship the work" |
+| "We crafted a denim with Japanese selvedge and copper rivets" | "We crafted a pair for the customer who buys one pair every two years and wears them out" |
 
 The right-side construction in every row leads with a verb, names the problem the founders solved, and delays the product reveal. The product is revealed (as needed) in a separate paragraph or a downstream block on the same surface.
 
