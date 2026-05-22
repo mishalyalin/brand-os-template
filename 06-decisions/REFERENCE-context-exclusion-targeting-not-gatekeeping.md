@@ -73,7 +73,7 @@ Always frame the exclusion as targeting. The "anyone who finds us and chooses to
 
 | Anti-pattern (reads as gatekeeping) | Safe (reads as honest targeting) |
 |---|---|
-| "Pranasalt is not for [excluded audience]" | "Pranasalt is built for [pain-fit audience]" |
+| "[Brand] is not for [excluded audience]" | "[Brand] is built for [pain-fit audience]" |
 | "We do not sell to [excluded audience]" | "We do not target [excluded audience] in our acquisition channels because the pain we solve does not land there as a daily condition" |
 | "X audience cannot benefit from our product" | "X audience already has a solution to this pain through their daily baseline; we welcome them if they choose us regardless" |
 | "Our brand is exclusively for [included audience]" | "Our brand is built around [included audience's pain]; anyone who finds us and wants to buy is welcomed" |
