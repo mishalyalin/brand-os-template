@@ -127,8 +127,13 @@ If your brand grows to a multi-founder profile (the original founder + a high-pr
 
 If your brand evolves into celebrity-grade founder territory (founder becomes a public figure during the brand's life), re-open the decision via the trigger-conditions table. Add the founder name to shallow surfaces incrementally; do not rip the pattern out wholesale.
 
-## Reference implementation
+## When a brand adopts this pattern, the artefacts to ship
 
-Pranasalt adopted this pattern 2026-05-22 (v9b) after the founder caught a welcome-modal prototype rendering "[Founder] writes them by hand" in a shallow surface. The decision record is `06-decisions/2026-05-22-founder-name-deep-surfaces-only.md`. The voice-anti-patterns entry is #19. The customer-copy sweep covered 10 files in a single PR.
+- `06-decisions/<date>-founder-name-deep-surfaces-only.md` locked decision record
+- `00-foundations/voice-anti-patterns.md` new anti-pattern entry with a banned-to-safe before-after table covering 6-8 shallow surfaces
+- `00-foundations/positioning.md` POS-FORBIDS extended with the shallow-surface ban + co-founder-name ban + family-name ban
+- Customer-copy sweep across: manifesto, PDP, founder statement template, testimonial template, welcome-flow SMS + emails, cart-abandon emails, About page intro, IG bio line, press boilerplate, brand-guidelines HTML
 
-Trigger: founder verbatim 2026-05-22 PM. The same-day fix swept manifesto, PDP, founder-statement, testimonial-template, welcome-flow SMS, cart-abandon email, brand-guidelines HTML, voice-anti-patterns, and positioning POS-FORBIDS.
+Typical first-PR sweep covers 8-12 files. Decision-record body should cite cross-brand precedents (which brands name founder in shallow surfaces vs which keep founder deep), alternatives considered, and trigger conditions for re-evaluation.
+
+The pattern is brand-agnostic - any brand whose founder is not celebrity-grade can adopt it.

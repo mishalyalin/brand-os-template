@@ -122,8 +122,19 @@ Brand OS  (WHAT)  -->  Web Lab    (HOW for web)
 
 Each Lab gets its own pointer file under `00-foundations/<surface>-lab-authority.md`. The pattern scales horizontally without changing the core split.
 
-## Reference implementation
+## When a brand adopts this pattern, the artefacts to ship
 
-Pranasalt adopted this pattern 2026-05-27. The Design Lab is at `https://pranasalt-design-lab.vercel.app` (Vercel-hosted, owned by `@ilyyyyyyya`). The pointer file lives at `00-foundations/design-lab-authority.md`. The decision record is `06-decisions/2026-05-27-design-lab-becomes-visual-authority.md`. The local Claude rule for any Misha-laptop session is `~/.claude/projects/-Users-mishalyalin-Desktop-claude/memory/feedback_design_lab_authority.md`.
+In your Brand OS:
+- `00-foundations/design-lab-authority.md` pointer file (this is where the Lab URL lives)
+- `06-decisions/<date>-design-lab-becomes-visual-authority.md` locked decision record
+- `CLAUDE.md` Q1 + Q2 in "Two most-asked questions" updated to route to the Lab
+- `AGENTS.md` design-agent role row + visual-tokens section updated to route to the Lab
+- `00-foundations/visual-identity.md` (if it exists from a pre-Lab era) gets a SECONDARY status header
 
-Trigger: Misha verbatim 2026-05-27 PM: the Lab is now the authority; Brand OS routes to it; don't extract Lab content.
+In the Lab (separate repo):
+- `AGENTS.md` (contract)
+- `tokens.json`
+- `modules.json`
+- per-module HTML at the `artifact_url` paths
+
+The pattern is brand-agnostic - any brand with a separate designer + iteration loop can adopt it.
