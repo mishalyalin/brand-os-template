@@ -18,6 +18,8 @@ The wizard fills the canonical foundation files via interactive Q&A (about 25-30
 
 The single source of truth for everything this brand says to a customer. Brand voice, positioning, persuasion canon (Behavioral Economics + Voss/NSTD + Cialdini-Sutherland), funnel architecture, touchpoint copy, evidence, decisions, anti-patterns.
 
+Current facts live on one page: `LAYER0-LIVE.md`. Read it before trusting a fact found in prose anywhere else in the repo. The dated decision files in `06-decisions/` (live statuses in `06-decisions/INDEX.md`) are the ultimate source; any PR that changes a fact must update `LAYER0-LIVE.md` in place in the same PR.
+
 If you are about to write or audit:
 
 - An email or SMS

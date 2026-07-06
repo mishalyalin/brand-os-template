@@ -42,6 +42,7 @@ That's it. You can now query the Brain for any marketing decision and get eviden
 ```
 .
 ├── CLAUDE.md                       # plug-in contract for any Claude session
+├── LAYER0-LIVE.md                  # one-page live fact sheet - updated in place with every fact change
 ├── README.md                       # this file
 ├── LICENSE                         # MIT
 ├── 00-foundations/                 # the strategic frame
@@ -66,8 +67,8 @@ That's it. You can now query the Brain for any marketing decision and get eviden
 ├── 04-content-rules/               # operational rules (launch plan, content calendar)
 ├── 05-evidence/                    # append-only evidence library
 ├── 06-decisions/                   # append-only decision records
-│   ├── REFERENCE-positioning-load-bearing-elements.md
-│   └── REFERENCE-manifesto-architecture.md
+│   ├── INDEX.md                    # live status of every dated decision (LIVE / AMENDED / SUPERSEDED)
+│   └── REFERENCE-*.md              # canonical architecture pattern docs (positioning, manifesto, design-lab split, ...)
 ├── 07-anti-patterns/               # the "do not do this" library
 ├── 08-templates/
 │   ├── founder-statement.md        # short / mid / long-form founder statement cuts
