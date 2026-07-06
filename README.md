@@ -1,6 +1,6 @@
 # Brand OS - template
 
-A working starter kit for building a single source of truth for everything your brand says to a customer. Brand voice. Positioning. Persuasion canon (51 principles across Behavioral Economics + Voss/NSTD + Cialdini/Sutherland). Funnel architecture. Cocktail recipes for specific funnel moments. Anti-patterns. Decision records. Evidence library.
+A working starter kit for building a single source of truth for everything your brand says to a customer. Brand voice. Positioning. Persuasion canon (88 principles across 7 schools - Behavioral Economics, Voss/NSTD, Cialdini/Sutherland, LLM SEO, DTC mechanics, subscription mechanics, pricing mechanics). Funnel architecture. Cocktail recipes for specific funnel moments. Anti-patterns. Decision records. Evidence library.
 
 The included Marketing Brain CLI searches across all of it in one query and returns evidence-backed answers. Drop the repo into a Claude session and the `CLAUDE.md` plug-in contract tells the agent: query the Brain before generating any customer copy, respect the walls, cite primary sources, never fabricate.
 
@@ -42,6 +42,7 @@ That's it. You can now query the Brain for any marketing decision and get eviden
 ```
 .
 ├── CLAUDE.md                       # plug-in contract for any Claude session
+├── LAYER0-LIVE.md                  # one-page live fact sheet - updated in place with every fact change
 ├── README.md                       # this file
 ├── LICENSE                         # MIT
 ├── 00-foundations/                 # the strategic frame
@@ -66,8 +67,8 @@ That's it. You can now query the Brain for any marketing decision and get eviden
 ├── 04-content-rules/               # operational rules (launch plan, content calendar)
 ├── 05-evidence/                    # append-only evidence library
 ├── 06-decisions/                   # append-only decision records
-│   ├── REFERENCE-positioning-load-bearing-elements.md
-│   └── REFERENCE-manifesto-architecture.md
+│   ├── INDEX.md                    # live status of every dated decision (LIVE / AMENDED / SUPERSEDED)
+│   └── REFERENCE-*.md              # canonical architecture pattern docs (positioning, manifesto, design-lab split, ...)
 ├── 07-anti-patterns/               # the "do not do this" library
 ├── 08-templates/
 │   ├── founder-statement.md        # short / mid / long-form founder statement cuts
@@ -81,7 +82,7 @@ That's it. You can now query the Brain for any marketing decision and get eviden
 │   └── templates/manifesto.html    # `/` home page renders the manifesto, falls back to stub
 ├── skills/
 │   └── marketing-brain-query/      # SKILL.md for any Claude agent loading this repo
-└── .github/workflows/              # CI: brand-voice-check (incl. qualifier guard), claims-trace, privacy-scrub
+└── .github/workflows/              # CI: brand-voice-check (incl. qualifier guard) + privacy-scrub-check
 ```
 
 ## The brand manifesto pattern
@@ -108,7 +109,7 @@ A stdlib-only Python CLI that searches your Brand OS in one query. Three (option
 
 - **Layer 0** - positioning anchors (ICP + content vectors + walls + founder anchor + forbids/licenses lists). Locked when you finish onboarding.
 - **Layer 1** - your cocktails. Pre-vetted stacks of behavioral, negotiation, and influence tactics for specific funnel moments.
-- **Layer 1.5** - canon principles (51 across BE + Voss + Cialdini). Universal persuasion knowledge with explicit Where-to-use / Where-NOT guidance.
+- **Layer 1.5** - canon principles (88 across 7 school files: BE + Voss/NSTD + Cialdini/Sutherland + LLM SEO + DTC + subscription + pricing mechanics). Universal persuasion knowledge with explicit Where-to-use / Where-NOT guidance.
 - **Layer 2** - raw research rows (optional - drop a `01-canon/nudge-vault-raw-capture.txt` if you have one).
 
 Layer 0 is the GATE: any tactic that does not serve at least one of your content vectors AND respect both walls gets rejected. Beneath that gate, priority is cocktail > canon principle > raw row.
@@ -159,9 +160,8 @@ Edit the JSON directly (or via GitHub UI in the browser). Then rebuild the index
 
 The workflows in `.github/workflows/` run on every PR:
 
-- **`brand-voice-check.yml`** - scans for hard-rule violations in customer copy files
-- **`claims-trace.yml`** - verifies external-facing factual claims trace to evidence
-- **`privacy-scrub-check.yml`** - blocks placeholder strings (`{{ YOUR_NAME }}` etc) from landing in production files
+- **`brand-voice-check.yml`** - scans customer copy files for hard-rule violations (em/en-dashes, emojis, exclamation marks, qualifier-discipline guard)
+- **`privacy-scrub-check.yml`** - deny-list scan that keeps source-brand-specific strings out of this template. When you fork, delete it or replace the deny-list with the strings you want kept out of your own public repo
 
 Customize the rules for your brand by editing `.github/workflows/brand-voice-check.yml` after onboarding.
 

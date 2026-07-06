@@ -17,3 +17,5 @@ Each decision should include:
 Decisions are the most important folder in the Brand OS over time. They are the brand's institutional memory - "why does positioning say this?" is always answerable by reading the relevant decision file.
 
 **Append-only rule:** never edit or delete a decision. If a later decision overrides an earlier one, add a new decision file that says "supersedes 2026-XX-XX-<slug>".
+
+**Live-status rule:** because decision files are never edited, the current status of every decision lives in [`INDEX.md`](INDEX.md). Add a row there in the same PR that adds a decision file, and update the superseded decision's row (`AMENDED-by` / `SUPERSEDED-by`) when a later decision overrides it. "What is in force right now?" is answered by the INDEX; "why?" is answered by the decision files.
