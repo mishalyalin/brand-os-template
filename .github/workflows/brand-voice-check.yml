@@ -18,6 +18,10 @@ on:
     paths:
       - "03-touchpoint-copy/**"
       - "01-canon/cocktail-recipes.md"
+      # Self-test: include the workflow itself. Without this line, a PR that
+      # only fixes this workflow does not re-trigger the gate, so the fix
+      # lands untested until an unrelated content edit happens to run it.
+      - ".github/workflows/brand-voice-check.yml"
 
 jobs:
   check:
